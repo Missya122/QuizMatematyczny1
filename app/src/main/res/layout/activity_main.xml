@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title_of_quiz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/bowlby_one"
+        android:text="Podstawowy Quiz"
+        android:textColor="#22539E"
+        android:textSize="35sp" />
+
+    <TextView
+        android:id="@+id/text_view_highscore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_of_quiz"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        android:text="@string/max_wynik"
+        android:textSize="20sp"
+        tools:text="Twój najwyższy wynik: 0" />
+
+    <TextView
+        android:id="@+id/text_view_choose_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button_start_quiz"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Wybierz poziom trudności: " />
+
+
+    <Button
+        android:id="@+id/button_start_quiz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#03A9F4"
+        android:fontFamily="@font/bangers"
+        android:text="Naprzód!"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp" />
+    <Spinner
+        android:id="@+id/spinner_sets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_alignStart="@+id/text_view_choose_category"
+        android:layout_alignLeft="@+id/text_view_choose_category"
+        android:layout_below="@+id/button_start_quiz"/>
+    <Spinner
+        android:id="@+id/spinner_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_alignStart="@+id/text_view_choose_category"
+        android:layout_alignLeft="@+id/text_view_choose_category"
+        android:layout_below="@+id/spinner_sets"/>
+
+    <Spinner
+        android:id="@+id/spinner_difficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_alignStart="@+id/text_view_choose_category"
+        android:layout_alignLeft="@+id/text_view_choose_category"
+        android:layout_below="@+id/spinner_category"/>
+
+
+</RelativeLayout>

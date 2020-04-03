@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Quiz dla dzieci</string>
+    <string name="quiz_matematyczny" />
+    <string name="dodawanie" />
+    <string name="odejmowanie" />
+    <string name="mnozenie" />
+    <string name="dzielenie" />
+    <string name="dzielenie_z_reszta" />
+    <string name="naprzod" />
+    <string name="twoj_wybor" />
+    <string name="klawiatura" />
+    <string name="karty" />
+    <string name="rodzaj_gry" />
+    <string name="_0_1000" />
+    <string name="_0_100" />
+    <string name="_0_20" />
+    <string name="_0_10" />
+    <string name="zakres" />
+    <string name="max_wynik" />
+    <string name="wybierz_rodzaj_gry">Wybierz rodzaj gry:</string>
+    <string name="quiz">Quiz</string>
+    <string name="kalkulator">Klawiatura</string>
+</resources>

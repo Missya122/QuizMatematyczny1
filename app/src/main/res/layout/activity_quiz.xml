@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".QuizActivity"
+    android:configChanges="orientation|screenSize"
+    >
+
+    <TextView
+        android:id="@+id/text_view_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wynik: 0"
+        android:textColor="@android:color/black"
+        android:freezesText="true"/>
+
+    <TextView
+    android:id="@+id/text_view_question_count"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/text_view_score"
+    android:text="Pytanie: 1/x"
+    android:textColor="@android:color/black"
+    android:freezesText="true"/>
+    <TextView
+        android:id="@+id/text_view_sets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_view_question_count"
+        android:text="Zestaw: "
+        android:textColor="@android:color/black"
+        android:freezesText="true"/>
+    <TextView
+        android:id="@+id/text_view_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_view_sets"
+        android:text="Kategoria: "
+        android:textColor="@android:color/black"
+        android:freezesText="true"/>
+    <TextView
+        android:id="@+id/text_view_difficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_view_category"
+        android:text="Poziom trudności: "
+        android:textColor="@android:color/black"
+        android:freezesText="true"/>
+
+
+    <TextView
+        android:id="@+id/text_view_countdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="00:30"
+        android:textColor="@android:color/black"
+        android:textSize="40sp"
+        android:freezesText="true"/>
+
+    <TextView
+        android:id="@+id/text_view_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/radio_group"
+        android:layout_marginBottom="16dp"
+        android:text="Tu będzie pytanie"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:freezesText="true"/>
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+
+        <RadioButton
+            android:id="@+id/radio_button_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Opcja 1"
+            android:freezesText="true"/>
+
+        <RadioButton
+            android:id="@+id/radio_button_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Opcja 2"
+            android:freezesText="true"/>
+
+        <RadioButton
+            android:id="@+id/radio_button_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Opcja 3"
+            android:freezesText="true"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button_confirm_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radio_group"
+        android:layout_marginTop="16dp"
+        android:text="Potwierdź"
+        android:background="@android:color/holo_purple"
+        android:freezesText="true"/>
+
+</RelativeLayout>

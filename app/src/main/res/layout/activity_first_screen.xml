@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3ECED"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".FirstScreenActivity">
+
+    <TextView
+        android:id="@+id/textViewQM"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bowlby_one_sc"
+        android:textColor="#0B1E87"
+        android:textSize="36sp"
+        android:text = "Quiz Matematyczny"/>
+
+    <Button
+        android:id="@+id/buttonAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#03A9F4"
+        android:fontFamily="@font/bangers"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:text = "Dodawanie"/>
+
+    <Button
+        android:id="@+id/buttonMinus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0D8CF1"
+        android:fontFamily="@font/bangers"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:text="Odejmowanie" />
+
+    <Button
+        android:id="@+id/buttonMultiple"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00BCD4"
+        android:fontFamily="@font/bangers"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:text="Mnożenie"/>
+
+    <Button
+        android:id="@+id/buttonDivide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#117DAE"
+        android:fontFamily="@font/bangers"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:text="Dzielenie"/>
+
+    <Button
+        android:id="@+id/buttonDivide2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#02335A"
+        android:fontFamily="@font/bangers"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:text="Dzielenie z resztą"/>
+
+
+</LinearLayout>
