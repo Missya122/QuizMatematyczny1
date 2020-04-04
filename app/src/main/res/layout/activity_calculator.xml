@@ -1,33 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".CalculatorActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
+    <TextView
+        android:id="@+id/textViewZakres"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/AppTheme">
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme" />
-    </com.google.android.material.appbar.AppBarLayout>
+        android:layout_above="@id/button10"
+        android:gravity="center"
+        android:text="@string/wybierz_zakres"
+        android:textSize="24sp" />
 
-    <include layout="@layout/content_calculator" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginVertical="16dp"
-        android:layout_margin="16dp"
-        android:visibility="invisible"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        android:layout_above="@id/button20"
+        android:background="#2196F3"
+        android:fontFamily="@font/bangers"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:text="0 - 10" />
 
+    <Button
+        android:id="@+id/button20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="#00BCD4"
+        android:fontFamily="@font/bangers"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:text="0 - 20" />
 
+    <Button
+        android:id="@+id/button100"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button20"
+        android:background="#3F51B5"
+        android:fontFamily="@font/bangers"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:text="0 - 100" />
+
+    <Button
+        android:id="@+id/button1000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button100"
+        android:background="#3FBBF3"
+        android:fontFamily="@font/bangers"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:text="0 - 1000" />
 </RelativeLayout>

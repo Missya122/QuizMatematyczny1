@@ -20,4 +20,9 @@
     <string name="wybierz_rodzaj_gry">Wybierz rodzaj gry:</string>
     <string name="quiz">Quiz</string>
     <string name="kalkulator">Klawiatura</string>
+    <string name="wybierz_zakres">Wybierz zakres:</string>
+    <string name="dalej" />
+    <string name="operation" />
+    <string name="operacja">999 + 999 =</string>
+    <string name="ktory_przyklad">TextView</string>
 </resources>

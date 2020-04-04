@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ActivityChose"></activity>
+        <activity android:name=".ActivityAdd"></activity>
+        <activity android:name=".ActivityWin" />
+        <activity android:name=".ActivityMinus" />
+        <activity android:name=".ActivityChose" />
         <activity android:name=".SecondFragment" />
         <activity android:name=".FirstFragment" />
         <activity android:name=".CalculatorActivity" />

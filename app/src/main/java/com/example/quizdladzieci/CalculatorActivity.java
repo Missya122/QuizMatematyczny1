@@ -1,5 +1,6 @@
 package com.example.quizdladzieci;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -17,92 +18,88 @@ import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
-public class CalculatorActivity extends AppCompatActivity {
-
-    private EditText editTextResult;
-    private Button buttonCheck;
-    private TextView textViewMsg;
-    private TextView editTextOne;
-    private TextView editTextTwo;
-
-    public void checkSum() {
-        int sum = Integer.parseInt(editTextOne.getText().toString()) + Integer.parseInt(editTextTwo.getText().toString());
-        String msg = "";
-        int result = Integer.parseInt(editTextResult.getText().toString());
-        if(result == sum) {
-            msg = "Brawo! To prawidłowy wynik, zagraj jeszcze raz!";
-            newGame();
-        }
-        else {
-            msg = "Niestety, zły wynik. Spróbuj ponownie";
-        }
-        textViewMsg.setText(msg);
-        editTextResult.requestFocus();
-        editTextResult.selectAll();
-    }
-    public void newGame() {
-        int theNumberOne = (int)(Math.random() * 100 + 1);
-        editTextOne.setText(Integer.toString(theNumberOne));
-        int theNumberTwo = (int)(Math.random() * (100 - theNumberOne));
-        editTextTwo.setText(Integer.toString(theNumberTwo));
-    }
-
+public class CalculatorActivity extends AppCompatActivity implements View.OnClickListener{
+    public static final String EXTRA_NUMBER = "com.example.application.example.EXTRA_NUMBER";
+    public static final String EXTRA_RANGE = "com.example.application.example.EXTRA_RANGE";
+    public int no;
+    public int range;
+    private Button button10;
+    private Button button20;
+    private Button button100;
+    private Button button1000;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculator);
-        editTextResult = (EditText) findViewById(R.id.editTextResult);
-        editTextOne = (TextView) findViewById(R.id.editTextOne);
-        editTextTwo = (TextView) findViewById(R.id.editTextTwo);
-        buttonCheck = (Button) findViewById(R.id.buttonCheck);
-        textViewMsg = (TextView) findViewById(R.id.textViewMsg);
-        newGame();
-        buttonCheck.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                checkSum();
-            }
-        });
-        editTextResult.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                checkSum();
-                return true;
-            }
-        });
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        Intent intent = getIntent();
+        no = intent.getIntExtra(ActivityChose.EXTRA_NUMBER, 0);
+
+        button10 = (Button)findViewById(R.id.button10);
+        button20 = (Button)findViewById(R.id.button20);
+        button100 = (Button)findViewById(R.id.button100);
+        button1000 = (Button)findViewById(R.id.button1000);
+
+        button10.setOnClickListener(this);
+        button20.setOnClickListener(this);
+        button100.setOnClickListener(this);
+        button1000.setOnClickListener(this);
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+    public void openCalculator() {
+        Intent intent;
+        switch(no){
+            case 1:
+                intent = new Intent(this, ActivityAdd.class);
+                intent.putExtra(EXTRA_RANGE, range);
+                intent.putExtra(EXTRA_NUMBER, no);
+                startActivity(intent);
+                break;
+            case 2:
+                intent = new Intent(this, ActivityMinus.class);
+                intent.putExtra(EXTRA_RANGE, range);
+                intent.putExtra(EXTRA_NUMBER, no);
+                startActivity(intent);
+                break;
+            case 3:
+                /*intent = new Intent(this, CalculatorActivity.class);
+                intent.putExtra(EXTRA_RANGE, range);
+                startActivity(intent);*/
+                break;
+            case 4:
+                /*intent = new Intent(this, CalculatorActivity.class);
+                intent.putExtra(EXTRA_RANGE, range);
+                startActivity(intent);*/
+                break;
+            case 5:
+                /*intent = new Intent(this, CalculatorActivity.class);
+                intent.putExtra(EXTRA_RANGE, range);
+                startActivity(intent);*/
+                break;
         }
 
-        return super.onOptionsItemSelected(item);
+    }
+
+    public void onClick(View v) {
+        switch(v.getId()) {
+            case R.id.button10:
+                range = 10;
+                openCalculator();
+                break;
+            case R.id.button20:
+                range = 20;
+                openCalculator();
+                break;
+            case R.id.button100:
+                range = 100;
+                openCalculator();
+                break;
+            case R.id.button1000:
+                range = 1000;
+                openCalculator();
+                break;
+        }
     }
 }
