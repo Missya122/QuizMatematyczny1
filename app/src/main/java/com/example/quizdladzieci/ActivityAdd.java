@@ -25,6 +25,7 @@ public class ActivityAdd extends AppCompatActivity {
     private int gameCounter;
     private int range;
     private int no;
+    private int pom = 0;
     final Random myRandom = new Random();
 
 
@@ -69,14 +70,13 @@ public class ActivityAdd extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if(gameCounter == 10){
-                    if (Integer.parseInt(editTextResult.getText().toString()) == numberOne - numberTwo) {
-                        counter++;
-                    }
-                    openWin();
+                    if (gameCounter == 10) {
+                        if (Integer.parseInt(editTextResult.getText().toString()) == numberOne - numberTwo) {
+                            counter++;
+                        }
+                        openWin();
+                    } else checkResult();
                 }
-                else checkResult();
-            }
         });
 
     }
@@ -85,7 +85,6 @@ public class ActivityAdd extends AppCompatActivity {
         Intent intent = new Intent(this, ActivityWin.class);
         intent.putExtra(EXTRA_NUMBER, no);
         intent.putExtra(EXTRA_COUNTER, counter);
-        Toast.makeText(this, "no = " + no, Toast.LENGTH_SHORT).show();
         startActivity(intent);
     }
 }

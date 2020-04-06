@@ -29,16 +29,11 @@ public class MainActivity extends AppCompatActivity {
     private Spinner spinnerSets;
 
     private Spinner spinnerDifficulty;
-    public static final String EXTRA_NUMBER = "com.example.application.example.EXTRA_NUMBER";
-    public int no;
     private int highscore;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        Intent intent = getIntent();
-        no = intent.getIntExtra(FirstScreenActivity.EXTRA_NUMBER, 0);
 
         textViewHighscore = findViewById(R.id.text_view_highscore);
         spinnerSets = findViewById(R.id.spinner_sets);

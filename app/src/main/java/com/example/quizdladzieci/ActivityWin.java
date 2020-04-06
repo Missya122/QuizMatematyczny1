@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class ActivityWin extends AppCompatActivity {
@@ -15,8 +17,9 @@ public class ActivityWin extends AppCompatActivity {
 
         int counter;
         TextView textView = (TextView)findViewById(R.id.textView2);
+        Button buttonOK = (Button)findViewById((R.id.buttonOK));
 
-        Intent intent = getIntent();
+        final Intent intent = getIntent();
         int no = intent.getIntExtra(ActivityMinus.EXTRA_NUMBER, 0);
         switch(no){
             case 1:
@@ -28,5 +31,16 @@ public class ActivityWin extends AppCompatActivity {
                 textView.setText("Twój wynik to: \n" + counter + "\n Brawo!");
                 break;
         }
+
+        buttonOK.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                backToFirstScreen();
+            }
+        });
+    }
+
+    public void backToFirstScreen() {
+        Intent intent = new Intent(this, FirstScreenActivity.class);
+        startActivity(intent);
     }
 }

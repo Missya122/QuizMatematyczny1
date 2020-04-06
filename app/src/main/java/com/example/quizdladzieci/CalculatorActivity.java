@@ -63,21 +63,6 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
                 intent.putExtra(EXTRA_NUMBER, no);
                 startActivity(intent);
                 break;
-            case 3:
-                /*intent = new Intent(this, CalculatorActivity.class);
-                intent.putExtra(EXTRA_RANGE, range);
-                startActivity(intent);*/
-                break;
-            case 4:
-                /*intent = new Intent(this, CalculatorActivity.class);
-                intent.putExtra(EXTRA_RANGE, range);
-                startActivity(intent);*/
-                break;
-            case 5:
-                /*intent = new Intent(this, CalculatorActivity.class);
-                intent.putExtra(EXTRA_RANGE, range);
-                startActivity(intent);*/
-                break;
         }
 
     }

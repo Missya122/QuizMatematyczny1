@@ -1,41 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F3ECED"
+    android:gravity="center"
+    android:orientation="vertical"
     tools:context=".ActivityChose">
 
     <TextView
-        android:id="@+id/textViewChose"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/buttonQuiz"
-        android:layout_centerInParent="true"
-        android:text="@string/wybierz_rodzaj_gry"
-        android:textSize="24sp" />
-
-    <Button
-        android:id="@+id/buttonQuiz"
+        android:id="@+id/textViewQM"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:background="#2196F3"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:text = "Jakie działania chcesz ćwiczyć?"/>
+
+    <Button
+        android:id="@+id/buttonAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#03A9F4"
         android:fontFamily="@font/bangers"
-        android:text="@string/quiz"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#FFFFFF"
-        android:textColorHighlight="#FFFFFF"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:text = "Dodawanie"/>
 
     <Button
-        android:id="@+id/buttonCalc"
+        android:id="@+id/buttonMinus"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/buttonQuiz"
-        android:layout_centerHorizontal="true"
+        android:background="#0D8CF1"
+        android:fontFamily="@font/bangers"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:text="Odejmowanie" />
+
+    <Button
+        android:id="@+id/buttonMultiple"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="#00BCD4"
         android:fontFamily="@font/bangers"
-        android:text="@string/kalkulator"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#FFFFFF"
-        android:textSize="24sp" />
-</RelativeLayout>
+        android:textSize="24sp"
+        android:text="Mnożenie"/>
+
+    <Button
+        android:id="@+id/buttonDivide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#117DAE"
+        android:fontFamily="@font/bangers"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:text="Dzielenie"/>
+
+    <Button
+        android:id="@+id/buttonDivide2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#02335A"
+        android:fontFamily="@font/bangers"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:text="Dzielenie z resztą"/>
+
+
+</LinearLayout>
