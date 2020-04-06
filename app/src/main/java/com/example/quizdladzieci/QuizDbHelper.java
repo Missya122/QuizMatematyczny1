@@ -89,13 +89,13 @@ public class QuizDbHelper extends SQLiteOpenHelper {
         db.setForeignKeyConstraintsEnabled(true);
     }
     private void fillSetsTable() {
-        Sets s1 = new Sets("I");
+        Sets s1 = new Sets("Zestaw 1");
         addSets(s1);
-        Sets s2 = new Sets("II");
+        Sets s2 = new Sets("Zestaw 2");
         addSets(s2);
-        Sets s3 = new Sets("III");
+        Sets s3 = new Sets("Zestaw 3");
         addSets(s3);
-        Sets s4 = new Sets("IV");
+        Sets s4 = new Sets("Zestaw 4");
         addSets(s4);
 
 

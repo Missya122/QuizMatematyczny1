@@ -25,57 +25,75 @@
         android:layout_below="@+id/title_of_quiz"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="32dp"
+        android:fontFamily="@font/bangers"
+        android:textColor="@android:color/holo_purple"
         android:text="@string/max_wynik"
         android:textSize="20sp"
         tools:text="Twój najwyższy wynik: 0" />
 
     <TextView
-        android:id="@+id/text_view_choose_category"
+        android:id="@+id/text_view_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
         android:layout_above="@+id/button_start_quiz"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
-        android:text="Wybierz poziom trudności: " />
+        android:fontFamily="@font/bangers"
+        android:textColor="@android:color/holo_blue_bright"
+        android:text="Kliknij przycisk, by zacząć quiz: " />
 
 
     <Button
         android:id="@+id/button_start_quiz"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
-        android:background="#03A9F4"
         android:fontFamily="@font/bangers"
         android:text="Naprzód!"
+        android:background="#03A9F4"
         android:textColor="#FFFFFF"
         android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/text_view_choose_set"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_start_quiz"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/bangers"
+        android:text="Wybierz swój zestaw, kategorię i zakres: "
+        android:textColor="@android:color/holo_blue_dark" />
     <Spinner
         android:id="@+id/spinner_sets"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_alignStart="@+id/text_view_choose_category"
-        android:layout_alignLeft="@+id/text_view_choose_category"
-        android:layout_below="@+id/button_start_quiz"/>
+        android:layout_marginTop="10dp"
+        android:background="#0D8CF1"
+        android:theme="@style/SpinnerTheme1"
+        android:layout_below="@+id/text_view_choose_set"/>
     <Spinner
         android:id="@+id/spinner_category"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_alignStart="@+id/text_view_choose_category"
-        android:layout_alignLeft="@+id/text_view_choose_category"
-        android:layout_below="@+id/spinner_sets"/>
+        android:background="#03A9F4"
+        android:theme="@style/SpinnerTheme2"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/spinner_sets"
+        />
 
     <Spinner
         android:id="@+id/spinner_difficulty"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_alignStart="@+id/text_view_choose_category"
-        android:layout_alignLeft="@+id/text_view_choose_category"
+        android:layout_marginTop="15dp"
+        android:background="#00BCD4"
+        android:theme="@style/SpinnerTheme3"
         android:layout_below="@+id/spinner_category"/>
 
 

@@ -14,6 +14,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.List;
 
+import android.app.Activity;
+import android.graphics.Color;
+import android.graphics.Typeface;
+import android.os.Bundle;
+import android.view.Menu;
+import android.widget.ArrayAdapter;
+
+
 public class MainActivity extends AppCompatActivity {
     private static final int REQUEST_CODE_QUIZ = 1;
 
@@ -91,9 +99,9 @@ public class MainActivity extends AppCompatActivity {
         QuizDbHelper dbHelper = QuizDbHelper.getInstance(this);
         List<Sets> sets = dbHelper.getAllSets();
 
-        ArrayAdapter<Sets> adapterSets = new ArrayAdapter<>(this,
-                android.R.layout.simple_spinner_item, sets);
-        adapterSets.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<Sets> adapterSets = new ArrayAdapter<>(this, R.layout.custom_spinner
+                , sets);
+        adapterSets.setDropDownViewResource(R.layout.custom_spinner);
         spinnerSets.setAdapter(adapterSets);
     }
     private void loadCategories() {
@@ -101,8 +109,8 @@ public class MainActivity extends AppCompatActivity {
         List<Category> categories = dbHelper.getAllCategories();
 
         ArrayAdapter<Category> adapterCategories = new ArrayAdapter<>(this,
-                android.R.layout.simple_spinner_item,categories);
-        adapterCategories.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                R.layout.custom_spinner,categories);
+        adapterCategories.setDropDownViewResource(R.layout.custom_spinner);
         spinnerCategory.setAdapter(adapterCategories);
 
     }
@@ -110,8 +118,8 @@ public class MainActivity extends AppCompatActivity {
     private void loadDifficultyLevels() {
         String[] difficultyLevels = Question.getAllDifficultyLevels();
         ArrayAdapter<String> adapterDifficulty = new ArrayAdapter<String>(this,
-                android.R.layout.simple_spinner_item, difficultyLevels);
-        adapterDifficulty.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                R.layout.custom_spinner, difficultyLevels);
+        adapterDifficulty.setDropDownViewResource(R.layout.custom_spinner);
         spinnerDifficulty.setAdapter(adapterDifficulty);
     }
 

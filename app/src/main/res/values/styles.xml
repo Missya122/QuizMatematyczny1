@@ -10,6 +10,33 @@
 
 
 
+
     </style>
+
+    <style name="SpinnerTheme1">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name ="android:textSize">15sp</item>
+        <item name="android:fontFamily">@font/bangers</item>
+
+        <item name ="android:background">#0D8CF1</item>
+    </style>
+
+    <style name="SpinnerTheme2">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name ="android:textSize">15sp</item>
+        <item name="android:fontFamily">@font/bangers</item>
+
+        <item name ="android:background">#03A9F4</item>
+    </style>
+
+    <style name="SpinnerTheme3">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name ="android:textSize">15sp</item>
+        <item name="android:fontFamily">@font/bangers</item>
+
+        <item name ="android:background">#00BCD4</item>
+    </style>
+
+
 
 </resources>
