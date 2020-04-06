@@ -219,7 +219,40 @@ public class QuizDbHelper extends SQLiteOpenHelper {
         addQuestion(q45);
         Question q46 = new Question(" 3 * 22 = ?  ", "66  ", "9 ", "29 ", 1, Question.DIFFICULTY_MEDIUM, Sets.III, Category.MNOŻENIE);
         addQuestion(q46);
-
+        Question q47 = new Question(" 8 / 2 = ?  ", "3  ", "4   ", "5  ", 2, Question.DIFFICULTY_EASY, Sets.I, Category.DZIELENIE);
+        addQuestion(q47);
+        Question q48 = new Question(" 6 / 1 = ?  ", "3  ", "1 ", "6 ", 3, Question.DIFFICULTY_MEDIUM, Sets.II, Category.DZIELENIE);
+        addQuestion(q48);
+        Question q49 = new Question(" 10 / 5 = ?  ", "5  ", "3 ", "2 ", 3, Question.DIFFICULTY_MEDIUM, Sets.III, Category.DZIELENIE);
+        addQuestion(q49);
+        Question q50 = new Question(" 12 / 6 = ?  ", "3  ", "4 ", "2 ", 3, Question.DIFFICULTY_HARD, Sets.IV, Category.DZIELENIE);
+        addQuestion(q50);
+        Question q51 = new Question(" 14 / 7 = ?  ", "3  ", "2 ", "4 ", 2, Question.DIFFICULTY_HARD, Sets.I, Category.DZIELENIE);
+        addQuestion(q51);
+        Question q52 = new Question(" 6 / 3 = ?  ", "1  ", "2 ", "3 ", 3, Question.DIFFICULTY_EASY, Sets.II, Category.DZIELENIE);
+        addQuestion(q52);
+        Question q53 = new Question(" 4 / 2 = ?  ", "1  ", "2 ", "3 ", 2, Question.DIFFICULTY_EASY, Sets.III, Category.DZIELENIE);
+        addQuestion(q53);
+        Question q54 = new Question(" 3 / 1 = ?  ", "3  ", "2 ", "1 ", 1, Question.DIFFICULTY_EASY, Sets.IV, Category.DZIELENIE);
+        addQuestion(q54);
+        Question q55 = new Question(" 11 - 5 = ?  ", "3  ", "5 ", "6 ", 3, Question.DIFFICULTY_MEDIUM, Sets.IV, Category.ODEJMOWANIE);
+        addQuestion(q55);
+        Question q56 = new Question(" 19 - 13 = ?  ", "11  ", "7 ", "6 ", 3, Question.DIFFICULTY_HARD, Sets.I, Category.ODEJMOWANIE);
+        addQuestion(q56);
+        Question q57 = new Question(" 7 - 5 = ?  ", "1  ", "2 ", "3 ", 2, Question.DIFFICULTY_EASY, Sets.II, Category.ODEJMOWANIE);
+        addQuestion(q57);
+        Question q58 = new Question(" 4 - 1 = ?  ", "3  ", "1 ", "2 ", 1, Question.DIFFICULTY_EASY, Sets.III, Category.ODEJMOWANIE);
+        addQuestion(q58);
+        Question q59 = new Question(" 6 - 6 = ?  ", "1  ", "3 ", "0 ", 3, Question.DIFFICULTY_MEDIUM, Sets.IV, Category.ODEJMOWANIE);
+        addQuestion(q59);
+        Question q60 = new Question(" 18 - 13 = ?  ", "3  ", "5 ", "6 ", 2, Question.DIFFICULTY_HARD, Sets.I, Category.ODEJMOWANIE);
+        addQuestion(q60);
+        Question q61 = new Question(" 21 - 9 = ?  ", "10  ", "14 ", "12 ", 3, Question.DIFFICULTY_HARD, Sets.II, Category.ODEJMOWANIE);
+        addQuestion(q61);
+        Question q62 = new Question(" 7 * 6 = ?  ", "42  ", "47 ", "49 ", 1, Question.DIFFICULTY_HARD, Sets.III, Category.MNOŻENIE);
+        addQuestion(q62);
+        Question q63 = new Question(" 13 * 2 = ?  ", "26  ", "39 ", "15 ", 1, Question.DIFFICULTY_MEDIUM, Sets.IV, Category.MNOŻENIE);
+        addQuestion(q63);
 
 
 
