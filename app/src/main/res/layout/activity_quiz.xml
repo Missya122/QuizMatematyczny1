@@ -13,8 +13,10 @@
         android:id="@+id/text_view_score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Wynik: 0"
-        android:textColor="@android:color/black"
+        android:text="Wynik: 0  "
+        android:textSize="20dp"
+        android:fontFamily="@font/bowlby_one_sc"
+        android:textColor="@android:color/holo_blue_dark"
         android:freezesText="true"/>
 
     <TextView
@@ -22,32 +24,40 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_below="@+id/text_view_score"
-    android:text="Pytanie: 1/x"
-    android:textColor="@android:color/black"
+    android:text="Pytanie: 1/x  "
+        android:textSize="20dp"
+        android:fontFamily="@font/bowlby_one_sc"
+    android:textColor="@android:color/holo_blue_bright"
     android:freezesText="true"/>
     <TextView
         android:id="@+id/text_view_sets"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/text_view_question_count"
-        android:text="Zestaw: "
-        android:textColor="@android:color/black"
+        android:text="Zestaw:  "
+        android:textSize="20dp"
+        android:fontFamily="@font/bowlby_one_sc"
+        android:textColor="@android:color/holo_blue_dark"
         android:freezesText="true"/>
     <TextView
         android:id="@+id/text_view_category"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/text_view_sets"
-        android:text="Kategoria: "
-        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        android:fontFamily="@font/bowlby_one_sc"
+        android:text="Kategoria:  "
+        android:textColor="@android:color/holo_blue_bright"
         android:freezesText="true"/>
     <TextView
         android:id="@+id/text_view_difficulty"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/text_view_category"
-        android:text="Poziom trudności: "
-        android:textColor="@android:color/black"
+        android:text="Poziom trudności:  "
+        android:textSize="20dp"
+        android:fontFamily="@font/bowlby_one_sc"
+        android:textColor="@android:color/holo_blue_light"
         android:freezesText="true"/>
 
 
@@ -57,8 +67,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:text="00:30"
+        android:text=" 00:30  "
         android:textColor="@android:color/black"
+        android:fontFamily="@font/bowlby_one_sc"
         android:textSize="40sp"
         android:freezesText="true"/>
 
@@ -67,38 +78,47 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/radio_group"
-        android:layout_marginBottom="16dp"
-        android:text="Tu będzie pytanie"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:text=" Tu będzie pytanie "
+        android:fontFamily="@font/bowlby_one_sc"
         android:textAlignment="center"
         android:textColor="@android:color/black"
-        android:textSize="20sp"
+        android:textSize="30sp"
         android:freezesText="true"/>
 
     <RadioGroup
         android:id="@+id/radio_group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true">
+        android:layout_centerVertical="true"
+        >
 
         <RadioButton
             android:id="@+id/radio_button_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Opcja 1"
+            android:fontFamily="@font/bowlby_one_sc"
+            android:text=" Opcja 1.  "
+            android:textSize="20sp"
             android:freezesText="true"/>
 
         <RadioButton
             android:id="@+id/radio_button_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Opcja 2"
+            android:fontFamily="@font/bowlby_one_sc"
+            android:text=" Opcja 2. "
+            android:textSize="20sp"
             android:freezesText="true"/>
 
         <RadioButton
             android:id="@+id/radio_button_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Opcja 3"
+            android:fontFamily="@font/bowlby_one_sc"
+            android:text=" Opcja 3.  "
+            android:textSize="20sp"
             android:freezesText="true"/>
     </RadioGroup>
 
@@ -107,7 +127,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/radio_group"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="13dp"
+        android:fontFamily="@font/bangers"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
         android:text="Potwierdź"
         android:background="@android:color/holo_purple"
         android:freezesText="true"/>
