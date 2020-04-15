@@ -13,7 +13,7 @@ import java.util.List;
 
 public class QuizDbHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "QuizDlaDzieci.db";
-    private static final int DATABASE_VERSION = 14;
+    private static final int DATABASE_VERSION = 17;
 
     private static QuizDbHelper instance;
 
@@ -253,6 +253,12 @@ public class QuizDbHelper extends SQLiteOpenHelper {
         addQuestion(q62);
         Question q63 = new Question(" 13 * 2 = ?  ", "26  ", "39 ", "15 ", 1, Question.DIFFICULTY_MEDIUM, Sets.IV, Category.MNOŻENIE);
         addQuestion(q63);
+        Question q64 = new Question(" 13 * 4 = ?  ", "52  ", "39 ", "15 ", 1, Question.DIFFICULTY_MEDIUM, Sets.IV, Category.MNOŻENIE);
+        addQuestion(q64);
+        Question q65 = new Question(" 14 * 5 = ?  ", "70  ", "39 ", "15 ", 1, Question.DIFFICULTY_MEDIUM, Sets.IV, Category.MNOŻENIE);
+        addQuestion(q65);
+        Question q66 = new Question(" 12 * 4 = ?  ", "26  ", "48 ", "15 ", 2, Question.DIFFICULTY_MEDIUM, Sets.IV, Category.MNOŻENIE);
+        addQuestion(q66);
 
 
 
