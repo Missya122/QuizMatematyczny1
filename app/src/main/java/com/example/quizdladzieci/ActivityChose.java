@@ -41,11 +41,12 @@ public class ActivityChose extends AppCompatActivity implements View.OnClickList
             intent.putExtra(EXTRA_NUMBER, no);
             startActivity(intent);
         } else if(no == 3){
-            /*intent = new Intent(this, ActivityMultiple.class);
-            startActivity(intent);*/
+            intent = new Intent(this, ActivityMultiple.class);
+            intent.putExtra(EXTRA_NUMBER, no);
+            startActivity(intent);
         } else if(no == 4){
-            /*intent = new Intent(this, ActivityDivide.class);
-            startActivity(intent);*/
+            intent = new Intent(this, ActivityDivide.class);
+            startActivity(intent);
         } else if(no == 5){
            /* intent = new Intent(this, ActivityDivide2.class);
             startActivity(intent);*/

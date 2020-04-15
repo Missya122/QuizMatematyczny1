@@ -30,6 +30,10 @@ public class ActivityWin extends AppCompatActivity {
                 counter = intent.getIntExtra(ActivityMinus.EXTRA_COUNTER, 0);
                 textView.setText("Twój wynik to: \n" + counter + "\n Brawo!");
                 break;
+            case 3:
+                counter = intent.getIntExtra(ActivityMultiple.EXTRA_COUNTER, 0);
+                textView.setText("Twój wynik to: \n" + counter + "\n Brawo!");
+                break;
         }
 
         buttonOK.setOnClickListener(new View.OnClickListener() {

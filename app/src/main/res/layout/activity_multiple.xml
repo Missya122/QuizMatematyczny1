@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityMultiple">
+
+    <EditText
+        android:id="@+id/editTextResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:autofillHints=""
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:inputType="number"
+        android:text=""
+        android:textColor="#030405"
+        android:textSize="50sp" />
+
+    <TextView
+        android:id="@+id/textViewOperation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/editTextResult"
+        android:fontFamily="@font/alfa_slab_one"
+        android:gravity="center"
+        android:textColor="#3045B8"
+        android:textSize="60sp"
+        android:text="@string/operacja"/>
+
+    <Button
+        android:id="@+id/buttonNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextResult"
+        android:background="#00BCD4"
+        android:fontFamily="@font/bangers"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:text="Dalej!"/>
+
+    <TextView
+        android:id="@+id/textViewKtory"
+        android:layout_width="90dp"
+        android:layout_height="70dp"
+        android:fontFamily="@font/bangers"
+        android:text="0/10"
+        android:textSize="30dp"
+        android:gravity="center"/>
+
+</RelativeLayout>
