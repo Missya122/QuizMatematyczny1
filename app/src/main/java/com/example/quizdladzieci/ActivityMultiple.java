@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -56,6 +57,7 @@ public class ActivityMultiple extends AppCompatActivity {
         textView1 = (TextView) findViewById(R.id.textViewKtory);
         editTextResult = (EditText) findViewById(R.id.editTextResult);
         buttonNext = (Button)findViewById(R.id.buttonNext);
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.sample);
 
         counter = 0;
         gameCounter = 0;
@@ -64,6 +66,7 @@ public class ActivityMultiple extends AppCompatActivity {
         buttonNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mp.start();
 
                 if(gameCounter == 10){
                     if (Integer.parseInt(editTextResult.getText().toString()) == numberOne * numberTwo) {

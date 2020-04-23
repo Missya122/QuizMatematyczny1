@@ -2,6 +2,7 @@ package com.example.quizdladzieci;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -53,10 +54,12 @@ public class MainActivity extends AppCompatActivity {
         loadHighscore();
 
 
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.sample);
         Button buttonStartQuiz = findViewById(R.id.button_start_quiz);
         buttonStartQuiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mp.start();
                 startQuiz();
             }
         });

@@ -12,8 +12,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class QuizDbHelper extends SQLiteOpenHelper {
-    private static final String DATABASE_NAME = "QuizDlaDzieci.db";
-    private static final int DATABASE_VERSION = 17;
+    private static final String DATABASE_NAME = "QuizDlaDzieci1.db";
+    private static final int DATABASE_VERSION = 1;
 
     private static QuizDbHelper instance;
 
@@ -259,6 +259,12 @@ public class QuizDbHelper extends SQLiteOpenHelper {
         addQuestion(q65);
         Question q66 = new Question(" 12 * 4 = ?  ", "26  ", "48 ", "15 ", 2, Question.DIFFICULTY_MEDIUM, Sets.IV, Category.MNOŻENIE);
         addQuestion(q66);
+        Question q67 = new Question(" 19 * 2 = ?  ", "28  ", "36", "38 ", 3, Question.DIFFICULTY_MEDIUM, Sets.III, Category.MNOŻENIE);
+        addQuestion(q67);
+        Question q68 = new Question(" 18 * 3 = ?  ", "34  ", "48 ", "44 ", 3, Question.DIFFICULTY_MEDIUM, Sets.III, Category.MNOŻENIE);
+        addQuestion(q66);
+
+
 
 
 

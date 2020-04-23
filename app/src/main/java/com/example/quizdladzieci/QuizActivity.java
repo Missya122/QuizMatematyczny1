@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.PersistableBundle;
@@ -84,6 +85,7 @@ public class QuizActivity extends AppCompatActivity {
         rb2 = findViewById(R.id.radio_button_2);
         rb3 = findViewById(R.id.radio_button_3);
         buttonConfirmNext = findViewById(R.id.button_confirm_next);
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.sample);
 
         textColorDefaultRb  = rb1.getTextColors();
 
@@ -127,6 +129,7 @@ public class QuizActivity extends AppCompatActivity {
         buttonConfirmNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mp.start();
                 if( !answered ) {
                     if( rb1.isChecked() || rb2.isChecked() || rb3.isChecked() ) {
                         checkAnswer();

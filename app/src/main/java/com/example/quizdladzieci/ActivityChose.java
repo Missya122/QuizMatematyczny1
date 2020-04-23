@@ -3,6 +3,7 @@ package com.example.quizdladzieci;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -25,6 +26,7 @@ public class ActivityChose extends AppCompatActivity implements View.OnClickList
         buttonMultiple = (Button) findViewById(R.id.buttonMultiple);
         buttonDivide = (Button) findViewById(R.id.buttonDivide);
         buttonDivide2 = (Button) findViewById(R.id.buttonDivide2);
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.sample);
 
         buttonAdd.setOnClickListener(this);
         buttonMinus.setOnClickListener(this);
@@ -32,7 +34,10 @@ public class ActivityChose extends AppCompatActivity implements View.OnClickList
         buttonDivide.setOnClickListener(this);
         buttonDivide2.setOnClickListener(this);
 
+
+
     }
+
 
     public void openActivity() {
         Intent intent;

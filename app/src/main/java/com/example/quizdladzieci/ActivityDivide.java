@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.provider.BaseColumns;
 import android.view.View;
@@ -49,6 +50,8 @@ public class ActivityDivide extends AppCompatActivity {
         editTextResult = (EditText)findViewById(R.id.editTextResult);
         textViewScore = (TextView)findViewById(R.id.textViewKtory);
         buttonNext = (Button)findViewById(R.id.buttonNext);
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.sample);
+
 
         CalculatorDbHelper dbHelper = new CalculatorDbHelper(this);
         divideQuestionsList = dbHelper.getAllDivideQuestions();
@@ -64,6 +67,7 @@ public class ActivityDivide extends AppCompatActivity {
         buttonNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mp.start();
                 if (!answered) {
                     if (editTextResult.getText().toString().trim().length() == 0) {
                         showMsg();
