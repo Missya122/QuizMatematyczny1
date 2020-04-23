@@ -1,6 +1,8 @@
 package com.example.quizdladzieci;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.content.res.ColorStateList;
@@ -18,7 +20,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
-public class ActivityDivide extends AppCompatActivity {
+public class ActivityDivide extends MenuForAllAcitivity {
     public static final String EXTRA_COUNTER = "com.example.application.example.EXTRA_COUNTER";
     public static final String EXTRA_NUMBER = "com.example.application.example.EXTRA_NUMBER";
 
@@ -37,6 +39,8 @@ public class ActivityDivide extends AppCompatActivity {
     private boolean answered;
     private int nrQuestion;
 
+    private Toolbar toolbar;
+
     final Random myRandom = new Random();
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +55,11 @@ public class ActivityDivide extends AppCompatActivity {
         textViewScore = (TextView)findViewById(R.id.textViewKtory);
         buttonNext = (Button)findViewById(R.id.buttonNext);
         final MediaPlayer mp = MediaPlayer.create(this, R.raw.sample);
+        toolbar = findViewById(R.id.myToolBar);
+
+        setSupportActionBar(toolbar);
+
+
 
 
         CalculatorDbHelper dbHelper = new CalculatorDbHelper(this);

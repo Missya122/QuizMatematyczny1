@@ -4,7 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class Question implements Parcelable {
-    public static final String DIFFICULTY_EASY = "0-10";
+    public static final String DIFFICULTY_EASY = "0-20";
     public static final String DIFFICULTY_MEDIUM = "0-100";
     public static final String DIFFICULTY_HARD = "0-1000";
 

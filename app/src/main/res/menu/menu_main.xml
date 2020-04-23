@@ -1,19 +1,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.myapplication.MainActivity">
+    tools:context="com.example.quizdladzieci.FirstScreenActivity">
     <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="ustawienia"
-        app:showAsAction="never" />
+        android:title="Udostępnij"
+        android:icon="@drawable/ic_share"
+        android:id="@+id/share"
+        app:showAsAction="ifRoom"/>
     <item
-        android:orderInCategory="101"
-        android:title="nowa gra" />
-    <item
-        android:orderInCategory="102"
-        android:title="statystyka" />
-    <item
-        android:orderInCategory="103"
-        android:title="o" />
+        android:title="Ustawienia"
+        android:id="@+id/setting"
+        app:showAsAction="never"/>
+
 </menu>

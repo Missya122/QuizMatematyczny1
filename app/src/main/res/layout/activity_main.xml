@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
+
     tools:context=".MainActivity">
+
+    <include
+        layout="@layout/appbar"
+        />
 
     <TextView
         android:id="@+id/title_of_quiz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="60dp"
         android:fontFamily="@font/bowlby_one"
         android:text="Podstawowy Quiz"
         android:textColor="#22539E"
@@ -26,7 +31,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="32dp"
         android:fontFamily="@font/bowlby_one_sc"
-        android:textColor="@android:color/holo_purple"
+        android:textColor="#03A9F4"
         android:text="@string/max_wynik"
         android:textSize="20sp"
         tools:text="Twój najwyższy wynik: 0" />
@@ -40,8 +45,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
-        android:fontFamily="@font/bangers"
-        android:textColor="@android:color/holo_blue_bright"
+        android:textSize="24sp"
         android:text="Kliknij przycisk, by zacząć quiz: " />
 
 
@@ -66,9 +70,9 @@
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         android:layout_centerHorizontal="true"
-        android:fontFamily="@font/bangers"
+        android:textSize="20sp"
         android:text="Wybierz swój zestaw, kategorię i zakres: "
-        android:textColor="@android:color/holo_blue_dark" />
+        />
     <Spinner
         android:id="@+id/spinner_sets"
         android:layout_width="match_parent"

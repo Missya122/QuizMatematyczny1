@@ -1,6 +1,8 @@
 package com.example.quizdladzieci;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -13,7 +15,7 @@ import android.widget.TextView;
 
 import java.util.Random;
 
-public class ActivityMultiple extends AppCompatActivity {
+public class ActivityMultiple extends MenuForAllAcitivity {
     public static final String EXTRA_COUNTER = "com.example.application.example.EXTRA_COUNTER";
     public static final String EXTRA_NUMBER = "com.example.application.example.EXTRA_NUMBER";
     private EditText editTextResult;
@@ -27,6 +29,7 @@ public class ActivityMultiple extends AppCompatActivity {
     private int range;
     private int no;
     final Random myRandom = new Random();
+    private Toolbar toolbar;
 
     public void newGame() {
         gameCounter++;
@@ -58,6 +61,10 @@ public class ActivityMultiple extends AppCompatActivity {
         editTextResult = (EditText) findViewById(R.id.editTextResult);
         buttonNext = (Button)findViewById(R.id.buttonNext);
         final MediaPlayer mp = MediaPlayer.create(this, R.raw.sample);
+        toolbar = findViewById(R.id.myToolBar);
+
+        setSupportActionBar(toolbar);
+
 
         counter = 0;
         gameCounter = 0;

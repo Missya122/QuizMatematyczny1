@@ -1,6 +1,8 @@
 package com.example.quizdladzieci;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
@@ -9,7 +11,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class ActivityWin extends AppCompatActivity {
+public class ActivityWin extends MenuForAllAcitivity {
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +23,10 @@ public class ActivityWin extends AppCompatActivity {
         TextView textView = (TextView)findViewById(R.id.textView2);
         Button buttonOK = (Button)findViewById((R.id.buttonOK));
         final MediaPlayer mp = MediaPlayer.create(this, R.raw.sample);
+        toolbar = findViewById(R.id.myToolBar);
+
+        setSupportActionBar(toolbar);
+
 
         final Intent intent = getIntent();
         int no = intent.getIntExtra(ActivityMinus.EXTRA_NUMBER, 0);

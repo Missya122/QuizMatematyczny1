@@ -1,7 +1,9 @@
 package com.example.quizdladzieci;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.content.res.ColorStateList;
@@ -24,7 +26,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 
-public class QuizActivity extends AppCompatActivity {
+public class QuizActivity extends MenuForAllAcitivity {
 
     public static final String EXTRA_SCORE = "extraScore";
     private static final long COUNTDOWN_IN_MILIS = 30000;
@@ -64,8 +66,7 @@ public class QuizActivity extends AppCompatActivity {
     private boolean answered;
 
     private long backPressedTime;
-
-
+    private Toolbar toolbar;
 
 
     @Override
@@ -85,7 +86,16 @@ public class QuizActivity extends AppCompatActivity {
         rb2 = findViewById(R.id.radio_button_2);
         rb3 = findViewById(R.id.radio_button_3);
         buttonConfirmNext = findViewById(R.id.button_confirm_next);
-        final MediaPlayer mp = MediaPlayer.create(this, R.raw.sample);
+        final MediaPlayer mp;
+        mp = MediaPlayer.create(this, R.raw.sample);
+        toolbar = findViewById(R.id.myToolBar);
+
+        setSupportActionBar(toolbar);
+
+
+
+
+
 
         textColorDefaultRb  = rb1.getTextColors();
 
@@ -100,6 +110,7 @@ public class QuizActivity extends AppCompatActivity {
         textViewSets.setText("Zestaw: " + setsName);
         textViewCategory.setText("Kategoria: " + categoryName);
         textViewDifficulty.setText("Trudność: " + difficulty);
+
         if( savedInstanceState == null ) {
 
 

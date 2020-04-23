@@ -1,6 +1,8 @@
 package com.example.quizdladzieci;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
@@ -8,7 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class ActivityChose extends AppCompatActivity implements View.OnClickListener{
+public class ActivityChose extends MenuForAllAcitivity implements View.OnClickListener{
     public static final String EXTRA_NUMBER = "com.example.application.example.EXTRA_NUMBER";
     private Button buttonAdd;
     private Button buttonMinus;
@@ -16,6 +18,7 @@ public class ActivityChose extends AppCompatActivity implements View.OnClickList
     private Button buttonDivide;
     private Button buttonDivide2;
     public int no;
+    private Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +29,13 @@ public class ActivityChose extends AppCompatActivity implements View.OnClickList
         buttonMultiple = (Button) findViewById(R.id.buttonMultiple);
         buttonDivide = (Button) findViewById(R.id.buttonDivide);
         buttonDivide2 = (Button) findViewById(R.id.buttonDivide2);
-        final MediaPlayer mp = MediaPlayer.create(this, R.raw.sample);
+
+        final MediaPlayer mp;
+        mp = MediaPlayer.create(this, R.raw.sample);
+        toolbar = findViewById(R.id.myToolBar);
+
+        setSupportActionBar(toolbar);
+
 
         buttonAdd.setOnClickListener(this);
         buttonMinus.setOnClickListener(this);
@@ -37,6 +46,7 @@ public class ActivityChose extends AppCompatActivity implements View.OnClickList
 
 
     }
+
 
 
     public void openActivity() {
@@ -64,6 +74,7 @@ public class ActivityChose extends AppCompatActivity implements View.OnClickList
         switch(v.getId()) {
             case R.id.buttonAdd:
                 no = 1;
+
                 openActivity();
                 break;
             case R.id.buttonMinus:

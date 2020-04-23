@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -15,15 +15,14 @@
 
     <style name="SpinnerTheme1">
         <item name="android:textColor">#FFFFFF</item>
-        <item name ="android:textSize">15sp</item>
         <item name="android:fontFamily">@font/bangers</item>
-
+        <item name="android:textSize">30sp</item>
         <item name ="android:background">#0D8CF1</item>
     </style>
 
     <style name="SpinnerTheme2">
         <item name="android:textColor">#FFFFFF</item>
-        <item name ="android:textSize">15sp</item>
+        <item name="android:textSize">30sp</item>
         <item name="android:fontFamily">@font/bangers</item>
 
         <item name ="android:background">#03A9F4</item>
@@ -31,10 +30,10 @@
 
     <style name="SpinnerTheme3">
         <item name="android:textColor">#FFFFFF</item>
-        <item name ="android:textSize">15sp</item>
+        <item name="android:textSize">30sp</item>
         <item name="android:fontFamily">@font/bangers</item>
 
-        <item name ="android:background">#00BCD4</item>
+        <item name="android:background">#00BCD4</item>
     </style>
 
 

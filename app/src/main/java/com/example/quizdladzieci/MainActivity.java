@@ -11,7 +11,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import java.util.List;
 
@@ -23,7 +25,7 @@ import android.view.Menu;
 import android.widget.ArrayAdapter;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends MenuForAllAcitivity {
     private static final int REQUEST_CODE_QUIZ = 1;
 
     public static final String EXTRA_DIFFICULTY = "extraDifficulty";
@@ -39,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
 
     private Spinner spinnerDifficulty;
     private int highscore;
+    private Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,8 +57,14 @@ public class MainActivity extends AppCompatActivity {
         loadDifficultyLevels();
         loadHighscore();
 
-
         final MediaPlayer mp = MediaPlayer.create(this, R.raw.sample);
+        toolbar = findViewById(R.id.myToolBar);
+
+        setSupportActionBar(toolbar);
+
+
+
+
         Button buttonStartQuiz = findViewById(R.id.button_start_quiz);
         buttonStartQuiz.setOnClickListener(new View.OnClickListener() {
             @Override

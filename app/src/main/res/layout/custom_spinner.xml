@@ -8,6 +8,6 @@
         android:layout_centerHorizontal="true"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:fontFamily="@font/bangers"
-        android:padding="10dp"
+        android:padding="5dp"
         android:textColor="@android:color/white"
-        android:textSize="15sp" />
+        android:textSize="20sp" />

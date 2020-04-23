@@ -6,6 +6,7 @@ import android.os.Bundle;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -20,7 +21,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class CalculatorActivity extends AppCompatActivity implements View.OnClickListener{
+public class CalculatorActivity extends MenuForAllAcitivity implements View.OnClickListener{
     public static final String EXTRA_NUMBER = "com.example.application.example.EXTRA_NUMBER";
     public static final String EXTRA_RANGE = "com.example.application.example.EXTRA_RANGE";
     public int no;
@@ -29,6 +30,7 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
     private Button button20;
     private Button button100;
     private Button button1000;
+    private Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +38,10 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
 
         Intent intent = getIntent();
         no = intent.getIntExtra(ActivityChose.EXTRA_NUMBER, 0);
+        toolbar = findViewById(R.id.myToolBar);
+
+        setSupportActionBar(toolbar);
+
 
         button10 = (Button)findViewById(R.id.button10);
         button20 = (Button)findViewById(R.id.button20);

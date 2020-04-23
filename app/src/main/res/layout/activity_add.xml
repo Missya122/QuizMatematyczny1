@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     android:layout_above="@id/editTextResult"
     tools:context=".ActivityAdd">
+    <include
+        layout="@layout/appbar"/>
 
     <EditText
         android:id="@+id/editTextResult"
@@ -47,6 +49,7 @@
         android:id="@+id/textViewKtory"
         android:layout_width="90dp"
         android:layout_height="70dp"
+        android:layout_marginTop="65dp"
         android:fontFamily="@font/bangers"
         android:gravity="center"
         android:text="0/10"
