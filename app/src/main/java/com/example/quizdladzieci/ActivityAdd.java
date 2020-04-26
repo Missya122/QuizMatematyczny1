@@ -5,9 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -31,25 +34,46 @@ public class ActivityAdd extends MenuForAllAcitivity {
     private int pom = 0;
     final Random myRandom = new Random();
     private Toolbar toolbar;
-
+    private boolean answered;
 
 
     public void newGame() {
-        gameCounter++;
-        editTextResult.setText(null);
-        textView1.setText(gameCounter + "/10");
+        editTextResult.setText("");
+        editTextResult.setBackgroundColor(Color.WHITE);
 
-        numberOne = myRandom.nextInt(range);
-        numberTwo = myRandom.nextInt(range - numberOne);
+        if (gameCounter < 10) {
+            numberOne = myRandom.nextInt(range);
+            numberTwo = myRandom.nextInt(range - numberOne);
 
-        textViewOperation.setText(numberOne + " + " + numberTwo + " = ");
+            textViewOperation.setText(numberOne + " + " + numberTwo + " = ");
+
+            gameCounter++;
+            textView1.setText(gameCounter + "/10");
+            answered = false;
+            buttonNext.setText("Potwierdź!");
+        } else {
+            openWin();
+        }
     }
 
     public void checkResult() {
+        answered = true;
         if (Integer.parseInt(editTextResult.getText().toString()) == numberOne + numberTwo) {
+            editTextResult.setBackgroundColor(Color.GREEN);
+            if (gameCounter <= 10) {
+                buttonNext.setText("Dalej!");
+            } else {
+                buttonNext.setText("Sprawdź");
+            }
             counter++;
+        } else {
+            editTextResult.setBackgroundColor(Color.RED);
+            if (gameCounter <= 10) {
+                buttonNext.setText("Dalej!");
+            } else {
+                buttonNext.setText("Sprawdź");
+            }
         }
-        newGame();
     }
 
 
@@ -76,22 +100,45 @@ public class ActivityAdd extends MenuForAllAcitivity {
         gameCounter = 0;
         newGame();
 
+        editTextResult.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == EditorInfo.IME_ACTION_DONE) {
+                    mp.start();
+
+                    if (!answered) {
+                        if (editTextResult.getText().toString().trim().length() == 0) {
+                            showMsg();
+                        } else {
+                            checkResult();
+                        }
+                    } else {
+                        newGame();
+                    }
+                }
+                return false;
+            }
+        });
+
         buttonNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 mp.start();
-
-
-
-                    if (gameCounter == 10) {
-                        if (Integer.parseInt(editTextResult.getText().toString()) == numberOne * numberTwo) {
-                            counter++;
-                        }
-                        openWin();
-                    } else checkResult();
+                if (!answered) {
+                    if (editTextResult.getText().toString().trim().length() == 0) {
+                        showMsg();
+                    } else {
+                        checkResult();
+                    }
+                } else {
+                    newGame();
                 }
+            }
         });
+    }
 
+    public void showMsg() {
+        Toast.makeText(this, "Wpisz wynik!", Toast.LENGTH_SHORT).show();
     }
 
     public void openWin() {
