@@ -64,8 +64,9 @@ public class ActivityChose extends MenuForAllAcitivity implements View.OnClickLi
             intent.putExtra(EXTRA_NUMBER, no);
             startActivity(intent);
         } else if(no == 5){
-           /* intent = new Intent(this, ActivityDivide2.class);
-            startActivity(intent);*/
+            intent = new Intent(this, ActivityDivide2.class);
+            intent.putExtra(EXTRA_NUMBER, no);
+            startActivity(intent);
         }
     }
 

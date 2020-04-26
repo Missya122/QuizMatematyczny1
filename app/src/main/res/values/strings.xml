@@ -25,4 +25,5 @@
     <string name="operation" />
     <string name="operacja">999 + 999 =</string>
     <string name="ktory_przyklad">TextView</string>
+    <string name="r">r.</string>
 </resources>

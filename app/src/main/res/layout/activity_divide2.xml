@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityDivide2">
+
+    <include
+        layout="@layout/appbar"/>
+
+    <EditText
+        android:id="@+id/editTextWynik"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="30dp"
+        android:autofillHints=""
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:inputType="number"
+        android:text=""
+        android:textColor="#030405"
+        android:textSize="50sp" />
+
+
+    <EditText
+        android:id="@+id/editTextReszta"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="260sp"
+        android:layout_marginLeft="260dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="30dp"
+        android:autofillHints=""
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:inputType="number"
+        android:text=""
+        android:textColor="#030405"
+        android:textSize="50sp" />
+
+    <TextView
+        android:id="@+id/textViewR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/alfa_slab_one"
+        android:gravity="center"
+        android:text="@string/r"
+        android:textColor="#096CBC"
+        android:textSize="50sp" />
+
+    <TextView
+        android:id="@+id/textViewOperation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/editTextWynik"
+        android:fontFamily="@font/alfa_slab_one"
+        android:gravity="center"
+        android:textColor="#3045B8"
+        android:textSize="60sp"
+        android:text="@string/operacja"/>
+
+    <Button
+        android:id="@+id/buttonNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextWynik"
+        android:background="#00BCD4"
+        android:fontFamily="@font/bangers"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:text="Dalej!"/>
+
+    <TextView
+        android:id="@+id/textViewKtory"
+        android:layout_width="90dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="65dp"
+        android:fontFamily="@font/bangers"
+        android:text="0/10"
+        android:textSize="30sp"
+        android:gravity="center"/>
+
+</RelativeLayout>
