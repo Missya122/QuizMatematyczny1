@@ -11,4 +11,11 @@ public final class CalculatorContract {
         public static final String COLUMN_QUESTION = "question";
         public static final String COLUMN_RESULT = "result";
     }
+
+    public static class QuestionRestTable implements  BaseColumns {
+        public static final String TABLE_NAME = "divide_rest_question";
+        public static final String COLUMN_QUESTION = "question";
+        public static final String COLUMN_RESULT = "result";
+        public static final String COLUMN_REST = "rest";
+    }
 }
