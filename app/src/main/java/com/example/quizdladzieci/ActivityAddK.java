@@ -27,7 +27,7 @@ public class ActivityAddK extends AppCompatActivity {
     private  int range;
     private int counter;
     private int gameCounter;
-    private boolean flaga;
+    private int flaga = 0;
     private boolean pom;
     final Random myRandom = new Random();
     private boolean answered;
@@ -125,13 +125,13 @@ public class ActivityAddK extends AppCompatActivity {
 
                         if ((Integer.parseInt(textView2_6.getText().toString()) + Integer.parseInt(textView3_6.getText().toString())) - 10 ==
                                 Integer.parseInt(editText5_6.getText().toString())) {
-                            flaga = true;
-                        } else flaga = false;
+                            flaga += 0;
+                        } else flaga += 1;
                     } else {
                         if ((Integer.parseInt(textView2_6.getText().toString()) + Integer.parseInt(textView3_6.getText().toString())) ==
                                 Integer.parseInt(editText5_6.getText().toString())) {
-                            flaga = true;
-                        } else flaga = false;
+                            flaga += 0;
+                        } else flaga += 1;
                         pom = false;
                     }
 
@@ -165,14 +165,14 @@ public class ActivityAddK extends AppCompatActivity {
                         if ((Integer.parseInt(textView2_5.getText().toString()) + Integer.parseInt(textView3_5.getText().toString()) +
                                 Integer.parseInt(textView1_5.getText().toString())) - 10 ==
                                 Integer.parseInt(editText5_5.getText().toString())) {
-                            flaga = true;
-                        } else flaga= false;
+                            flaga += 0;
+                        } else flaga += 1;
                     } else {
                         if ((Integer.parseInt(textView2_5.getText().toString()) + Integer.parseInt(textView3_5.getText().toString()) +
                                 Integer.parseInt(textView1_5.getText().toString())) ==
                                 Integer.parseInt(editText5_5.getText().toString())) {
-                            flaga = true;
-                        } else flaga= false;
+                            flaga += 0;
+                        } else flaga += 1;
                         pom = false;
                     }
                 } else {
@@ -182,17 +182,16 @@ public class ActivityAddK extends AppCompatActivity {
 
                         if ((Integer.parseInt(textView2_5.getText().toString()) + Integer.parseInt(textView3_5.getText().toString())) - 10 ==
                                 Integer.parseInt(editText5_5.getText().toString())) {
-                            flaga = true;
-                        } else flaga= false;
+                            flaga += 0;
+                        } else flaga += 1;
                     } else {
                         if ((Integer.parseInt(textView2_5.getText().toString()) + Integer.parseInt(textView3_5.getText().toString())) ==
                                 Integer.parseInt(editText5_5.getText().toString())) {
-                            flaga = true;
-                        } else flaga= false;
+                            flaga += 0;
+                        } else flaga += 1;
                         pom = false;
                     }
                 }
-
                 editText5_4.setFocusableInTouchMode(true);
                 editText5_4.requestFocus();
             }
@@ -223,14 +222,14 @@ public class ActivityAddK extends AppCompatActivity {
                             if ((Integer.parseInt(textView2_4.getText().toString()) + Integer.parseInt(textView3_4.getText().toString()) +
                                     Integer.parseInt(textView1_4.getText().toString())) - 10 ==
                                     Integer.parseInt(editText5_4.getText().toString())) {
-                                flaga = true;
-                            } else flaga = false;
+                                flaga += 0;
+                            } else flaga += 1;
                         } else {
                             if ((Integer.parseInt(textView2_4.getText().toString()) + Integer.parseInt(textView3_4.getText().toString()) +
                                     Integer.parseInt(textView1_4.getText().toString())) ==
                                     Integer.parseInt(editText5_4.getText().toString())) {
-                                flaga = true;
-                            } else flaga = false;
+                                flaga += 0;
+                            } else flaga += 1;
                             pom = false;
                         }
                     } else {
@@ -240,17 +239,16 @@ public class ActivityAddK extends AppCompatActivity {
 
                             if ((Integer.parseInt(textView2_4.getText().toString()) + Integer.parseInt(textView3_4.getText().toString())) - 10 ==
                                     Integer.parseInt(editText5_4.getText().toString())) {
-                                flaga = true;
-                            } else flaga = false;
+                                flaga += 0;
+                            } else flaga += 1;
                         } else {
                             if ((Integer.parseInt(textView2_4.getText().toString()) + Integer.parseInt(textView3_4.getText().toString())) ==
                                     Integer.parseInt(editText5_4.getText().toString())) {
-                                flaga = true;
-                            } else flaga = false;
+                                flaga += 0;
+                            } else flaga += 1;
                             pom = false;
                         }
                     }
-
                     editText5_3.setFocusableInTouchMode(true);
                     editText5_3.requestFocus();
                 }
@@ -275,8 +273,8 @@ public class ActivityAddK extends AppCompatActivity {
                         if (pom == true) {
                             if (Integer.parseInt(textView1_3.getText().toString()) ==
                                     Integer.parseInt(editText5_3.getText().toString())) {
-                                flaga = true;
-                            } else flaga = false;
+                                flaga += 0;
+                            } else flaga += 1;
                         }
                     } else {
 
@@ -289,14 +287,14 @@ public class ActivityAddK extends AppCompatActivity {
                                 if ((Integer.parseInt(textView2_3.getText().toString()) + Integer.parseInt(textView3_3.getText().toString()) +
                                         Integer.parseInt(textView1_3.getText().toString())) - 10 ==
                                         Integer.parseInt(editText5_3.getText().toString())) {
-                                    flaga = true;
-                                } else flaga = false;
+                                    flaga += 0;
+                                } else flaga += 1;
                             } else {
                                 if ((Integer.parseInt(textView2_3.getText().toString()) + Integer.parseInt(textView3_3.getText().toString()) +
                                         Integer.parseInt(textView1_3.getText().toString())) ==
                                         Integer.parseInt(editText5_3.getText().toString())) {
-                                    flaga = true;
-                                } else flaga = false;
+                                    flaga += 0;
+                                } else flaga += 1;
                                 pom = false;
                             }
                         } else {
@@ -306,18 +304,17 @@ public class ActivityAddK extends AppCompatActivity {
 
                                 if ((Integer.parseInt(textView2_3.getText().toString()) + Integer.parseInt(textView3_3.getText().toString())) - 10 ==
                                         Integer.parseInt(editText5_3.getText().toString())) {
-                                    flaga = true;
-                                } else flaga = false;
+                                    flaga += 0;
+                                } else flaga += 1;
                             } else {
                                 if ((Integer.parseInt(textView2_3.getText().toString()) + Integer.parseInt(textView3_3.getText().toString())) ==
                                         Integer.parseInt(editText5_3.getText().toString())) {
-                                    flaga = true;
-                                } else flaga = false;
+                                    flaga += 0;
+                                } else flaga += 1;
                                 pom = false;
                             }
                         }
                     }
-
                     editText5_2.setFocusableInTouchMode(true);
                     editText5_2.requestFocus();
                 }
@@ -342,8 +339,8 @@ public class ActivityAddK extends AppCompatActivity {
                         if (pom == true) {
                             if (Integer.parseInt(textView1_2.getText().toString()) ==
                                     Integer.parseInt(editText5_2.getText().toString())) {
-                                flaga = true;
-                            } else flaga = false;
+                                flaga += 0;
+                            } else flaga += 1;
                         }
                     } else {
 
@@ -356,14 +353,14 @@ public class ActivityAddK extends AppCompatActivity {
                                 if ((Integer.parseInt(textView2_2.getText().toString()) + Integer.parseInt(textView3_2.getText().toString()) +
                                         Integer.parseInt(textView1_2.getText().toString())) - 10 ==
                                         Integer.parseInt(editText5_2.getText().toString())) {
-                                    flaga = true;
-                                } else flaga = false;
+                                    flaga += 0;
+                                } else flaga += 1;
                             } else {
                                 if ((Integer.parseInt(textView2_2.getText().toString()) + Integer.parseInt(textView3_2.getText().toString()) +
                                         Integer.parseInt(textView1_2.getText().toString())) ==
                                         Integer.parseInt(editText5_2.getText().toString())) {
-                                    flaga = true;
-                                } else flaga = false;
+                                    flaga += 0;
+                                } else flaga += 1;
                                 pom = false;
                             }
                         } else {
@@ -373,18 +370,17 @@ public class ActivityAddK extends AppCompatActivity {
 
                                 if ((Integer.parseInt(textView2_2.getText().toString()) + Integer.parseInt(textView3_2.getText().toString())) - 10 ==
                                         Integer.parseInt(editText5_2.getText().toString())) {
-                                    flaga = true;
-                                } else flaga = false;
+                                    flaga += 0;
+                                } else flaga += 1;
                             } else {
                                 if ((Integer.parseInt(textView2_2.getText().toString()) + Integer.parseInt(textView3_2.getText().toString())) ==
                                         Integer.parseInt(editText5_2.getText().toString())) {
-                                    flaga = true;
-                                } else flaga = false;
+                                    flaga += 0;
+                                } else flaga += 1;
                                 pom = false;
                             }
                         }
                     }
-
                     editText5_1.setFocusableInTouchMode(true);
                     editText5_1.requestFocus();
                 }
@@ -409,8 +405,8 @@ public class ActivityAddK extends AppCompatActivity {
                         if (pom == true) {
                             if (Integer.parseInt(textView1_1.getText().toString()) ==
                                     Integer.parseInt(editText5_1.getText().toString())) {
-                                flaga = true;
-                            } else flaga = false;
+                                flaga += 0;
+                            } else flaga += 1;
                         }
                     }
                 }
@@ -455,7 +451,7 @@ public class ActivityAddK extends AppCompatActivity {
 
     public void checkResult() {
         answered = true;
-        if(flaga == true) {
+        if(flaga == 0) {
             buttonNext.setBackgroundColor(Color.GREEN);
             if (gameCounter <= 10) {
                 buttonNext.setText("Dalej!");
@@ -463,7 +459,7 @@ public class ActivityAddK extends AppCompatActivity {
                 buttonNext.setText("Sprawdź");
             }
             counter++;
-        } else {
+        } else if(flaga > 0){
             buttonNext.setBackgroundColor(Color.RED);
             if (gameCounter <= 10) {
                 buttonNext.setText("Dalej!");
@@ -475,6 +471,12 @@ public class ActivityAddK extends AppCompatActivity {
 
     public void clear() {
         editText5_1.setText("");
+        editText5_1.setBackgroundColor(Color.WHITE);
+        editText5_2.setBackgroundColor(Color.WHITE);
+        editText5_3.setBackgroundColor(Color.WHITE);
+        editText5_4.setBackgroundColor(Color.WHITE);
+        editText5_5.setBackgroundColor(Color.WHITE);
+        editText5_6.setBackgroundColor(Color.WHITE);
         textView1_1.setText("");
         editText5_2.setText("");
         textView1_2.setText("");

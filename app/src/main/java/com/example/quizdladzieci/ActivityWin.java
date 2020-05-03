@@ -51,6 +51,10 @@ public class ActivityWin extends MenuForAllAcitivity {
                 counter = intent.getIntExtra(ActivityDivide2.EXTRA_COUNTER, 0);
                 textView.setText("Twój wynik to: \n" + counter + "\n Brawo!");
                 break;
+            case 6:
+                counter = intent.getIntExtra(ActivityAddK.EXTRA_COUNTER, 0);
+                textView.setText("Twój wynik to: \n" + counter + "\n Brawo!");
+                break;
         }
 
         buttonOK.setOnClickListener(new View.OnClickListener() {
