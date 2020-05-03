@@ -17,7 +17,8 @@ public class ActivityChose extends MenuForAllAcitivity implements View.OnClickLi
     private Button buttonMultiple;
     private Button buttonDivide;
     private Button buttonDivide2;
-    public int no;
+    private Button buttonKreska;
+    public int no = 0;
     private Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +30,7 @@ public class ActivityChose extends MenuForAllAcitivity implements View.OnClickLi
         buttonMultiple = (Button) findViewById(R.id.buttonMultiple);
         buttonDivide = (Button) findViewById(R.id.buttonDivide);
         buttonDivide2 = (Button) findViewById(R.id.buttonDivide2);
+        buttonKreska = (Button) findViewById(R.id.buttonK);
 
         final MediaPlayer mp;
         mp = MediaPlayer.create(this, R.raw.sample);
@@ -42,7 +44,7 @@ public class ActivityChose extends MenuForAllAcitivity implements View.OnClickLi
         buttonMultiple.setOnClickListener(this);
         buttonDivide.setOnClickListener(this);
         buttonDivide2.setOnClickListener(this);
-
+        buttonKreska.setOnClickListener(this);
 
 
     }
@@ -67,6 +69,9 @@ public class ActivityChose extends MenuForAllAcitivity implements View.OnClickLi
             intent = new Intent(this, ActivityDivide2.class);
             intent.putExtra(EXTRA_NUMBER, no);
             startActivity(intent);
+        } else {
+            intent = new Intent(this, ActivitySettings.class);
+            startActivity(intent);
         }
     }
 
@@ -75,7 +80,6 @@ public class ActivityChose extends MenuForAllAcitivity implements View.OnClickLi
         switch(v.getId()) {
             case R.id.buttonAdd:
                 no = 1;
-
                 openActivity();
                 break;
             case R.id.buttonMinus:
@@ -92,6 +96,9 @@ public class ActivityChose extends MenuForAllAcitivity implements View.OnClickLi
                 break;
             case R.id.buttonDivide2:
                 no = 5;
+                openActivity();
+                break;
+            case R.id.buttonK:
                 openActivity();
                 break;
         }

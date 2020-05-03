@@ -26,4 +26,13 @@
     <string name="operacja">999 + 999 =</string>
     <string name="ktory_przyklad">TextView</string>
     <string name="r">r.</string>
+    <string name="_100_999">100 - 999</string>
+    <string name="_1000_9999">1000 - 9999</string>
+    <string name="_10000_99999">10000 - 99999</string>
+    <string name="rodzaj_dzialania">Rodzaj działania</string>
+    <string name="dodawanie_pod_kresk">Dodawanie pod kreską</string>
+    <string name="odejmowanie_pod_kresk">Odejmowanie pod kreską</string>
+    <string name="naprzod1">Naprzód</string>
+    <string name="twoj_wybor1">Twój wybór:</string>
+    <string name="wybierz_zakres1">Wybierz zakres</string>
 </resources>
