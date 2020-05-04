@@ -31,12 +31,17 @@ public class ActivityMinusK extends AppCompatActivity {
     private Toolbar toolbar;
 
     private TextView textViewLicznik;
-    private TextView textView1_1;
-    private TextView textView1_2;
-    private TextView textView1_3;
-    private TextView textView1_4;
-    private TextView textView1_5;
-    private TextView textView1_6;
+    private EditText editText1_2;
+    private EditText editText1_3;
+    private EditText editText1_4;
+    private EditText editText1_5;
+    private EditText editText1_6;
+    private TextView textView_1;
+    private TextView textView_2;
+    private TextView textView_3;
+    private TextView textView_4;
+    private TextView textView_5;
+    private TextView textView_6;
     private TextView textView2_1;
     private TextView textView2_2;
     private TextView textView2_3;
@@ -72,12 +77,17 @@ public class ActivityMinusK extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         textViewLicznik = (TextView)findViewById(R.id.textViewLicznik);
-        textView1_1 = (TextView)findViewById(R.id.textView1_1);
-        textView1_2 = (TextView)findViewById(R.id.textView1_2);
-        textView1_3 = (TextView)findViewById(R.id.textView1_3);
-        textView1_4 = (TextView)findViewById(R.id.textView1_4);
-        textView1_5 = (TextView)findViewById(R.id.textView1_5);
-        textView1_6 = (TextView)findViewById(R.id.textView1_6);
+        editText1_2 = (EditText)findViewById(R.id.editText1_2);
+        editText1_3 = (EditText)findViewById(R.id.editText1_3);
+        editText1_4 = (EditText)findViewById(R.id.editText1_4);
+        editText1_5 = (EditText)findViewById(R.id.editText1_5);
+        editText1_6 = (EditText)findViewById(R.id.editText1_6);
+        textView_1 = (TextView)findViewById(R.id.textView_1);
+        textView_2 = (TextView)findViewById(R.id.textView_2);
+        textView_3 = (TextView)findViewById(R.id.textView_3);
+        textView_4 = (TextView)findViewById(R.id.textView_4);
+        textView_5 = (TextView)findViewById(R.id.textView_5);
+        textView_6 = (TextView)findViewById(R.id.textView_6);
         textView2_1 = (TextView)findViewById(R.id.textView2_1);
         textView2_2 = (TextView)findViewById(R.id.textView2_2);
         textView2_3 = (TextView)findViewById(R.id.textView2_3);
@@ -102,6 +112,70 @@ public class ActivityMinusK extends AppCompatActivity {
         gameCounter = 0;
         newGame();
 
+        editText1_6.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                textView2_6.setTextColor(Color.parseColor("#550B0A0A"));
+                textView2_5.setTextColor(Color.parseColor("#550B0A0A"));
+                textView_5.setText(String.valueOf(Integer.parseInt(textView2_5.getText().toString()) - 1));
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {}
+        });
+
+        editText1_5.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {}
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                textView2_5.setTextColor(Color.parseColor("#550B0A0A"));
+                textView2_4.setTextColor(Color.parseColor("#550B0A0A"));
+                textView_4.setText(String.valueOf(Integer.parseInt(textView2_4.getText().toString()) - 1));
+            }
+        });
+
+        editText1_4.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {}
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if(textView2_3.getText().toString().trim().length() != 0) {
+                    textView2_4.setTextColor(Color.parseColor("#550B0A0A"));
+                    textView2_3.setTextColor(Color.parseColor("#550B0A0A"));
+                    textView_3.setText(String.valueOf(Integer.parseInt(textView2_3.getText().toString()) - 1));
+                }
+            }
+        });
+
+        editText1_3.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {}
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if(textView2_2.getText().toString().trim().length() != 0) {
+                    textView2_3.setTextColor(Color.parseColor("#550B0A0A"));
+                    textView2_2.setTextColor(Color.parseColor("#550B0A0A"));
+                    textView_2.setText(String.valueOf(Integer.parseInt(textView2_2.getText().toString()) - 1));
+                }
+            }
+        });
+
         editText5_6.addTextChangedListener(new TextWatcher() {
 
             @Override
@@ -110,15 +184,6 @@ public class ActivityMinusK extends AppCompatActivity {
             @Override
             public void beforeTextChanged(CharSequence s, int start,
                                           int count, int after) {
-                if (textView2_6.getText().toString().trim().length() != 0) {
-                    if (Integer.parseInt(textView2_6.getText().toString()) < Integer.parseInt(textView3_6.getText().toString())) {
-                        textView1_6.setText(String.valueOf(Integer.parseInt(textView2_6.getText().toString()) + 10));
-                        textView2_6.setTextColor(Color.parseColor("#550B0A0A"));
-
-                        textView2_5.setTextColor(Color.parseColor("#550B0A0A"));
-                        textView1_5.setText(String.valueOf(Integer.parseInt(textView2_5.getText().toString()) - 1));
-                    }
-                }
             }
 
             @Override
@@ -126,13 +191,8 @@ public class ActivityMinusK extends AppCompatActivity {
                                       int before, int count) {
                 if (editText5_6.getText().toString().trim().length() != 0) {
                     if(Integer.parseInt(textView2_6.getText().toString()) < Integer.parseInt(textView3_6.getText().toString())) {
-                        /*textView1_6.setText(String.valueOf(Integer.parseInt(textView2_6.getText().toString()) + 10));
-                        textView2_6.setTextColor(Color.parseColor("#550B0A0A"));
 
-                        textView2_5.setTextColor(Color.parseColor("#550B0A0A"));
-                        textView1_5.setText(String.valueOf(Integer.parseInt(textView2_5.getText().toString()) - 1));*/
-
-                        if ((Integer.parseInt(textView1_6.getText().toString()) - Integer.parseInt(textView3_6.getText().toString())) ==
+                        if ((Integer.parseInt(editText1_6.getText().toString()) - Integer.parseInt(textView3_6.getText().toString())) ==
                                 Integer.parseInt(editText5_6.getText().toString())) {
                             flaga += 0;
                         } else flaga += 1;
@@ -144,7 +204,6 @@ public class ActivityMinusK extends AppCompatActivity {
                         } else flaga += 1;
                         pom = false;
                     }
-
                     editText5_5.setFocusableInTouchMode(true);
                     editText5_5.requestFocus();
                 }
@@ -159,25 +218,6 @@ public class ActivityMinusK extends AppCompatActivity {
             @Override
             public void beforeTextChanged(CharSequence s, int start,
                                           int count, int after) {
-                if (textView2_5.getText().toString().trim().length() != 0) {
-                    if (pom == true) {
-                        if (Integer.parseInt(textView1_5.getText().toString()) < Integer.parseInt(textView3_5.getText().toString())) {
-                            textView1_5.setText(String.valueOf(Integer.parseInt(textView1_5.getText().toString()) + 10));
-                            //textView2_5.setTextColor(Color.parseColor("#550B0A0A"));
-
-                            textView2_4.setTextColor(Color.parseColor("#550B0A0A"));
-                            textView1_4.setText(String.valueOf(Integer.parseInt(textView2_4.getText().toString()) - 1));
-                        }
-                    } else {
-                        if (Integer.parseInt(textView2_5.getText().toString()) < Integer.parseInt(textView3_5.getText().toString())) {
-                            textView1_5.setText(String.valueOf(Integer.parseInt(textView2_5.getText().toString()) + 10));
-                            textView2_5.setTextColor(Color.parseColor("#550B0A0A"));
-
-                            textView2_4.setTextColor(Color.parseColor("#550B0A0A"));
-                            textView1_4.setText(String.valueOf(Integer.parseInt(textView2_4.getText().toString()) - 1));
-                        }
-                    }
-                }
             }
 
             @Override
@@ -186,20 +226,15 @@ public class ActivityMinusK extends AppCompatActivity {
 
                 if (editText5_5.getText().toString().trim().length() != 0) {
                     if(pom == true) {
-                        if(Integer.parseInt(textView1_5.getText().toString()) < Integer.parseInt(textView3_5.getText().toString())) {
-                            /*textView1_5.setText(String.valueOf(Integer.parseInt(textView1_5.getText().toString()) + 10));
-                            //textView2_5.setTextColor(Color.parseColor("#550B0A0A"));
-
-                            textView2_4.setTextColor(Color.parseColor("#550B0A0A"));
-                            textView1_4.setText(String.valueOf(Integer.parseInt(textView2_4.getText().toString()) - 1));*/
-
-                            if ((Integer.parseInt(textView1_5.getText().toString()) - Integer.parseInt(textView3_5.getText().toString())) ==
+                        if(editText1_5.getText().toString().trim().length() != 0) {
+                            if ((Integer.parseInt(editText1_5.getText().toString()) - Integer.parseInt(textView3_5.getText().toString())) ==
                                     Integer.parseInt(editText5_5.getText().toString())) {
                                 flaga += 0;
                             } else flaga += 1;
                             pom = true;
+
                         } else {
-                            if ((Integer.parseInt(textView1_5.getText().toString()) - Integer.parseInt(textView3_5.getText().toString())) ==
+                            if ((Integer.parseInt(textView_5.getText().toString()) - Integer.parseInt(textView3_5.getText().toString())) ==
                                     Integer.parseInt(editText5_5.getText().toString())) {
                                 flaga += 0;
                             } else flaga += 1;
@@ -207,14 +242,8 @@ public class ActivityMinusK extends AppCompatActivity {
                         }
 
                     } else {
-                        if(Integer.parseInt(textView2_5.getText().toString()) < Integer.parseInt(textView3_5.getText().toString())) {
-                            /*textView1_5.setText(String.valueOf(Integer.parseInt(textView2_5.getText().toString()) + 10));
-                            textView2_5.setTextColor(Color.parseColor("#550B0A0A"));
-
-                            textView2_4.setTextColor(Color.parseColor("#550B0A0A"));
-                            textView1_4.setText(String.valueOf(Integer.parseInt(textView2_4.getText().toString()) - 1));*/
-
-                            if ((Integer.parseInt(textView1_5.getText().toString()) - Integer.parseInt(textView3_5.getText().toString())) ==
+                        if(editText1_5.getText().toString().trim().length() != 0) {
+                            if ((Integer.parseInt(editText1_5.getText().toString()) - Integer.parseInt(textView3_5.getText().toString())) ==
                                     Integer.parseInt(editText5_5.getText().toString())) {
                                 flaga += 0;
                             } else flaga += 1;
@@ -227,7 +256,6 @@ public class ActivityMinusK extends AppCompatActivity {
                             pom = false;
                         }
                     }
-
                     editText5_4.setFocusableInTouchMode(true);
                     editText5_4.requestFocus();
                 }
@@ -242,25 +270,6 @@ public class ActivityMinusK extends AppCompatActivity {
             @Override
             public void beforeTextChanged(CharSequence s, int start,
                                           int count, int after) {
-                if (textView2_4.getText().toString().trim().length() != 0) {
-                    if (pom == true) {
-                        if (Integer.parseInt(textView1_4.getText().toString()) < Integer.parseInt(textView3_4.getText().toString())) {
-                            textView1_4.setText(String.valueOf(Integer.parseInt(textView1_4.getText().toString()) + 10));
-                            //textView2_4.setTextColor(Color.parseColor("#550B0A0A"));
-
-                            textView2_3.setTextColor(Color.parseColor("#550B0A0A"));
-                            textView1_3.setText(String.valueOf(Integer.parseInt(textView2_3.getText().toString()) - 1));
-                        }
-                    } else {
-                        if (Integer.parseInt(textView2_4.getText().toString()) < Integer.parseInt(textView3_4.getText().toString())) {
-                            textView1_4.setText(String.valueOf(Integer.parseInt(textView2_4.getText().toString()) + 10));
-                            textView2_4.setTextColor(Color.parseColor("#550B0A0A"));
-
-                            textView2_3.setTextColor(Color.parseColor("#550B0A0A"));
-                            textView1_3.setText(String.valueOf(Integer.parseInt(textView2_3.getText().toString()) - 1));
-                        }
-                    }
-                }
             }
 
             @Override
@@ -268,49 +277,36 @@ public class ActivityMinusK extends AppCompatActivity {
                                       int before, int count) {
 
                 if (editText5_4.getText().toString().trim().length() != 0) {
-                    if(pom == true) {
-                        if(Integer.parseInt(textView1_4.getText().toString()) < Integer.parseInt(textView3_4.getText().toString())) {
-                            /*textView1_4.setText(String.valueOf(Integer.parseInt(textView1_4.getText().toString()) + 10));
-                            //textView2_4.setTextColor(Color.parseColor("#550B0A0A"));
+                        if(pom == true) {
+                            if(editText1_4.getText().toString().trim().length() != 0) {
+                                if ((Integer.parseInt(editText1_4.getText().toString()) - Integer.parseInt(textView3_4.getText().toString())) ==
+                                        Integer.parseInt(editText5_4.getText().toString())) {
+                                    flaga += 0;
+                                } else flaga += 1;
+                                pom = true;
 
-                            textView2_3.setTextColor(Color.parseColor("#550B0A0A"));
-                            textView1_3.setText(String.valueOf(Integer.parseInt(textView2_3.getText().toString()) - 1));*/
-
-                            if ((Integer.parseInt(textView1_4.getText().toString()) - Integer.parseInt(textView3_4.getText().toString())) ==
-                                    Integer.parseInt(editText5_4.getText().toString())) {
-                                flaga += 0;
-                            } else flaga += 1;
-                            pom = true;
+                            } else {
+                                if ((Integer.parseInt(textView_4.getText().toString()) - Integer.parseInt(textView3_4.getText().toString())) ==
+                                        Integer.parseInt(editText5_4.getText().toString())) {
+                                    flaga += 0;
+                                } else flaga += 1;
+                                pom = false;
+                            }
                         } else {
-                            if ((Integer.parseInt(textView1_4.getText().toString()) - Integer.parseInt(textView3_4.getText().toString())) ==
-                                    Integer.parseInt(editText5_4.getText().toString())) {
-                                flaga += 0;
-                            } else flaga += 1;
-                            pom = false;
+                            if(editText1_4.getText().toString().trim().length() != 0) {
+                                if ((Integer.parseInt(editText1_4.getText().toString()) - Integer.parseInt(textView3_4.getText().toString())) ==
+                                        Integer.parseInt(editText5_4.getText().toString())) {
+                                    flaga += 0;
+                                } else flaga += 1;
+                                pom = true;
+                            } else {
+                                if ((Integer.parseInt(textView2_4.getText().toString()) - Integer.parseInt(textView3_4.getText().toString())) ==
+                                        Integer.parseInt(editText5_4.getText().toString())) {
+                                    flaga += 0;
+                                } else flaga += 1;
+                                pom = false;
+                            }
                         }
-
-                    } else {
-                        if(Integer.parseInt(textView2_4.getText().toString()) < Integer.parseInt(textView3_4.getText().toString())) {
-                            /*textView1_4.setText(String.valueOf(Integer.parseInt(textView2_4.getText().toString()) + 10));
-                            textView2_4.setTextColor(Color.parseColor("#550B0A0A"));
-
-                            textView2_3.setTextColor(Color.parseColor("#550B0A0A"));
-                            textView1_3.setText(String.valueOf(Integer.parseInt(textView2_3.getText().toString()) - 1));*/
-
-                            if ((Integer.parseInt(textView1_4.getText().toString()) - Integer.parseInt(textView3_4.getText().toString())) ==
-                                    Integer.parseInt(editText5_4.getText().toString())) {
-                                flaga += 0;
-                            } else flaga += 1;
-                            pom = true;
-                        } else {
-                            if ((Integer.parseInt(textView2_4.getText().toString()) - Integer.parseInt(textView3_4.getText().toString())) ==
-                                    Integer.parseInt(editText5_4.getText().toString())) {
-                                flaga += 0;
-                            } else flaga += 1;
-                            pom = false;
-                        }
-                    }
-
                     editText5_3.setFocusableInTouchMode(true);
                     editText5_3.requestFocus();
                 }
@@ -326,25 +322,6 @@ public class ActivityMinusK extends AppCompatActivity {
             @Override
             public void beforeTextChanged(CharSequence s, int start,
                                           int count, int after) {
-                if (textView2_3.getText().toString().trim().length() != 0) {
-                    if (pom == true) {
-                        if (Integer.parseInt(textView1_3.getText().toString()) < Integer.parseInt(textView3_3.getText().toString())) {
-                            textView1_3.setText(String.valueOf(Integer.parseInt(textView1_3.getText().toString()) + 10));
-                            //textView2_4.setTextColor(Color.parseColor("#550B0A0A"));
-
-                            textView2_2.setTextColor(Color.parseColor("#550B0A0A"));
-                            textView1_2.setText(String.valueOf(Integer.parseInt(textView2_2.getText().toString()) - 1));
-                        }
-                    } else {
-                        if (Integer.parseInt(textView2_3.getText().toString()) < Integer.parseInt(textView3_3.getText().toString())) {
-                            textView1_3.setText(String.valueOf(Integer.parseInt(textView2_3.getText().toString()) + 10));
-                            textView2_3.setTextColor(Color.parseColor("#550B0A0A"));
-
-                            textView2_2.setTextColor(Color.parseColor("#550B0A0A"));
-                            textView1_2.setText(String.valueOf(Integer.parseInt(textView2_2.getText().toString()) - 1));
-                        }
-                    }
-                }
             }
 
             @Override
@@ -352,48 +329,37 @@ public class ActivityMinusK extends AppCompatActivity {
                                       int before, int count) {
 
                 if (editText5_3.getText().toString().trim().length() != 0) {
-                    if(pom == true) {
-                        if(Integer.parseInt(textView1_3.getText().toString()) < Integer.parseInt(textView3_3.getText().toString())) {
-                           /* textView1_3.setText(String.valueOf(Integer.parseInt(textView1_3.getText().toString()) + 10));
-                            //textView2_4.setTextColor(Color.parseColor("#550B0A0A"));
+                        if(pom == true) {
+                            if(editText1_3.getText().toString().trim().length() != 0) {
+                                if ((Integer.parseInt(editText1_3.getText().toString()) - Integer.parseInt(textView3_3.getText().toString())) ==
+                                        Integer.parseInt(editText5_3.getText().toString())) {
+                                    flaga += 0;
+                                } else flaga += 1;
+                                pom = true;
 
-                            textView2_2.setTextColor(Color.parseColor("#550B0A0A"));
-                            textView1_2.setText(String.valueOf(Integer.parseInt(textView2_2.getText().toString()) - 1));*/
+                            } else {
+                                if ((Integer.parseInt(textView_3.getText().toString()) - Integer.parseInt(textView3_3.getText().toString())) ==
+                                        Integer.parseInt(editText5_3.getText().toString())) {
+                                    flaga += 0;
+                                } else flaga += 1;
+                                pom = false;
+                            }
 
-                            if ((Integer.parseInt(textView1_3.getText().toString()) - Integer.parseInt(textView3_3.getText().toString())) ==
-                                    Integer.parseInt(editText5_3.getText().toString())) {
-                                flaga += 0;
-                            } else flaga += 1;
-                            pom = true;
                         } else {
-                            if ((Integer.parseInt(textView1_3.getText().toString()) - Integer.parseInt(textView3_3.getText().toString())) ==
-                                    Integer.parseInt(editText5_3.getText().toString())) {
-                                flaga += 0;
-                            } else flaga += 1;
-                            pom = false;
+                            if(editText1_3.getText().toString().trim().length() != 0) {
+                                if ((Integer.parseInt(editText1_3.getText().toString()) - Integer.parseInt(textView3_3.getText().toString())) ==
+                                        Integer.parseInt(editText5_3.getText().toString())) {
+                                    flaga += 0;
+                                } else flaga += 1;
+                                pom = true;
+                            } else {
+                                if ((Integer.parseInt(textView2_3.getText().toString()) - Integer.parseInt(textView3_3.getText().toString())) ==
+                                        Integer.parseInt(editText5_3.getText().toString())) {
+                                    flaga += 0;
+                                } else flaga += 1;
+                                pom = false;
+                            }
                         }
-
-                    } else {
-                        if(Integer.parseInt(textView2_3.getText().toString()) < Integer.parseInt(textView3_3.getText().toString())) {
-                            /*textView1_3.setText(String.valueOf(Integer.parseInt(textView2_3.getText().toString()) + 10));
-                            textView2_3.setTextColor(Color.parseColor("#550B0A0A"));
-
-                            textView2_2.setTextColor(Color.parseColor("#550B0A0A"));
-                            textView1_2.setText(String.valueOf(Integer.parseInt(textView2_2.getText().toString()) - 1));*/
-
-                            if ((Integer.parseInt(textView1_3.getText().toString()) - Integer.parseInt(textView3_3.getText().toString())) ==
-                                    Integer.parseInt(editText5_3.getText().toString())) {
-                                flaga += 0;
-                            } else flaga += 1;
-                            pom = true;
-                        } else {
-                            if ((Integer.parseInt(textView2_3.getText().toString()) - Integer.parseInt(textView3_3.getText().toString())) ==
-                                    Integer.parseInt(editText5_3.getText().toString())) {
-                                flaga += 0;
-                            } else flaga += 1;
-                            pom = false;
-                        }
-                    }
 
                     editText5_2.setFocusableInTouchMode(true);
                     editText5_2.requestFocus();
@@ -409,71 +375,43 @@ public class ActivityMinusK extends AppCompatActivity {
             @Override
             public void beforeTextChanged(CharSequence s, int start,
                                           int count, int after) {
-                if (textView2_2.getText().toString().trim().length() != 0) {
-                    if (pom == true) {
-                        if (Integer.parseInt(textView1_2.getText().toString()) < Integer.parseInt(textView3_2.getText().toString())) {
-                            textView1_2.setText(String.valueOf(Integer.parseInt(textView1_2.getText().toString()) + 10));
-                            //textView2_2.setTextColor(Color.parseColor("#550B0A0A"));
-
-                            textView2_1.setTextColor(Color.parseColor("#550B0A0A"));
-                            textView1_1.setText(String.valueOf(Integer.parseInt(textView2_1.getText().toString()) - 1));
-                        }
-                    } else {
-                        if (Integer.parseInt(textView2_2.getText().toString()) < Integer.parseInt(textView3_2.getText().toString())) {
-                            textView1_2.setText(String.valueOf(Integer.parseInt(textView2_2.getText().toString()) + 10));
-                            textView2_2.setTextColor(Color.parseColor("#550B0A0A"));
-
-                            textView2_1.setTextColor(Color.parseColor("#550B0A0A"));
-                            textView1_1.setText(String.valueOf(Integer.parseInt(textView2_1.getText().toString()) - 1));
-                        }
-                    }
-                }
             }
 
             @Override
             public void onTextChanged(CharSequence s, int start,
                                       int before, int count) {
                 if (editText5_2.getText().toString().trim().length() != 0) {
-                    if (pom == true) {
-                        if(Integer.parseInt(textView1_2.getText().toString()) < Integer.parseInt(textView3_2.getText().toString())) {
-                            /*textView1_2.setText(String.valueOf(Integer.parseInt(textView1_2.getText().toString()) + 10));
-                            //textView2_2.setTextColor(Color.parseColor("#550B0A0A"));
+                        if(pom == true) {
+                            if(editText1_2.getText().toString().trim().length() != 0) {
+                                if ((Integer.parseInt(editText1_2.getText().toString()) - Integer.parseInt(textView3_2.getText().toString())) ==
+                                        Integer.parseInt(editText5_2.getText().toString())) {
+                                    flaga += 0;
+                                } else flaga += 1;
+                                pom = true;
 
-                            textView2_1.setTextColor(Color.parseColor("#550B0A0A"));
-                            textView1_1.setText(String.valueOf(Integer.parseInt(textView2_1.getText().toString()) - 1));*/
-                            if ((Integer.parseInt(textView1_2.getText().toString()) - Integer.parseInt(textView3_2.getText().toString())) ==
-                                    Integer.parseInt(editText5_2.getText().toString())) {
-                                flaga += 0;
-                            } else flaga += 1;
-                            pom = true;
+                            } else {
+                                if ((Integer.parseInt(textView_2.getText().toString()) - Integer.parseInt(textView3_2.getText().toString())) ==
+                                        Integer.parseInt(editText5_2.getText().toString())) {
+                                    flaga += 0;
+                                } else flaga += 1;
+                                pom = false;
+                            }
+
                         } else {
-                            if ((Integer.parseInt(textView1_2.getText().toString()) - Integer.parseInt(textView3_2.getText().toString())) ==
-                                    Integer.parseInt(editText5_2.getText().toString())) {
-                                flaga += 0;
-                            } else flaga += 1;
-                            pom = false;
+                            if(editText1_2.getText().toString().trim().length() != 0) {
+                                if ((Integer.parseInt(editText1_2.getText().toString()) - Integer.parseInt(textView3_2.getText().toString())) ==
+                                        Integer.parseInt(editText5_2.getText().toString())) {
+                                    flaga += 0;
+                                } else flaga += 1;
+                                pom = true;
+                            } else {
+                                if ((Integer.parseInt(textView2_2.getText().toString()) - Integer.parseInt(textView3_2.getText().toString())) ==
+                                        Integer.parseInt(editText5_2.getText().toString())) {
+                                    flaga += 0;
+                                } else flaga += 1;
+                                pom = false;
+                            }
                         }
-                    } else {
-                        if(Integer.parseInt(textView2_2.getText().toString()) < Integer.parseInt(textView3_2.getText().toString())) {
-                            /*textView1_2.setText(String.valueOf(Integer.parseInt(textView2_2.getText().toString()) + 10));
-                            textView2_2.setTextColor(Color.parseColor("#550B0A0A"));
-
-                            textView2_1.setTextColor(Color.parseColor("#550B0A0A"));
-                            textView1_1.setText(String.valueOf(Integer.parseInt(textView2_1.getText().toString()) - 1));*/
-
-                            if ((Integer.parseInt(textView1_2.getText().toString()) - Integer.parseInt(textView3_2.getText().toString())) ==
-                                    Integer.parseInt(editText5_2.getText().toString())) {
-                                flaga += 0;
-                            } else flaga += 1;
-                            pom = true;
-                        } else {
-                            if ((Integer.parseInt(textView2_2.getText().toString()) - Integer.parseInt(textView3_2.getText().toString())) ==
-                                    Integer.parseInt(editText5_2.getText().toString())) {
-                                flaga += 0;
-                            } else flaga += 1;
-                            pom = false;
-                        }
-                    }
 
                     editText5_1.setFocusableInTouchMode(true);
                     editText5_1.requestFocus();
@@ -505,6 +443,7 @@ public class ActivityMinusK extends AppCompatActivity {
         clear();
         editText5_6.setFocusableInTouchMode(true);
         editText5_6.requestFocus();
+
 
         if (gameCounter < 10) {
             losuj();
@@ -541,6 +480,16 @@ public class ActivityMinusK extends AppCompatActivity {
 
     public void clear() {
         editText5_1.setText("");
+        editText5_2.setText("");
+        editText5_3.setText("");
+        editText5_4.setText("");
+        editText5_5.setText("");
+        editText5_6.setText("");
+        editText1_2.setText("");
+        editText1_3.setText("");
+        editText1_4.setText("");
+        editText1_5.setText("");
+        editText1_6.setText("");
         editText5_1.setBackgroundColor(Color.WHITE);
         editText5_2.setBackgroundColor(Color.WHITE);
         editText5_3.setBackgroundColor(Color.WHITE);
@@ -553,17 +502,12 @@ public class ActivityMinusK extends AppCompatActivity {
         textView2_4.setTextColor(Color.parseColor("#FF3045B8"));
         textView2_5.setTextColor(Color.parseColor("#FF3045B8"));
         textView2_6.setTextColor(Color.parseColor("#FF3045B8"));
-        textView1_1.setText("");
-        editText5_2.setText("");
-        textView1_2.setText("");
-        editText5_3.setText("");
-        textView1_3.setText("");
-        editText5_4.setText("");
-        textView1_4.setText("");
-        editText5_5.setText("");
-        textView1_5.setText("");
-        editText5_6.setText("");
-        textView1_6.setText("");
+        textView_1.setText("");
+        textView_2.setText("");
+        textView_3.setText("");
+        textView_4.setText("");
+        textView_5.setText("");
+        textView_6.setText("");
     }
 
     public void losuj() {
