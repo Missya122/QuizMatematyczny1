@@ -192,6 +192,7 @@ public class ActivityAddK extends AppCompatActivity {
                         pom = false;
                     }
                 }
+
                 editText5_4.setFocusableInTouchMode(true);
                 editText5_4.requestFocus();
             }
@@ -249,6 +250,7 @@ public class ActivityAddK extends AppCompatActivity {
                             pom = false;
                         }
                     }
+
                     editText5_3.setFocusableInTouchMode(true);
                     editText5_3.requestFocus();
                 }
@@ -315,6 +317,7 @@ public class ActivityAddK extends AppCompatActivity {
                             }
                         }
                     }
+
                     editText5_2.setFocusableInTouchMode(true);
                     editText5_2.requestFocus();
                 }
@@ -381,6 +384,7 @@ public class ActivityAddK extends AppCompatActivity {
                             }
                         }
                     }
+
                     editText5_1.setFocusableInTouchMode(true);
                     editText5_1.requestFocus();
                 }
@@ -432,6 +436,7 @@ public class ActivityAddK extends AppCompatActivity {
     }
 
     public void newGame() {
+        flaga = 0;
         clear();
         editText5_6.setFocusableInTouchMode(true);
         editText5_6.requestFocus();

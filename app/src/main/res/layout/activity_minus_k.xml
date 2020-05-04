@@ -33,7 +33,7 @@
             android:layout_height="match_parent"
             android:fontFamily="@font/bangers"
             android:gravity="center"
-            android:text="1"
+            android:text=""
             android:textSize="20dp"/>
 
         <TextView
@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/bangers"
             android:gravity="center"
-            android:text="1"
+            android:text=""
             android:textSize="20dp"/>
 
         <TextView
@@ -51,7 +51,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/bangers"
             android:gravity="center"
-            android:text="1"
+            android:text=""
             android:textSize="20dp"/>
 
         <TextView
@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/bangers"
             android:gravity="center"
-            android:text="1"
+            android:text=""
             android:textSize="20dp"/>
 
         <TextView
@@ -69,7 +69,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/bangers"
             android:gravity="center"
-            android:text="1"
+            android:text=""
             android:textSize="20dp"/>
 
         <TextView
@@ -78,7 +78,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/bangers"
             android:gravity="center"
-            android:text="1"
+            android:text=""
             android:textSize="20dp"/>
 
     </TableRow>
@@ -94,7 +94,7 @@
             android:fontFamily="@font/alfa_slab_one"
             android:gravity="center"
             android:textColor="#3045B8"
-            android:text="9"
+            android:text=""
             android:textSize="40dp"/>
 
         <TextView
@@ -104,7 +104,7 @@
             android:fontFamily="@font/alfa_slab_one"
             android:gravity="center"
             android:textColor="#3045B8"
-            android:text="9"
+            android:text=""
             android:textSize="40dp"/>
 
         <TextView
@@ -114,7 +114,7 @@
             android:fontFamily="@font/alfa_slab_one"
             android:gravity="center"
             android:textColor="#3045B8"
-            android:text="9"
+            android:text=""
             android:textSize="40dp"/>
 
         <TextView
@@ -160,7 +160,7 @@
             android:fontFamily="@font/alfa_slab_one"
             android:gravity="center"
             android:textColor="#3045B8"
-            android:text="9"
+            android:text="-"
             android:textSize="40dp"/>
 
         <TextView
@@ -170,7 +170,7 @@
             android:fontFamily="@font/alfa_slab_one"
             android:gravity="center"
             android:textColor="#3045B8"
-            android:text="9"
+            android:text=""
             android:textSize="40dp"/>
 
         <TextView
@@ -180,7 +180,7 @@
             android:fontFamily="@font/alfa_slab_one"
             android:gravity="center"
             android:textColor="#3045B8"
-            android:text="9"
+            android:text=""
             android:textSize="40dp"/>
 
         <TextView
@@ -226,7 +226,34 @@
         android:layout_height="match_parent">
 
         <EditText
-            android:id="@+id/textView5_1"
+            android:id="@+id/editText5_1"
+            android:layout_width="65dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:inputType="number"
+            android:text=""
+            android:textSize="40dp"/>
+
+        <EditText
+            android:id="@+id/editText5_2"
+            android:layout_width="65dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:inputType="number"
+            android:text=""
+            android:textSize="40dp"/>
+
+        <EditText
+            android:id="@+id/editText5_3"
+            android:layout_width="65dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:inputType="number"
+            android:text=""
+            android:textSize="40dp"/>
+
+        <EditText
+            android:id="@+id/editText5_4"
             android:layout_width="65dp"
             android:layout_height="match_parent"
             android:gravity="center"
@@ -235,7 +262,7 @@
             android:textSize="40dp"/>
 
         <EditText
-            android:id="@+id/textView5_2"
+            android:id="@+id/editText5_5"
             android:layout_width="65dp"
             android:layout_height="match_parent"
             android:gravity="center"
@@ -244,34 +271,7 @@
             android:textSize="40dp"/>
 
         <EditText
-            android:id="@+id/textView5_3"
-            android:layout_width="65dp"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:inputType="number"
-            android:text="0"
-            android:textSize="40dp"/>
-
-        <EditText
-            android:id="@+id/textView5_4"
-            android:layout_width="65dp"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:inputType="number"
-            android:text="0"
-            android:textSize="40dp"/>
-
-        <EditText
-            android:id="@+id/textView5_5"
-            android:layout_width="65dp"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:inputType="number"
-            android:text="0"
-            android:textSize="40dp"/>
-
-        <EditText
-            android:id="@+id/textView5_6"
+            android:id="@+id/editText5_6"
             android:layout_width="65dp"
             android:layout_height="match_parent"
             android:gravity="center"
