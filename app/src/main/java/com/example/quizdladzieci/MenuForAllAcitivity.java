@@ -1,5 +1,6 @@
 package com.example.quizdladzieci;
 
+import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -7,23 +8,33 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.firebase.auth.FirebaseAuth;
+
 public class MenuForAllAcitivity extends AppCompatActivity {
+
+    private FirebaseAuth firebaseAuth;
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_main,menu);
+        firebaseAuth = FirebaseAuth.getInstance();
         return true;
+    }
+
+    private void Logout() {
+        firebaseAuth.signOut();
+        finish();
+        startActivity(new Intent(MenuForAllAcitivity.this, AcitivityLogin.class));
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch(item.getItemId())
         {
-            case R.id.share:
-                Toast.makeText(this, "Podziel się ze światem", Toast.LENGTH_SHORT).show();
-                break;
+            case R.id.logout:
+                Logout();
             case R.id.setting:
-                Toast.makeText(this, "Tu będą ustawienia", Toast.LENGTH_SHORT).show();
                 break;
         }
         return true;

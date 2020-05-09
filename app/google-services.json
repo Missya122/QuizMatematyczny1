@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "186190304018",
+    "firebase_url": "https://quizdladzieci.firebaseio.com",
+    "project_id": "quizdladzieci",
+    "storage_bucket": "quizdladzieci.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:186190304018:android:13619c43cbf09f115599cb",
+        "android_client_info": {
+          "package_name": "com.example.quizdladzieci"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "186190304018-e6t68m04mmamjss039cl9gu0fes0qel2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAr1zD9uTChRHEZkeZwhL2JJ2fn06hQ_G8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "186190304018-e6t68m04mmamjss039cl9gu0fes0qel2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

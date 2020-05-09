@@ -3,9 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.quizdladzieci.FirstScreenActivity">
     <item
-        android:title="Udostępnij"
-        android:icon="@drawable/ic_share"
-        android:id="@+id/share"
+        android:title="Wyloguj się"
+        android:id="@+id/logout"
         app:showAsAction="ifRoom"/>
     <item
         android:title="Ustawienia"

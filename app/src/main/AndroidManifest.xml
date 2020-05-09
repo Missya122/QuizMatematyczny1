@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ActivityMinusK"></activity>
+        <activity android:name=".RegistrationActivity"></activity>
+        <activity android:name=".ActivityMinusK" />
         <activity android:name=".ActivityAddK" />
         <activity android:name=".ActivitySettings" />
         <activity android:name=".ActivityDivide2" />
@@ -22,7 +23,8 @@
         <activity android:name=".SecondFragment" />
         <activity android:name=".FirstFragment" />
         <activity android:name=".CalculatorActivity" />
-        <activity android:name=".FirstScreenActivity">
+        <activity android:name=".FirstScreenActivity" />
+        <activity android:name=".AcitivityLogin">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
