@@ -18,6 +18,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.PhoneMultiFactorAssertion;
 
 public class AcitivityLogin extends AppCompatActivity {
 
@@ -29,6 +30,7 @@ public class AcitivityLogin extends AppCompatActivity {
     private TextView userRegistration;
     private FirebaseAuth firebaseAuth;
     private ProgressDialog progressDialog;
+    private TextView forgotPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +43,7 @@ public class AcitivityLogin extends AppCompatActivity {
         Login = (Button) findViewById(R.id.btnLogin);
         userRegistration = (TextView) findViewById(R.id.tvRegister);
         final MediaPlayer mp = MediaPlayer.create(this, R.raw.sample);
+       forgotPassword = (TextView) findViewById(R.id.tvForgotPassword);
 
         Info.setText("Liczba pozostałych prób: 5");
 
@@ -60,7 +63,12 @@ public class AcitivityLogin extends AppCompatActivity {
             public void onClick(View view) {
                 mp.start();
 
-                validate(Name.getText().toString(), Password.getText().toString());
+                if( validate0()) {
+
+                    validate(Name.getText().toString(), Password.getText().toString());
+                }
+
+
             }
         });
 
@@ -71,8 +79,31 @@ public class AcitivityLogin extends AppCompatActivity {
             }
         });
 
+        forgotPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(AcitivityLogin.this, PasswordActivity.class));
+            }
+        });
 
 
+
+    }
+    private Boolean validate0(){
+
+        Boolean result = false;
+
+        String name = Name.getText().toString();
+        String password = Password.getText().toString();
+
+
+        if(name.isEmpty() || password.isEmpty()  ){
+            Toast.makeText(this, "Uzupełnij wszystkie pola!", Toast.LENGTH_SHORT).show();
+        }else{
+            result = true;
+        }
+
+        return result;
     }
 
     private void validate(String userName, String userPassword) {
@@ -85,8 +116,7 @@ public class AcitivityLogin extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()) {
                     progressDialog.dismiss();
-                    Toast.makeText(AcitivityLogin.this, "Logowanie poprawne! ", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(AcitivityLogin.this, FirstScreenActivity.class));
+                    checkEmailVerification();
                 } else {
                     Toast.makeText(AcitivityLogin.this, "Niepoprawny email lub hasło, spróbuj ponownie", Toast.LENGTH_SHORT).show();
                     counter--;
@@ -99,6 +129,21 @@ public class AcitivityLogin extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    private void checkEmailVerification(){
+        FirebaseUser firebaseUser = firebaseAuth.getInstance().getCurrentUser();
+        Boolean emailflag = firebaseUser.isEmailVerified();
+
+        startActivity(new Intent(AcitivityLogin.this, FirstScreenActivity.class));
+
+        if(emailflag){
+           finish();
+           startActivity(new Intent(AcitivityLogin.this, FirstScreenActivity.class));
+      }else{
+           Toast.makeText(this, "Sprawdź swoją skrzynkę email", Toast.LENGTH_SHORT).show();
+           firebaseAuth.signOut();
+        }
     }
 
 

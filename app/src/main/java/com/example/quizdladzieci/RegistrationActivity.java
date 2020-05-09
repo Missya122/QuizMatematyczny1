@@ -16,6 +16,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class RegistrationActivity extends AppCompatActivity {
 
@@ -51,9 +52,7 @@ public class RegistrationActivity extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(task.isSuccessful())
                             {
-                                Toast.makeText(RegistrationActivity.this, "Rejestracja zakończona sukcesem!", Toast.LENGTH_SHORT).show();
-                                finish();
-                                startActivity(new Intent(RegistrationActivity.this,AcitivityLogin.class));
+                                sendEmailVerification();
                             } else {
                                 Toast.makeText(RegistrationActivity.this, "Rejestracja zakończona błędem!", Toast.LENGTH_SHORT).show();
                             }
@@ -98,5 +97,25 @@ public class RegistrationActivity extends AppCompatActivity {
         }
 
         return result;
+    }
+
+    private void sendEmailVerification(){
+        FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
+        if(firebaseUser!=null){
+            firebaseUser.sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
+                @Override
+                public void onComplete(@NonNull Task<Void> task) {
+                    if(task.isSuccessful()){
+                        //sendUserData();
+                        Toast.makeText(RegistrationActivity.this, "Wszystko OK, sprawdź swoją skrzynkę i potwierdź adres email!", Toast.LENGTH_SHORT).show();
+                        firebaseAuth.signOut();
+                        finish();
+                        startActivity(new Intent(RegistrationActivity.this, AcitivityLogin.class));
+                    }else{
+                        Toast.makeText(RegistrationActivity.this, "Coś poszło nie tak, spróbuj ponownie", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
+        }
     }
 }
