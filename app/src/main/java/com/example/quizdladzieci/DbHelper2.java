@@ -146,6 +146,16 @@ public class DbHelper2 extends SQLiteOpenHelper {
         addQuestion(q49);
         DivideRestQuestions q50 = new DivideRestQuestions("17 : 8 = ", 2, 1);
         addQuestion(q50);
+        DivideRestQuestions q51 = new DivideRestQuestions("28 : 11 = ", 2, 7);
+        addQuestion(q51);
+        DivideRestQuestions q52 = new DivideRestQuestions("13 : 3 = ", 4, 1);
+        addQuestion(q52);
+        DivideRestQuestions q53 = new DivideRestQuestions("8 : 3 = ", 2, 2);
+        addQuestion(q53);
+        DivideRestQuestions q54 = new DivideRestQuestions("4 : 3 = ", 1, 1);
+        addQuestion(q54);
+        DivideRestQuestions q55 = new DivideRestQuestions("18 : 5 = ", 3, 3);
+        addQuestion(q55);
     }
 
     private void addQuestion(DivideRestQuestions questions){
