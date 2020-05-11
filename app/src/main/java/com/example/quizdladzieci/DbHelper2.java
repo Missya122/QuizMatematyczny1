@@ -156,6 +156,39 @@ public class DbHelper2 extends SQLiteOpenHelper {
         addQuestion(q54);
         DivideRestQuestions q55 = new DivideRestQuestions("18 : 5 = ", 3, 3);
         addQuestion(q55);
+        DivideRestQuestions q56 = new DivideRestQuestions("34 : 3 = ", 11, 1);
+        addQuestion(q56);
+        DivideRestQuestions q57 = new DivideRestQuestions("29 : 4 = ", 7, 1);
+        addQuestion(q57);
+        DivideRestQuestions q58 = new DivideRestQuestions("14 : 5 = ", 2, 4);
+        addQuestion(q58);
+        DivideRestQuestions q59 = new DivideRestQuestions("28 : 8 = ", 3, 4);
+        addQuestion(q59);
+        DivideRestQuestions q60 = new DivideRestQuestions("43 : 6 = ", 7, 1);
+        addQuestion(q60);
+        DivideRestQuestions q61 = new DivideRestQuestions("57 : 8 = ", 7, 1);
+        addQuestion(q61);
+        DivideRestQuestions q62 = new DivideRestQuestions("57 : 7 = ", 8, 1);
+        addQuestion(q62);
+        DivideRestQuestions q63 = new DivideRestQuestions("20 : 6 = ", 3, 2);
+        addQuestion(q63);
+        DivideRestQuestions q64 = new DivideRestQuestions("23 : 9 = ", 2, 5);
+        addQuestion(q64);
+        DivideRestQuestions q65 = new DivideRestQuestions("61 : 7 = ", 8, 5);
+        addQuestion(q65);
+        DivideRestQuestions q66 = new DivideRestQuestions("43 : 5 = ", 8, 3);
+        addQuestion(q66);
+        DivideRestQuestions q67 = new DivideRestQuestions("19 : 9 = ", 2, 1);
+        addQuestion(q67);
+        DivideRestQuestions q68 = new DivideRestQuestions("13 : 2 = ", 6, 1);
+        addQuestion(q68);
+        DivideRestQuestions q69 = new DivideRestQuestions("9 : 6 = ", 1, 3);
+        addQuestion(q69);
+        DivideRestQuestions q70 = new DivideRestQuestions("12 : 5 = ", 2, 2);
+        addQuestion(q66);
+
+
+
     }
 
     private void addQuestion(DivideRestQuestions questions){
