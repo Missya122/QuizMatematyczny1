@@ -15,7 +15,7 @@ import java.util.List;
 
 public class DbHelper2 extends SQLiteOpenHelper {
     private static final String DATABASE_NAME="CalculatorDivideRest.db";
-    private static final int DATABASE_VERSION=1;
+    private static final int DATABASE_VERSION=2;
 
     private SQLiteDatabase db;
 
@@ -70,6 +70,14 @@ public class DbHelper2 extends SQLiteOpenHelper {
         addQuestion(q11);
         DivideRestQuestions q12 = new DivideRestQuestions("31 : 7 = ", 4, 3);
         addQuestion(q12);
+        DivideRestQuestions q13 = new DivideRestQuestions("77 : 10 = ", 7, 7);
+        addQuestion(q13);
+        DivideRestQuestions q14 = new DivideRestQuestions("25 : 3 = ", 8, 1);
+        addQuestion(q14);
+        DivideRestQuestions q15 = new DivideRestQuestions("11 : 5 = ", 2, 1);
+        addQuestion(q15);
+        DivideRestQuestions q16 = new DivideRestQuestions("91 : 9 = ", 10, 1);
+        addQuestion(q16);
     }
 
     private void addQuestion(DivideRestQuestions questions){

@@ -59,7 +59,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.81" />
+        app:layout_constraintVertical_bias="0.781" />
 
     <TextView
         android:id="@+id/tvRegister"
@@ -68,12 +68,28 @@
         android:fontFamily="@font/bowlby_one_sc"
         android:text="Jesteś nowy? Załóż konto!"
         android:textColor="@color/design_default_color_primary_dark"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.846" />
+
+    <TextView
+        android:id="@+id/tvWithoutLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bowlby_one_sc"
+        android:text="Lub GRAJ bez logowania"
+        android:textColor="#03A9F4"
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.895" />
+        app:layout_constraintVertical_bias="0.934" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -95,10 +111,10 @@
         android:textColor="@color/design_default_color_primary_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.554"
+        app:layout_constraintHorizontal_bias="0.578"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.753" />
+        app:layout_constraintVertical_bias="0.738" />
 
     <TextView
         android:id="@+id/textView3"

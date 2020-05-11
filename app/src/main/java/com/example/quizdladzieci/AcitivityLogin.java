@@ -28,6 +28,7 @@ public class AcitivityLogin extends AppCompatActivity {
     private Button Login;
     private int counter = 5;
     private TextView userRegistration;
+    private TextView withoutLogin;
     private FirebaseAuth firebaseAuth;
     private ProgressDialog progressDialog;
     private TextView forgotPassword;
@@ -42,6 +43,7 @@ public class AcitivityLogin extends AppCompatActivity {
         Info = (TextView)findViewById(R.id.tvInfo);
         Login = (Button) findViewById(R.id.btnLogin);
         userRegistration = (TextView) findViewById(R.id.tvRegister);
+        withoutLogin = (TextView) findViewById(R.id.tvWithoutLogin);
         final MediaPlayer mp = MediaPlayer.create(this, R.raw.sample);
        forgotPassword = (TextView) findViewById(R.id.tvForgotPassword);
 
@@ -86,7 +88,12 @@ public class AcitivityLogin extends AppCompatActivity {
             }
         });
 
-
+        withoutLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(AcitivityLogin.this, FirstScreenActivity.class));
+            }
+        });
 
     }
     private Boolean validate0(){
