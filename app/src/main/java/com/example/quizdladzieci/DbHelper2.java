@@ -185,7 +185,7 @@ public class DbHelper2 extends SQLiteOpenHelper {
         DivideRestQuestions q69 = new DivideRestQuestions("9 : 6 = ", 1, 3);
         addQuestion(q69);
         DivideRestQuestions q70 = new DivideRestQuestions("12 : 5 = ", 2, 2);
-        addQuestion(q66);
+        addQuestion(q70);
 
 
 
