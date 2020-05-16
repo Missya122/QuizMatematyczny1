@@ -34,8 +34,10 @@ public class MenuForAllAcitivity extends AppCompatActivity {
         {
             case R.id.logout:
                 Logout();
-            case R.id.setting:
                 break;
+            case R.id.profileMenu:
+                startActivity(new Intent(MenuForAllAcitivity.this, UserProfileActivity.class));
+
         }
         return true;
     }

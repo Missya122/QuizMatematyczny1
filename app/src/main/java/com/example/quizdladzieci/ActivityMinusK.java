@@ -17,7 +17,7 @@ import android.widget.Toast;
 
 import java.util.Random;
 
-public class ActivityMinusK extends AppCompatActivity {
+public class ActivityMinusK extends MenuForAllAcitivity {
     public static final String EXTRA_COUNTER = "com.example.application.example.EXTRA_COUNTER";
     public static final String EXTRA_NUMBER = "com.example.application.example.EXTRA_NUMBER";
     private  int no;

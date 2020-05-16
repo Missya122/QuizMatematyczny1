@@ -144,13 +144,13 @@ public class AcitivityLogin extends AppCompatActivity {
 
         startActivity(new Intent(AcitivityLogin.this, FirstScreenActivity.class));
 
-        if(emailflag){
+        /*if(emailflag){
            finish();
            startActivity(new Intent(AcitivityLogin.this, FirstScreenActivity.class));
       }else{
            Toast.makeText(this, "Sprawdź swoją skrzynkę email", Toast.LENGTH_SHORT).show();
            firebaseAuth.signOut();
-        }
+        }*/
     }
 
 

@@ -7,8 +7,10 @@
         android:id="@+id/logout"
         app:showAsAction="ifRoom"/>
     <item
-        android:title="Ustawienia"
-        android:id="@+id/setting"
+        android:title="Twój profil"
+        android:id="@+id/profileMenu"
         app:showAsAction="never"/>
+
+
 
 </menu>
