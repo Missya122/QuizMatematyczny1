@@ -5,19 +5,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".UpdateProfile">
+
     <include
-        layout="@layout/appbar"/>
+        android:id="@+id/include"
+        layout="@layout/appbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/tvInfoUpdate2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="21dp"
+        android:fontFamily="@font/bowlby_one_sc"
+        android:text="Kliknij w ikonkę, by zmienić obrazek"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/ivProfileUpdate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include"
+        app:layout_constraintVertical_bias="1.0" />
+
+
 
     <ImageView
         android:id="@+id/ivProfileUpdate"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
+        android:layout_width="200dp"
+        android:layout_height="140dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.177"
+        app:layout_constraintVertical_bias="0.256"
         app:srcCompat="@drawable/boy_icon" />
 
     <EditText
