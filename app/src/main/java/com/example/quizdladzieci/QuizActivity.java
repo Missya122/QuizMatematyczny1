@@ -65,6 +65,10 @@ public class QuizActivity extends MenuForAllAcitivity {
     private int score;
     private boolean answered;
 
+    public int correctAns = 0, wrongAns = 0;
+
+    public TextView correct_answers;
+
     private long backPressedTime;
     private Toolbar toolbar;
 
@@ -229,6 +233,10 @@ public class QuizActivity extends MenuForAllAcitivity {
         if( answerNr == currentQuestion.getAnswerNr())
         {
             score++;
+           // correctAns++;
+
+           // correct_answers.setText(String.valueOf(correctAns));
+
             textViewScore.setText("Twój wynik: " + score );
 
         }

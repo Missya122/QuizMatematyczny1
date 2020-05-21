@@ -36,6 +36,7 @@ public class Statistics_Quiz extends MenuForAllAcitivity {
         tvQuizMarkYour = findViewById(R.id.tvQuizMark);
         loadHighscore();
 
+
         toolbar = findViewById(R.id.myToolBar);
 
         setSupportActionBar(toolbar);
