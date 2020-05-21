@@ -2,11 +2,13 @@ package com.example.quizdladzieci;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -33,6 +35,9 @@ public class AcitivityLogin extends AppCompatActivity {
     private ProgressDialog progressDialog;
     private TextView forgotPassword;
 
+
+    private Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +51,8 @@ public class AcitivityLogin extends AppCompatActivity {
         withoutLogin = (TextView) findViewById(R.id.tvWithoutLogin);
         final MediaPlayer mp = MediaPlayer.create(this, R.raw.sample);
        forgotPassword = (TextView) findViewById(R.id.tvForgotPassword);
+       invalidateOptionsMenu();
+
 
         Info.setText("Liczba pozostałych prób: 5");
 
@@ -91,7 +98,12 @@ public class AcitivityLogin extends AppCompatActivity {
         withoutLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 startActivity(new Intent(AcitivityLogin.this, FirstScreenActivity.class));
+
+
+
+
             }
         });
 

@@ -32,13 +32,7 @@ public class ActivitySettings extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
-        radioGroup = findViewById(R.id.radioGroup);
-        radioGroupRange = findViewById(R.id.radioGroupRange);
-        textView = findViewById(R.id.text_view_selected);
-        textView2 = findViewById(R.id.textViewRange);
-        textView3 = findViewById(R.id.textViewDzialanie);
 
-        final MediaPlayer mp = MediaPlayer.create(this, R.raw.sample);
         toolbar = findViewById(R.id.myToolBar);
 
         setSupportActionBar(toolbar);
@@ -51,6 +45,18 @@ public class ActivitySettings extends AppCompatActivity {
                 finish();
             }
         });
+
+
+        radioGroup = findViewById(R.id.radioGroup);
+        radioGroupRange = findViewById(R.id.radioGroupRange);
+        textView = findViewById(R.id.text_view_selected);
+        textView2 = findViewById(R.id.textViewRange);
+        textView3 = findViewById(R.id.textViewDzialanie);
+
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.sample);
+
+
+
 
         Button buttonApply = findViewById(R.id.button_apply);
         buttonApply.setOnClickListener(new View.OnClickListener() {

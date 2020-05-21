@@ -30,6 +30,21 @@ public class MenuForAllAcitivity extends AppCompatActivity {
     }
 
     @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        if(FirebaseAuth.getInstance().getCurrentUser() == null ) {
+            MenuItem menuItem = menu.findItem(R.id.logout);
+            MenuItem menuItem2 = menu.findItem(R.id.profileMenu);
+            MenuItem menuItem3 = menu.findItem(R.id.profileStats);
+            menuItem.setVisible(false);//gone
+            menuItem2.setVisible(false);
+            menuItem3.setVisible(false);
+
+
+        }
+        return true;
+    }
+
+    @Override
     public boolean onSupportNavigateUp() {
         onBackPressed();
         return true;
