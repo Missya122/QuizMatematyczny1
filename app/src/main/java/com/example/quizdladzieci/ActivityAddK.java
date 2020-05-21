@@ -73,6 +73,14 @@ public class ActivityAddK extends AppCompatActivity {
         toolbar = findViewById(R.id.myToolBar);
 
         setSupportActionBar(toolbar);
+        toolbar.setNavigationIcon(R.drawable.ic_chevron_left_black_24dp);
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         textViewLicznik = (TextView)findViewById(R.id.textViewLicznik);
         textView1_1 = (TextView)findViewById(R.id.textView1_1);

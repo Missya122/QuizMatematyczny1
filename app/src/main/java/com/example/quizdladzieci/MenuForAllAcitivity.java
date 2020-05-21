@@ -14,6 +14,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class MenuForAllAcitivity extends AppCompatActivity {
 
     private FirebaseAuth firebaseAuth;
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -29,6 +30,12 @@ public class MenuForAllAcitivity extends AppCompatActivity {
     }
 
     @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
+
+    @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch(item.getItemId())
         {
@@ -37,6 +44,10 @@ public class MenuForAllAcitivity extends AppCompatActivity {
                 break;
             case R.id.profileMenu:
                 startActivity(new Intent(MenuForAllAcitivity.this, UserProfileActivity.class));
+                break;
+            case R.id.profileStats:
+                startActivity(new Intent(MenuForAllAcitivity.this, Statistics.class));
+                break;
 
         }
         return true;

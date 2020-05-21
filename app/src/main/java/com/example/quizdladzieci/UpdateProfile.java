@@ -43,14 +43,14 @@ public class UpdateProfile extends MenuForAllAcitivity {
 
     private ImageView updateProfilePic;
     private static int PICK_IMAGE = 123;
-    Uri imagePath;
+    Uri imagePath = Uri.EMPTY;
     private StorageReference storageReference;
     private FirebaseStorage firebaseStorage;
 
    @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
-       super.onActivityResult(requestCode, resultCode, data);
+
         if(requestCode == PICK_IMAGE && resultCode == RESULT_OK && data.getData() != null){
             imagePath = data.getData();
             try {
@@ -60,6 +60,8 @@ public class UpdateProfile extends MenuForAllAcitivity {
                 e.printStackTrace();
             }
         }
+       super.onActivityResult(requestCode, resultCode, data);
+
 
     }
 
@@ -71,6 +73,15 @@ public class UpdateProfile extends MenuForAllAcitivity {
         toolbar = findViewById(R.id.myToolBar);
 
         setSupportActionBar(toolbar);
+
+        toolbar.setNavigationIcon(R.drawable.ic_chevron_left_black_24dp);
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
 
         final MediaPlayer mp = MediaPlayer.create(this, R.raw.sample);
@@ -94,8 +105,9 @@ public class UpdateProfile extends MenuForAllAcitivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 UserProfile userProfile = dataSnapshot.getValue(UserProfile.class);
                 newUserName.setText(userProfile.getUserName());
-                newUserEmail.setText(userProfile.getUserEmail());
                 newUserAge.setText(userProfile.getUserAge());
+                newUserEmail.setText(userProfile.getUserEmail());
+
 
 
             }
@@ -141,15 +153,17 @@ public class UpdateProfile extends MenuForAllAcitivity {
                     uploadTask.addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
-                            Toast.makeText(UpdateProfile.this, "Wystąpił błąd!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(UpdateProfile.this, "....", Toast.LENGTH_SHORT).show();
                         }
                     }).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
                         @Override
                         public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
-                            Toast.makeText(UpdateProfile.this, "Wszystko OK!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(UpdateProfile.this, "Gotowe!", Toast.LENGTH_SHORT).show();
                         }
                     });
+
                     finish();
+
                 }
 
 
@@ -165,6 +179,13 @@ public class UpdateProfile extends MenuForAllAcitivity {
                 mp.start();
                 Intent intent = new Intent(Intent.ACTION_PICK,android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                 startActivityForResult(intent, PICK_IMAGE);
+
+                /*Intent intent = new Intent();
+                intent.setType("image/*"); // application/pdf
+                intent.setAction(Intent.ACTION_GET_CONTENT);
+                startActivityForResult(Intent.createChooser(intent, "Wybierz obraz"), PICK_IMAGE);*/
+
+
             }
         });
     }
@@ -177,7 +198,7 @@ public class UpdateProfile extends MenuForAllAcitivity {
         String age = newUserAge.getText().toString();
 
 
-        if(name.isEmpty() || email.isEmpty() || age.isEmpty()  ){
+        if(name.isEmpty() || email.isEmpty() || age.isEmpty()  || imagePath==null ){
             Toast.makeText(this, "Uzupełnij wszystkie pola!", Toast.LENGTH_SHORT).show();
         }else{
             result = true;

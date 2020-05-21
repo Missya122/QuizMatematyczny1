@@ -61,6 +61,15 @@ public class ActivityDivide2 extends MenuForAllAcitivity {
 
         setSupportActionBar(toolbar);
 
+        toolbar.setNavigationIcon(R.drawable.ic_chevron_left_black_24dp);
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
         DbHelper2 dbHelper = new DbHelper2(this);
         divideRestQuestionsList = dbHelper.getAllDivideRestQuestions();
 

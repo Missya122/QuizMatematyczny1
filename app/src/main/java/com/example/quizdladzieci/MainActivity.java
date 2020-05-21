@@ -35,7 +35,7 @@ public class MainActivity extends MenuForAllAcitivity {
     public static final String EXTRA_CATEGORY_NAME = "extraCategoryName";
     public static final String SHARED_PREFS = "sharedPrefs";
     public static final String KEY_HIGHSCORE = "keyHighscore";
-    private TextView textViewHighscore;
+    public TextView textViewHighscore;
     private Spinner spinnerCategory;
     private Spinner spinnerSets;
 
@@ -61,6 +61,14 @@ public class MainActivity extends MenuForAllAcitivity {
         toolbar = findViewById(R.id.myToolBar);
 
         setSupportActionBar(toolbar);
+        toolbar.setNavigationIcon(R.drawable.ic_chevron_left_black_24dp);
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
 
 

@@ -76,6 +76,15 @@ public class ActivityMinusK extends MenuForAllAcitivity {
 
         setSupportActionBar(toolbar);
 
+        toolbar.setNavigationIcon(R.drawable.ic_chevron_left_black_24dp);
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
         textViewLicznik = (TextView)findViewById(R.id.textViewLicznik);
         editText1_2 = (EditText)findViewById(R.id.editText1_2);
         editText1_3 = (EditText)findViewById(R.id.editText1_3);
