@@ -197,7 +197,7 @@ public class RegistrationActivity extends AppCompatActivity {
                 Toast.makeText(RegistrationActivity.this, "Wszystko OK!", Toast.LENGTH_SHORT).show();
             }
         });
-        UserProfile userProfile = new UserProfile(age, email, name);
+        UserProfile userProfile = new UserProfile(age, email, name,0,0,0,0,0,0,0);
         myRef.setValue(userProfile);
     }
 }

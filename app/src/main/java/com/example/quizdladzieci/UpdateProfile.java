@@ -100,6 +100,8 @@ public class UpdateProfile extends MenuForAllAcitivity {
         final DatabaseReference databaseReference = firebaseDatabase.getReference(firebaseAuth.getUid());
 
 
+
+
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -145,8 +147,12 @@ public class UpdateProfile extends MenuForAllAcitivity {
                     String age = newUserAge.getText().toString();
                     String email = newUserEmail.getText().toString();
 
-                    UserProfile userProfile = new UserProfile(age, email, name);
-                    databaseReference.setValue(userProfile);
+                    //UserProfile userProfile = new UserProfile(age, email, name,0,0,0,0,0,0);
+                   // databaseReference.setValue(userProfile);
+
+                     firebaseDatabase.getReference(firebaseAuth.getUid()).child("userAge").setValue(age);
+                    firebaseDatabase.getReference(firebaseAuth.getUid()).child("userEmail").setValue(email);
+                    firebaseDatabase.getReference(firebaseAuth.getUid()).child("userName").setValue(name);
 
                     StorageReference imageReference = storageReference.child(firebaseAuth.getUid()).child("Images").child("Profile Pic");  //User id/Images/Profile Pic.jpg
                     UploadTask uploadTask = imageReference.putFile(imagePath);

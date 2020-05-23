@@ -8,6 +8,22 @@
     tools:context=".QuizActivity"
     android:configChanges="orientation|screenSize"
     >
+
+    <TextView
+        android:id="@+id/text_view_wrong_ans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="60dp"
+        android:layout_below="@id/text_view_countdown"
+        android:layout_marginRight="10dp"
+        android:fontFamily="@font/bowlby_one_sc"
+        android:freezesText="true"
+        android:text=" Błędne odpowiedzi: "
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
     <include
         layout="@layout/appbar"/>
 
@@ -21,6 +37,7 @@
         android:fontFamily="@font/bowlby_one_sc"
         android:textColor="@android:color/holo_blue_dark"
         android:freezesText="true"/>
+
 
     <TextView
     android:id="@+id/text_view_question_count"
@@ -70,14 +87,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="60dp"
         android:layout_alignParentRight="true"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginRight="9dp"
+        android:fontFamily="@font/bowlby_one_sc"
+        android:freezesText="true"
         android:text=" 00:30  "
         android:textColor="@android:color/black"
-        android:fontFamily="@font/bowlby_one_sc"
-        android:textSize="40sp"
-        android:freezesText="true"/>
+        android:textSize="40sp" />
 
     <TextView
         android:id="@+id/text_view_question"

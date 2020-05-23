@@ -38,6 +38,7 @@ public class QuizActivity extends MenuForAllAcitivity {
 
     private TextView textViewQuestion;
     private TextView textViewScore;
+    private TextView textViewWrongAns;
     private TextView textViewQuestionCount;
     private TextView textViewSets;
     private TextView textViewCategory;
@@ -63,6 +64,7 @@ public class QuizActivity extends MenuForAllAcitivity {
     private Question currentQuestion;
 
     private int score;
+    private int question_count;
     private boolean answered;
 
     public int correctAns = 0, wrongAns = 0;
@@ -80,6 +82,7 @@ public class QuizActivity extends MenuForAllAcitivity {
 
         textViewQuestion = findViewById(R.id.text_view_question);
         textViewScore= findViewById(R.id.text_view_score);
+        textViewWrongAns = findViewById(R.id.text_view_wrong_ans);
         textViewQuestionCount = findViewById(R.id.text_view_question_count);
         textViewSets = findViewById(R.id.text_view_sets);
         textViewCategory = findViewById(R.id.text_view_category);
@@ -139,6 +142,7 @@ public class QuizActivity extends MenuForAllAcitivity {
             questionCounter = savedInstanceState.getInt(KEY_QUESTION_COUNT);
             currentQuestion = questionList.get(questionCounter - 1);
             score = savedInstanceState.getInt(KEY_SCORE);
+
             timeLeftInMilis = savedInstanceState.getLong(KEY_MILIS_LEFT);
             answered = savedInstanceState.getBoolean(KEY_ANSWERED);
 
@@ -233,13 +237,20 @@ public class QuizActivity extends MenuForAllAcitivity {
         if( answerNr == currentQuestion.getAnswerNr())
         {
             score++;
+           // question_count++;
+
            // correctAns++;
 
            // correct_answers.setText(String.valueOf(correctAns));
 
             textViewScore.setText("Twój wynik: " + score );
 
+        } else {
+            wrongAns++;
+            //question_count++;
+            textViewWrongAns.setText("Błędne odpowiedzi: " + wrongAns);
         }
+        question_count++;
         ShowSolution();
     }
     private void ShowSolution()
@@ -270,10 +281,16 @@ public class QuizActivity extends MenuForAllAcitivity {
     }
     private void finishQuiz() {
 
-        Intent resultIntent = new Intent();
-        resultIntent.putExtra(EXTRA_SCORE,score);
-        setResult(RESULT_OK, resultIntent);
+        //Intent resultIntent = new Intent();
+        //resultIntent.putExtra(EXTRA_SCORE,score);
+        //setResult(RESULT_OK, resultIntent);
+        Intent intent = new Intent(this, FinishQuiz.class);
+        intent.putExtra("score", score);
+        intent.putExtra("wrongAns", wrongAns);
+        intent.putExtra("question_count", question_count);
+        startActivity(intent);
         finish();
+
     }
 
     @Override
@@ -304,4 +321,6 @@ public class QuizActivity extends MenuForAllAcitivity {
         outState.putBoolean(KEY_ANSWERED,answered);
         outState.putParcelableArrayList(KEY_QUESTION_LIST, questionList);
     }
+
+
 }
