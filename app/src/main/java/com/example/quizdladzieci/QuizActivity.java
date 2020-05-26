@@ -40,7 +40,6 @@ public class QuizActivity extends MenuForAllAcitivity {
     private TextView textViewScore;
     private TextView textViewWrongAns;
     private TextView textViewQuestionCount;
-    private TextView textViewSets;
     private TextView textViewCategory;
     private TextView textViewDifficulty;
     private TextView textViewCountDown;
@@ -84,7 +83,6 @@ public class QuizActivity extends MenuForAllAcitivity {
         textViewScore= findViewById(R.id.text_view_score);
         textViewWrongAns = findViewById(R.id.text_view_wrong_ans);
         textViewQuestionCount = findViewById(R.id.text_view_question_count);
-        textViewSets = findViewById(R.id.text_view_sets);
         textViewCategory = findViewById(R.id.text_view_category);
         textViewDifficulty = findViewById(R.id.text_view_difficulty);
         textViewCountDown = findViewById(R.id.text_view_countdown);
@@ -123,7 +121,6 @@ public class QuizActivity extends MenuForAllAcitivity {
         int categoryID = intent.getIntExtra(MainActivity.EXTRA_CATEGORY_ID,0);
         String categoryName = intent.getStringExtra(MainActivity.EXTRA_CATEGORY_NAME);
         String difficulty = intent.getStringExtra(MainActivity.EXTRA_DIFFICULTY);
-        textViewSets.setText("Zestaw: " + setsName);
         textViewCategory.setText("Kategoria: " + categoryName);
         textViewDifficulty.setText("Trudność: " + difficulty);
 

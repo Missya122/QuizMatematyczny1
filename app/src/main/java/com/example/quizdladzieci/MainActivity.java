@@ -33,29 +33,27 @@ public class MainActivity extends MenuForAllAcitivity {
     public static final String EXTRA_SETS_NAME = "extraSetsName";
     public static final String EXTRA_CATEGORY_ID = "extraCategoryID";
     public static final String EXTRA_CATEGORY_NAME = "extraCategoryName";
-    public static final String SHARED_PREFS = "sharedPrefs";
-    public static final String KEY_HIGHSCORE = "keyHighscore";
+
     public TextView textViewHighscore;
     private Spinner spinnerCategory;
     private Spinner spinnerSets;
 
     private Spinner spinnerDifficulty;
-    private int highscore;
+
     private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        textViewHighscore = findViewById(R.id.text_view_highscore);
         spinnerSets = findViewById(R.id.spinner_sets);
         spinnerCategory = findViewById(R.id.spinner_category);
         spinnerDifficulty = findViewById(R.id.spinner_difficulty);
         loadSets();
         loadCategories();
         loadDifficultyLevels();
-        loadHighscore();
+
 
         final MediaPlayer mp = MediaPlayer.create(this, R.raw.sample);
         toolbar = findViewById(R.id.myToolBar);
@@ -69,8 +67,6 @@ public class MainActivity extends MenuForAllAcitivity {
                 finish();
             }
         });
-
-
 
 
         Button buttonStartQuiz = findViewById(R.id.button_start_quiz);
@@ -103,19 +99,7 @@ public class MainActivity extends MenuForAllAcitivity {
         startActivityForResult(intent, REQUEST_CODE_QUIZ);
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
 
-        if( requestCode == REQUEST_CODE_QUIZ){
-            if( resultCode == RESULT_OK) {
-                int score = data.getIntExtra(QuizActivity.EXTRA_SCORE, 0);
-                if ( score > highscore ) {
-                    updateHighScore(score);
-                }
-            }
-        }
-    }
     private void loadSets() {
         QuizDbHelper dbHelper = QuizDbHelper.getInstance(this);
         List<Sets> sets = dbHelper.getAllSets();
@@ -144,19 +128,4 @@ public class MainActivity extends MenuForAllAcitivity {
         spinnerDifficulty.setAdapter(adapterDifficulty);
     }
 
-    private void loadHighscore() {
-        SharedPreferences prefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
-        highscore = prefs.getInt(KEY_HIGHSCORE,0);
-        textViewHighscore.setText("Maksymalny wynik: " + highscore);
-    }
-    private void updateHighScore( int highscoreNew )
-    {
-        highscore = highscoreNew;
-        textViewHighscore.setText("Maksymalny wynik: " + highscore);
-
-        SharedPreferences prefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
-        SharedPreferences.Editor editor = prefs.edit();
-        editor.putInt(KEY_HIGHSCORE, highscore);
-        editor.apply();
-    }
 }

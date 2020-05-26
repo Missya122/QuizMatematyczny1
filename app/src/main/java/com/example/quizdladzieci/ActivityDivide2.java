@@ -34,6 +34,8 @@ public class ActivityDivide2 extends MenuForAllAcitivity {
     private DivideRestQuestions currentQuestion;
 
     private int counter;
+    private int wrongAns;
+    private int goodAns;
     private int gameCounter;
     private int no;
     private boolean answered;
@@ -77,6 +79,8 @@ public class ActivityDivide2 extends MenuForAllAcitivity {
         Collections.shuffle(divideRestQuestionsList);
 
         counter = 0;
+        wrongAns = 0;
+        goodAns = 0;
         gameCounter = 0;
         nrQuestion = myRandom.nextInt(questionCountTotal-11);
         newGame();
@@ -154,6 +158,7 @@ public class ActivityDivide2 extends MenuForAllAcitivity {
                 buttonNext.setText("Sprawdź");
             }
             counter++;
+            goodAns++;
         } else {
             editTextResult.setBackgroundColor(Color.RED);
             editTextRest.setBackgroundColor(Color.RED);
@@ -162,6 +167,7 @@ public class ActivityDivide2 extends MenuForAllAcitivity {
             } else {
                 buttonNext.setText("Sprawdź");
             }
+            wrongAns++;
         }
     }
 
@@ -173,6 +179,8 @@ public class ActivityDivide2 extends MenuForAllAcitivity {
         Intent intent = new Intent(this, ActivityWin.class);
         intent.putExtra(EXTRA_NUMBER, no);
         intent.putExtra(EXTRA_COUNTER, counter);
+        intent.putExtra("wrongAns_Divide2", wrongAns);
+        intent.putExtra("goodAns_Divide2", goodAns);
         startActivity(intent);
     }
 }

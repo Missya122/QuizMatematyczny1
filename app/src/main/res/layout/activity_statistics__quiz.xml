@@ -63,7 +63,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:fontFamily="@font/bowlby_one_sc"
-        android:text="Ocena na jaką zasługujesz to:"
+        android:text="Ocena jaką dostajesz to:"
         android:textColor="#0B1E87"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -71,7 +71,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvQuizBad"
-        app:layout_constraintVertical_bias="0.103" />
+        app:layout_constraintVertical_bias="0.076" />
 
     <TextView
         android:id="@+id/tvQuizBad"
@@ -86,7 +86,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvQuizGood"
-        app:layout_constraintVertical_bias="0.065" />
+        app:layout_constraintVertical_bias="0.064" />
 
     <TextView
         android:id="@+id/tvQuizGood"

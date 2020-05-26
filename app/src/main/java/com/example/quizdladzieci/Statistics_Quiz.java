@@ -33,8 +33,6 @@ public class Statistics_Quiz extends MenuForAllAcitivity {
 
     private static final int REQUEST_CODE_QUIZ = 1;
 
-    public static final String SHARED_PREFS = "sharedPrefs";
-    public static final String KEY_HIGHSCORE = "keyHighscore";
 
 
     @Override
@@ -46,7 +44,7 @@ public class Statistics_Quiz extends MenuForAllAcitivity {
         tvQuizGoodCount = findViewById(R.id.tvQuizGood);
         tvQuizBadCount = findViewById(R.id.tvQuizBad);
         tvQuizMarkYour = findViewById(R.id.tvQuizMark);
-        loadHighscore();
+
 
 
         toolbar = findViewById(R.id.myToolBar);
@@ -55,13 +53,13 @@ public class Statistics_Quiz extends MenuForAllAcitivity {
 
         toolbar.setNavigationIcon(R.drawable.ic_chevron_left_black_24dp);
 
+
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
             }
         });
-
 
         final MediaPlayer mp = MediaPlayer.create(this, R.raw.sample);
 
@@ -104,6 +102,9 @@ public class Statistics_Quiz extends MenuForAllAcitivity {
                     tvQuizMarkYour.setText("Odpowiedz na co najmniej 10 pytań!");
                 }
 
+                highscore2 = userProfile.getUserBestScoreQuiz();
+                tvQuizMaxYour.setText("Maksymalny wynik z quizu: " + highscore2);
+
 
                 tvQuizMarkYour.setText( String.valueOf(mark));
 
@@ -133,15 +134,6 @@ public class Statistics_Quiz extends MenuForAllAcitivity {
 
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        int score = data.getIntExtra(QuizActivity.EXTRA_SCORE, 0);
-        if ( score > highscore2 ) {
-            updateHighScore(score);
-        }
-    }
 
     private void goToQuizNow () {
 
@@ -149,32 +141,8 @@ public class Statistics_Quiz extends MenuForAllAcitivity {
         startActivity(intent);
     }
 
-    private void loadHighscore() {
-        SharedPreferences prefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
-        highscore2 = prefs.getInt(KEY_HIGHSCORE,0);
-        tvQuizMaxYour.setText("Maksymalny wynik z quizu: " + highscore2);
-    }
-    private void updateHighScore( int highscoreNew )
-    {
-        highscore2 = highscoreNew;
-        tvQuizMaxYour.setText("Maksymalny wynik z quizu: " + highscore2);
-
-        SharedPreferences prefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
-        SharedPreferences.Editor editor = prefs.edit();
-        editor.putInt(KEY_HIGHSCORE, highscore2);
-        editor.apply();
-    }
-
-    private void loadGoodAnswers( )
-    {
 
 
-    }
-
-    private void loadMark ()
-    {
-
-    }
 
 
 }

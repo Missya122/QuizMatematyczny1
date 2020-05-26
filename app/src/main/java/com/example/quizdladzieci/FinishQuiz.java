@@ -3,6 +3,7 @@ package com.example.quizdladzieci;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -23,8 +24,6 @@ import com.google.firebase.database.annotations.NotNull;
 
 import javax.security.auth.callback.Callback;
 
-import static com.example.quizdladzieci.MainActivity.SHARED_PREFS;
-import static com.example.quizdladzieci.QuizActivity.EXTRA_SCORE;
 
 public class FinishQuiz extends AppCompatActivity {
 
@@ -35,10 +34,8 @@ public class FinishQuiz extends AppCompatActivity {
     private FirebaseAuth firebaseAuth;
     private FirebaseDatabase firebaseDatabase;
     private  int highscore2 = 0;
-    public static final String SHARED_PREFS = "sharedPrefs";
-    public static final String KEY_HIGHSCORE = "keyHighscore";
 
-
+    private Toolbar toolbar;
 
 
 
@@ -59,16 +56,25 @@ public class FinishQuiz extends AppCompatActivity {
 
         score_view = findViewById(R.id.tvScore);
 
-        score_view.setText("Twój wynik: " + score);
+        score_view.setText(" Oto twój wynik: " + score) ;
 
 
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
-        loadHighscore();
 
-        Intent resultIntent = new Intent();
-        resultIntent.putExtra(EXTRA_SCORE,score);
-        setResult(RESULT_OK, resultIntent);
+        toolbar = findViewById(R.id.myToolBar);
+
+        setSupportActionBar(toolbar);
+
+        toolbar.setNavigationIcon(R.drawable.ic_chevron_left_black_24dp);
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
 
         final DatabaseReference databaseReference = firebaseDatabase.getReference(firebaseAuth.getUid());
 
@@ -99,7 +105,9 @@ public class FinishQuiz extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 UserProfile userProfile = dataSnapshot.getValue(UserProfile.class);
                 userProfile.userGoodAnswersQuiz = score + userProfile.getUserGoodAnswersQuiz();
-                button_return.setText(String.valueOf(userProfile.userGoodAnswersQuiz));
+
+                highscore2 = userProfile.getUserBestScoreQuiz();
+
                 if ( score > highscore2 ) {
                     updateHighScore(score);
                 }
@@ -125,12 +133,6 @@ public class FinishQuiz extends AppCompatActivity {
                 DatabaseReference myRef_total = firebaseDatabase.getReference(firebaseAuth.getUid()).child("userTotalQuestionsQuiz");
 
                 myRef_total.setValue(userProfile.userTotalQuestionsQuiz);
-
-
-
-
-
-
 
 
 
@@ -168,20 +170,13 @@ public class FinishQuiz extends AppCompatActivity {
             updateHighScore(score);
         }
     }*/
-    private void loadHighscore() {
-        SharedPreferences prefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
-        highscore2 = prefs.getInt(KEY_HIGHSCORE,0);
 
-    }
+
     private void updateHighScore( int highscoreNew )
     {
         highscore2 = highscoreNew;
 
 
-        SharedPreferences prefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
-        SharedPreferences.Editor editor = prefs.edit();
-        editor.putInt(KEY_HIGHSCORE, highscore2);
-        editor.apply();
     }
 
 

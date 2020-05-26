@@ -13,16 +13,12 @@
         android:id="@+id/text_view_wrong_ans"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="60dp"
-        android:layout_below="@id/text_view_countdown"
-        android:layout_marginRight="10dp"
+        android:layout_below="@id/text_view_question_count"
         android:fontFamily="@font/bowlby_one_sc"
+        android:textColor="@android:color/holo_blue_light"
         android:freezesText="true"
-        android:text=" Błędne odpowiedzi: "
-        android:textColor="@android:color/black"
-        android:textSize="20sp" />
+        android:text="Błędne odpowiedzi: "
+        android:textSize="18sp" />
 
     <include
         layout="@layout/appbar"/>
@@ -42,7 +38,6 @@
     <TextView
     android:id="@+id/text_view_question_count"
     android:layout_width="wrap_content"
-
     android:layout_height="wrap_content"
     android:layout_below="@+id/text_view_score"
     android:text="Pytanie: 1/x  "
@@ -50,21 +45,12 @@
         android:fontFamily="@font/bowlby_one_sc"
     android:textColor="@android:color/holo_blue_bright"
     android:freezesText="true"/>
-    <TextView
-        android:id="@+id/text_view_sets"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/text_view_question_count"
-        android:text="Zestaw:  "
-        android:textSize="18dp"
-        android:fontFamily="@font/bowlby_one_sc"
-        android:textColor="@android:color/holo_blue_dark"
-        android:freezesText="true"/>
+
     <TextView
         android:id="@+id/text_view_category"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/text_view_sets"
+        android:layout_below="@+id/text_view_wrong_ans"
         android:textSize="18dp"
         android:fontFamily="@font/bowlby_one_sc"
         android:text="Kategoria:  "

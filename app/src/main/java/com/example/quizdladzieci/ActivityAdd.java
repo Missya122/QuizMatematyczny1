@@ -28,6 +28,8 @@ public class ActivityAdd extends MenuForAllAcitivity {
     private int numberOne;
     private int numberTwo;
     private int counter;
+    private int wrongAns = 0 ;
+    private int goodAns = 0;
     private int gameCounter;
     private int range;
     private int no;
@@ -66,13 +68,18 @@ public class ActivityAdd extends MenuForAllAcitivity {
                 buttonNext.setText("Sprawdź");
             }
             counter++;
+            goodAns++;
         } else {
+
             editTextResult.setBackgroundColor(Color.RED);
+            wrongAns++;
             if (gameCounter <= 10) {
                 buttonNext.setText("Dalej!");
+
             } else {
                 buttonNext.setText("Sprawdź");
             }
+            //wrongAns++;
         }
     }
 
@@ -105,6 +112,8 @@ public class ActivityAdd extends MenuForAllAcitivity {
 
 
         counter = 0;
+        goodAns = 0;
+        wrongAns = 0;
         gameCounter = 0;
         newGame();
 
@@ -153,6 +162,8 @@ public class ActivityAdd extends MenuForAllAcitivity {
         Intent intent = new Intent(this, ActivityWin.class);
         intent.putExtra(EXTRA_NUMBER, no);
         intent.putExtra(EXTRA_COUNTER, counter);
+        intent.putExtra("goodAns_Add", goodAns);
+        intent.putExtra("wrongAns_Add", wrongAns);
         startActivity(intent);
     }
 }

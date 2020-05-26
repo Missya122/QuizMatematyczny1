@@ -31,6 +31,8 @@ public class ActivityMinus extends MenuForAllAcitivity {
     private int numberOne;
     private int numberTwo;
     private int counter;
+    private int wrongAns;
+    private int goodAns;
     private int gameCounter;
     private int range;
     private int no;
@@ -68,6 +70,7 @@ public class ActivityMinus extends MenuForAllAcitivity {
                 buttonNext.setText("Sprawdź");
             }
             counter++;
+            goodAns++;
         } else {
             editTextResult.setBackgroundColor(Color.RED);
             if (gameCounter <= 10) {
@@ -75,6 +78,7 @@ public class ActivityMinus extends MenuForAllAcitivity {
             } else {
                 buttonNext.setText("Sprawdź");
             }
+            wrongAns++;
         }
     }
 
@@ -107,6 +111,8 @@ public class ActivityMinus extends MenuForAllAcitivity {
 
 
         counter = 0;
+        wrongAns = 0;
+        goodAns = 0;
         gameCounter = 0;
         newGame();
 
@@ -156,6 +162,8 @@ public class ActivityMinus extends MenuForAllAcitivity {
         Intent intent = new Intent(this, ActivityWin.class);
         intent.putExtra(EXTRA_NUMBER, no);
         intent.putExtra(EXTRA_COUNTER, counter);
+        intent.putExtra("wrongAns_Minus", wrongAns);
+        intent.putExtra("goodAns_Minus", goodAns);
         startActivity(intent);
     }
 

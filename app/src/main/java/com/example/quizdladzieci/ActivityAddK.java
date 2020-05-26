@@ -26,6 +26,8 @@ public class ActivityAddK extends AppCompatActivity {
     private  int no;
     private  int range;
     private int counter;
+    private  int wrongAns;
+    private int goodAns;
     private int gameCounter;
     private int flaga = 0;
     private boolean pom;
@@ -110,6 +112,8 @@ public class ActivityAddK extends AppCompatActivity {
         buttonNext = (Button)findViewById(R.id.buttonNext);
 
         counter = 0;
+        goodAns = 0;
+        wrongAns = 0;
         gameCounter = 0;
         newGame();
 
@@ -472,13 +476,16 @@ public class ActivityAddK extends AppCompatActivity {
                 buttonNext.setText("Sprawdź");
             }
             counter++;
+            goodAns++;
         } else if(flaga > 0){
+            wrongAns++;
             buttonNext.setBackgroundColor(Color.RED);
             if (gameCounter <= 10) {
                 buttonNext.setText("Dalej!");
             } else {
                 buttonNext.setText("Sprawdź");
             }
+
         }
     }
 
@@ -546,6 +553,8 @@ public class ActivityAddK extends AppCompatActivity {
         Intent intent = new Intent(this, ActivityWin.class);
         intent.putExtra(EXTRA_NUMBER, no);
         intent.putExtra(EXTRA_COUNTER, counter);
+        intent.putExtra("goodAns_AddK", goodAns);
+        intent.putExtra("wrongAns_AddK",wrongAns);
         startActivity(intent);
     }
 }
