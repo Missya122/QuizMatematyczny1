@@ -307,13 +307,26 @@ public class QuizDbHelper extends SQLiteOpenHelper {
         addQuestion(q89);
         Question q90 = new Question(" 51 - 18 = ?  ", "31  ", "33 ", "37 ", 2, Question.DIFFICULTY_HARD, Sets.II, Category.ODEJMOWANIE);
         addQuestion(q90);
-
-
-
-
-
-
-
+        Question q91 = new Question(" 37 - 17 = ?  ", "20  ", "19 ", "21 ", 1, Question.DIFFICULTY_MEDIUM, Sets.III, Category.ODEJMOWANIE);
+        addQuestion(q91);
+        Question q92 = new Question(" 11 - 7 = ?  ", "3  ", "4 ", "5 ", 2, Question.DIFFICULTY_EASY, Sets.IV, Category.ODEJMOWANIE);
+        addQuestion(q92);
+        Question q93 = new Question(" 20 : 10 = ?  ", "2  ", "3 ", "4 ", 1, Question.DIFFICULTY_EASY, Sets.I, Category.DZIELENIE);
+        addQuestion(q93);
+        Question q94 = new Question(" 30 : 2 = ?  ", "10  ", "13 ", "15 ", 3, Question.DIFFICULTY_EASY, Sets.II, Category.DZIELENIE);
+        addQuestion(q94);
+        Question q95 = new Question(" 38 : 2 = ?  ", "14  ", "17 ", "19 ", 3, Question.DIFFICULTY_MEDIUM, Sets.III, Category.DZIELENIE);
+        addQuestion(q95);
+        Question q96 = new Question(" 60 : 3 = ?  ", "20  ", "30 ", "15 ", 1, Question.DIFFICULTY_MEDIUM, Sets.IV, Category.DZIELENIE);
+        addQuestion(q96);
+        Question q97 = new Question(" 54 : 3 = ?  ", "18  ", "20 ", "16 ", 1, Question.DIFFICULTY_MEDIUM, Sets.I, Category.DZIELENIE);
+        addQuestion(q97);
+        Question q98 = new Question(" 81 : 9 = ?  ", "10  ", "8 ", "9 ", 3, Question.DIFFICULTY_HARD, Sets.II, Category.DZIELENIE);
+        addQuestion(q98);
+        Question q99 = new Question(" 52 : 4 = ?  ", "12  ", "11 ", "13 ", 3, Question.DIFFICULTY_HARD, Sets.III, Category.DZIELENIE);
+        addQuestion(q99);
+        Question q100 = new Question(" 54 : 9 = ?  ", "6  ", "8 ", "7 ", 1, Question.DIFFICULTY_HARD, Sets.IV, Category.DZIELENIE);
+        addQuestion(q100);
 
     }
     private void addQuestion(Question question)
