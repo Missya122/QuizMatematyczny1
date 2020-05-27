@@ -127,6 +127,8 @@ public class QuizDbHelper extends SQLiteOpenHelper {
     }
 
     private void fillQuestionsTable() {
+
+        //zapytania ręczne
         Question q1 = new Question(" 5 + 5 = ? ", "12 ", "8 ", "10 ", 3, Question.DIFFICULTY_EASY,Sets.I, Category.DODAWANIE);
         addQuestion(q1);
         Question q2 = new Question(" 5 + 20 = ? ", "25 ", "52 ", "23 ", 1, Question.DIFFICULTY_EASY, Sets.II, Category.DODAWANIE);
@@ -328,6 +330,233 @@ public class QuizDbHelper extends SQLiteOpenHelper {
         Question q100 = new Question(" 54 : 9 = ?  ", "6  ", "8 ", "7 ", 1, Question.DIFFICULTY_HARD, Sets.IV, Category.DZIELENIE);
         addQuestion(q100);
 
+
+
+        /*
+        //zapytania losowe
+
+        //zestawI_dodawanie_easy q10
+        Question q1 = new Question(" 2 + 8 = ? ", "10 ", "8 ", "7 ", 1, Question.DIFFICULTY_EASY,Sets.I, Category.DODAWANIE);
+        addQuestion(q1);
+        Question q2 = new Question(" 10 + 5 = ? ", "13 ", "14 ", "15 ", 3, Question.DIFFICULTY_EASY,Sets.I, Category.DODAWANIE);
+        addQuestion(q2);
+        Question q3 = new Question(" 3 + 5 = ? ", "8 ", "6 ", "7 ", 1, Question.DIFFICULTY_EASY,Sets.I, Category.DODAWANIE);
+        addQuestion(q3);
+        Question q4 = new Question(" 2 + 8 = ? ", "8 ", "10 ", "11 ", 2, Question.DIFFICULTY_EASY,Sets.I, Category.DODAWANIE);
+        addQuestion(q4);
+        Question q5 = new Question(" 6 + 3 = ? ", "9 ", "8 ", "7 ", 1, Question.DIFFICULTY_EASY,Sets.I, Category.DODAWANIE);
+        addQuestion(q5);
+        Question q6 = new Question(" 2 + 5 = ? ", "7 ", "8 ", "6 ", 1, Question.DIFFICULTY_EASY,Sets.I, Category.DODAWANIE);
+        addQuestion(q6);
+        Question q7 = new Question(" 3 + 3 = ? ", "5 ", "6 ", "7 ", 2, Question.DIFFICULTY_EASY,Sets.I, Category.DODAWANIE);
+        addQuestion(q7);
+        Question q8 = new Question(" 9 + 6 = ? ", "14 ", "16 ", "15 ", 3, Question.DIFFICULTY_EASY,Sets.I, Category.DODAWANIE);
+        addQuestion(q8);
+        Question q9 = new Question(" 2 + 9 = ? ", "11 ", "12 ", "10 ", 1, Question.DIFFICULTY_EASY,Sets.I, Category.DODAWANIE);
+        addQuestion(q9);
+        Question q10 = new Question(" 8 + 10 = ? ", "16 ", "17 ", "18 ", 3, Question.DIFFICULTY_EASY,Sets.I, Category.DODAWANIE);
+        addQuestion(q10);
+
+        //zestawI_dodawanie_medium q20
+        Question q11 = new Question(" 40 + 29 = ? ", "69 ", "80 ", "61 ", 1, Question.DIFFICULTY_MEDIUM,Sets.I, Category.DODAWANIE);
+        addQuestion(q11);
+        Question q12 = new Question(" 32 + 15 = ? ", "51 ", "47 ", "39 ", 2, Question.DIFFICULTY_MEDIUM,Sets.I, Category.DODAWANIE);
+        addQuestion(q12);
+        Question q13 = new Question(" 31 + 48 = ? ", "87 ", "68 ", "79 ", 3, Question.DIFFICULTY_MEDIUM,Sets.I, Category.DODAWANIE);
+        addQuestion(q13);
+        Question q14 = new Question(" 35 + 27 = ? ", "62 ", "66 ", "58 ", 1, Question.DIFFICULTY_MEDIUM,Sets.I, Category.DODAWANIE);
+        addQuestion(q14);
+        Question q15 = new Question(" 25 + 18 = ? ", "51 ", "43 ", "37 ", 2, Question.DIFFICULTY_MEDIUM,Sets.I, Category.DODAWANIE);
+        addQuestion(q15);
+        Question q16 = new Question(" 23 + 22 = ? ", "53 ", "36 ", "45 ", 3, Question.DIFFICULTY_MEDIUM,Sets.I, Category.DODAWANIE);
+        addQuestion(q16);
+        Question q17 = new Question(" 38 + 20 = ? ", "58 ", "63 ", "48 ", 1, Question.DIFFICULTY_MEDIUM,Sets.I, Category.DODAWANIE);
+        addQuestion(q17);
+        Question q18 = new Question(" 17 + 43 = ? ", "69 ", "60 ", "52 ", 2, Question.DIFFICULTY_MEDIUM,Sets.I, Category.DODAWANIE);
+        addQuestion(q18);
+        Question q19 = new Question(" 26 + 26 = ? ", "46 ", "63 ", "52 ", 3, Question.DIFFICULTY_MEDIUM,Sets.I, Category.DODAWANIE);
+        addQuestion(q19);
+        Question q20 = new Question(" 43 + 29 = ? ", "72 ", "79 ", "66 ", 1, Question.DIFFICULTY_MEDIUM,Sets.I, Category.DODAWANIE);
+        addQuestion(q20);
+
+        //zestawI_dodawanie_hard q30
+
+        //zestawII_dodawanie_easy q40
+        Question q31 = new Question(" 10 + 4 = ? ", "14 ", "12 ", "12 ", 1, Question.DIFFICULTY_EASY,Sets.II, Category.DODAWANIE);
+        addQuestion(q31);
+        Question q32 = new Question(" 7 + 7 = ? ", "11 ", "14 ", "12 ", 2, Question.DIFFICULTY_EASY,Sets.II, Category.DODAWANIE);
+        addQuestion(q32);
+        Question q33 = new Question(" 6 + 3 = ? ", "10 ", "8 ", "9 ", 3, Question.DIFFICULTY_EASY,Sets.II, Category.DODAWANIE);
+        addQuestion(q33);
+        Question q34 = new Question(" 7 + 4 = ? ", "11 ", "9 ", "12 ", 1, Question.DIFFICULTY_EASY,Sets.II, Category.DODAWANIE);
+        addQuestion(q34);
+        Question q35 = new Question(" 3 + 2 = ? ", "4 ", "5 ", "6 ", 2, Question.DIFFICULTY_EASY,Sets.II, Category.DODAWANIE);
+        addQuestion(q35);
+        Question q36 = new Question(" 9 + 6 = ? ", "17 ", "14 ", "15 ", 3, Question.DIFFICULTY_EASY,Sets.II, Category.DODAWANIE);
+        addQuestion(q36);
+        Question q37 = new Question(" 8 + 3 = ? ", "11 ", "9 ", "12 ", 1, Question.DIFFICULTY_EASY,Sets.II, Category.DODAWANIE);
+        addQuestion(q37);
+        Question q38 = new Question(" 10 + 9 = ? ", "21 ", "19 ", "17 ", 2, Question.DIFFICULTY_EASY,Sets.II, Category.DODAWANIE);
+        addQuestion(q38);
+        Question q39 = new Question(" 7 + 3 = ? ", "9 ", "8 ", "10 ", 3, Question.DIFFICULTY_EASY,Sets.II, Category.DODAWANIE);
+        addQuestion(q39);
+        Question q40 = new Question(" 3 + 9 = ? ", "12 ", "10 ", "10 ", 1, Question.DIFFICULTY_EASY,Sets.II, Category.DODAWANIE);
+        addQuestion(q40);
+
+        //zestawII_dodawanie_medium q50
+        Question q41 = new Question(" 49 + 33 = ? ", "82 ", "87 ", "75 ", 1, Question.DIFFICULTY_MEDIUM,Sets.II, Category.DODAWANIE);
+        addQuestion(q41);
+        Question q42 = new Question(" 16 + 35 = ? ", "55 ", "51 ", "41 ", 2, Question.DIFFICULTY_MEDIUM,Sets.II, Category.DODAWANIE);
+        addQuestion(q42);
+        Question q43 = new Question(" 29 + 34 = ? ", "55 ", "73 ", "63 ", 3, Question.DIFFICULTY_MEDIUM,Sets.II, Category.DODAWANIE);
+        addQuestion(q43);
+        Question q44 = new Question(" 18 + 17 = ? ", "35 ", "44 ", "31 ", 1, Question.DIFFICULTY_MEDIUM,Sets.II, Category.DODAWANIE);
+        addQuestion(q44);
+        Question q45 = new Question(" 17 + 45 = ? ", "68 ", "62 ", "56 ", 2, Question.DIFFICULTY_MEDIUM,Sets.II, Category.DODAWANIE);
+        addQuestion(q45);
+        Question q46 = new Question(" 37 + 23 = ? ", "49 ", "68 ", "60 ", 3, Question.DIFFICULTY_MEDIUM,Sets.II, Category.DODAWANIE);
+        addQuestion(q46);
+        Question q47 = new Question(" 50 + 24 = ? ", "74 ", "83 ", "68 ", 1, Question.DIFFICULTY_MEDIUM,Sets.II, Category.DODAWANIE);
+        addQuestion(q47);
+        Question q48 = new Question(" 18 + 19 = ? ", "48 ", "37 ", "31 ", 2, Question.DIFFICULTY_MEDIUM,Sets.II, Category.DODAWANIE);
+        addQuestion(q48);
+        Question q49 = new Question(" 22 + 23 = ? ", "38 ", "49 ", "45 ", 3, Question.DIFFICULTY_MEDIUM,Sets.II, Category.DODAWANIE);
+        addQuestion(q49);
+        Question q50 = new Question(" 39 + 38 = ? ", "77 ", "82 ", "72 ", 1, Question.DIFFICULTY_MEDIUM,Sets.II, Category.DODAWANIE);
+        addQuestion(q50);
+
+        //zestawII_dodawanie_hard q60
+
+        //zestawIII_dodawanie_easy q70
+        Question q61 = new Question(" 6 + 3 = ? ", "9 ", "13 ", "10 ", 1, Question.DIFFICULTY_EASY,Sets.III, Category.DODAWANIE);
+        addQuestion(q61);
+        Question q62 = new Question(" 3 + 4 = ? ", "6 ", "7 ", "8 ", 2, Question.DIFFICULTY_EASY,Sets.III, Category.DODAWANIE);
+        addQuestion(q62);
+        Question q63 = new Question(" 2 + 2 = ? ", "5 ", "6 ", "4 ", 3, Question.DIFFICULTY_EASY,Sets.III, Category.DODAWANIE);
+        addQuestion(q63);
+        Question q64 = new Question(" 7 + 8 = ? ", "15 ", "16 ", "14 ", 1, Question.DIFFICULTY_EASY,Sets.III, Category.DODAWANIE);
+        addQuestion(q64);
+        Question q65 = new Question(" 3 + 8 = ? ", "13 ", "11 ", "15 ", 2, Question.DIFFICULTY_EASY,Sets.III, Category.DODAWANIE);
+        addQuestion(q65);
+        Question q66 = new Question(" 9 + 6 = ? ", "14 ", "18 ", "15 ", 3, Question.DIFFICULTY_EASY,Sets.III, Category.DODAWANIE);
+        addQuestion(q66);
+        Question q67 = new Question(" 5 + 7 = ? ", "12 ", "14 ", "16 ", 1, Question.DIFFICULTY_EASY,Sets.III, Category.DODAWANIE);
+        addQuestion(q67);
+        Question q68 = new Question(" 7 + 4 = ? ", "12 ", "11 ", "13 ", 2, Question.DIFFICULTY_EASY,Sets.III, Category.DODAWANIE);
+        addQuestion(q68);
+        Question q69 = new Question(" 8 + 5 = ? ", "14 ", "17 ", "13 ", 3, Question.DIFFICULTY_EASY,Sets.III, Category.DODAWANIE);
+        addQuestion(q69);
+        Question q70 = new Question(" 8 + 4 = ? ", "12 ", "14 ", "13 ", 1, Question.DIFFICULTY_EASY,Sets.III, Category.DODAWANIE);
+        addQuestion(q70);
+
+        //zestawIII_dodawanie_medium q80
+
+        //zestawIII_dodawanie_hard q90
+
+        //zestawIV_dodawanie_easy q100
+        Question q91 = new Question(" 10 + 3 = ? ", "13 ", "11 ", "12 ", 1, Question.DIFFICULTY_EASY,Sets.IV, Category.DODAWANIE);
+        addQuestion(q91);
+        Question q92 = new Question(" 10 + 2 = ? ", "14 ", "12 ", "10 ", 2, Question.DIFFICULTY_EASY,Sets.IV, Category.DODAWANIE);
+        addQuestion(q92);
+        Question q93 = new Question(" 2 + 8 = ? ", "11 ", "9 ", "10 ", 3, Question.DIFFICULTY_EASY,Sets.IV, Category.DODAWANIE);
+        addQuestion(q93);
+        Question q94 = new Question(" 2 + 9 = ? ", "11 ", "14 ", "10 ", 1, Question.DIFFICULTY_EASY,Sets.IV, Category.DODAWANIE);
+        addQuestion(q94);
+        Question q95 = new Question(" 8 + 8 = ? ", "14 ", "16 ", "18 ", 2, Question.DIFFICULTY_EASY,Sets.IV, Category.DODAWANIE);
+        addQuestion(q95);
+        Question q96 = new Question(" 10 + 2 = ? ", "11 ", "12 ", "14 ", 3, Question.DIFFICULTY_EASY,Sets.IV, Category.DODAWANIE);
+        addQuestion(q96);
+        Question q97 = new Question(" 4 + 3 = ? ", "7 ", "9 ", "6 ", 1, Question.DIFFICULTY_EASY,Sets.IV, Category.DODAWANIE);
+        addQuestion(q97);
+        Question q98 = new Question(" 3 + 10 = ? ", "12 ", "13 ", "14 ", 2, Question.DIFFICULTY_EASY,Sets.IV, Category.DODAWANIE);
+        addQuestion(q98);
+        Question q99 = new Question(" 8 + 5 = ? ", "12 ", "14 ", "11 ", 3, Question.DIFFICULTY_EASY,Sets.IV, Category.DODAWANIE);
+        addQuestion(q99);
+        Question q100 = new Question(" 5 + 6 = ? ", "11 ", "13 ", "9 ", 1, Question.DIFFICULTY_EASY,Sets.IV, Category.DODAWANIE);
+        addQuestion(q100);
+
+        //zestawIV_dodawanie_medium q110
+
+        //zestawIV_dodawanie_hard q120
+
+
+
+        //zestawI_odejmowanie_easy q130
+
+        //zestawI_odejmowanie_medium q140
+
+        //zestawI_odejmowanie_hard q150
+
+        //zestawII_odejmowanie_easy q160
+
+        //zestawII_odejmowanie_medium q170
+
+        //zestawII_odejmowanie_hard q180
+
+        //zestawIII_odejmowanie_easy q190
+
+        //zestawIII_odejmowanie_medium q200
+
+        //zestawIII_odejmowanie_hard q210
+
+        //zestawIV_odejmowanie_easy q220
+
+        //zestawIV_odejmowanie_medium q230
+
+        //zestawIV_odejmowanie_hard q240
+
+
+
+        //zestawI_mnozenie_easy q250
+
+        //zestawI_mnozenie_medium q260
+
+        //zestawI_mnozenie_hard q270
+
+        //zestawII_mnozenie_easy q280
+
+        //zestawII_mnozenie_medium q290
+
+        //zestawII_mnozenie_hard q300
+
+        //zestawIII_mnozenie_easy q310
+
+        //zestawIII_mnozenie_medium q320
+
+        //zestawIII_mnozenie_hard q330
+
+        //zestawIV_mnozenie_easy q340
+
+        //zestawIV_mnozenie_medium q350
+
+        //zestawIV_mnozenie_hard q360
+
+
+
+        //zestawI_dzielenie_easy q370
+
+        //zestawI_dzielenie_medium q380
+
+        //zestawI_dzielenie_hard q390
+
+        //zestawII_dzielenie_easy q400
+
+        //zestawII_dzielenie_medium q410
+
+        //zestawII_dzielenie_hard q420
+
+        //zestawIII_dzielenie_easy q430
+
+        //zestawIII_dzielenie_medium q440
+
+        //zestawIII_dzielenie_hard q450
+
+        //zestawIV_dzielenie_easy q460
+
+        //zestawIV_dzielenie_medium q470
+
+        //zestawIV_dzielenie_hard q480
+        */
     }
     private void addQuestion(Question question)
     {
