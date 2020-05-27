@@ -28,6 +28,8 @@ public class ActivityMultiple extends MenuForAllAcitivity {
     private int numberOne;
     private int numberTwo;
     private int counter;
+    private int wrongAns;
+    private int goodAns;
     private int gameCounter;
     private int range;
     private int no;
@@ -64,6 +66,7 @@ public class ActivityMultiple extends MenuForAllAcitivity {
                 buttonNext.setText("Sprawdź");
             }
             counter++;
+            goodAns++;
         } else {
             editTextResult.setBackgroundColor(Color.RED);
             if (gameCounter <= 10) {
@@ -71,6 +74,7 @@ public class ActivityMultiple extends MenuForAllAcitivity {
             } else {
                 buttonNext.setText("Sprawdź");
             }
+            wrongAns++;
         }
     }
     @Override
@@ -89,9 +93,19 @@ public class ActivityMultiple extends MenuForAllAcitivity {
         toolbar = findViewById(R.id.myToolBar);
 
         setSupportActionBar(toolbar);
+        toolbar.setNavigationIcon(R.drawable.ic_chevron_left_black_24dp);
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
 
         counter = 0;
+        goodAns = 0;
+        wrongAns = 0;
         gameCounter = 0;
         newGame();
 
@@ -141,6 +155,8 @@ public class ActivityMultiple extends MenuForAllAcitivity {
         Intent intent = new Intent(this, ActivityWin.class);
         intent.putExtra(EXTRA_NUMBER, no);
         intent.putExtra(EXTRA_COUNTER, counter);
+        intent.putExtra("wrongAns_Multiple", wrongAns);
+        intent.putExtra("goodAns_Multiple", goodAns);
         startActivity(intent);
     }
 }

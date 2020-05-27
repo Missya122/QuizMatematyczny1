@@ -9,22 +9,59 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PasswordActivity"></activity>
-        <activity android:name=".RegistrationActivity" />
+        <activity android:name=".FinishQuiz"></activity>
+        <activity
+            android:name=".Statistics_Calculator"
+            android:parentActivityName=".Statistics" />
+        <activity
+            android:name=".Statistics_Quiz"
+            android:parentActivityName=".Statistics" />
+        <activity
+            android:name=".Statistics"
+            android:parentActivityName=".FirstScreenActivity" />
+        <activity
+            android:name=".UpdatePassword"
+            android:parentActivityName=".UserProfileActivity" />
+        <activity
+            android:name=".UpdateProfile"
+            android:parentActivityName=".UserProfileActivity" />
+        <activity
+            android:name=".UserProfileActivity"
+            android:parentActivityName=".FirstScreenActivity" />
+        <activity
+            android:name=".PasswordActivity"
+            android:parentActivityName=".AcitivityLogin" />
+        <activity
+            android:name=".RegistrationActivity"
+            android:parentActivityName=".AcitivityLogin" />
         <activity android:name=".ActivityMinusK" />
         <activity android:name=".ActivityAddK" />
         <activity android:name=".ActivitySettings" />
         <activity android:name=".ActivityDivide2" />
         <activity android:name=".ActivityDivide" />
-        <activity android:name=".ActivityMultiple" />
-        <activity android:name=".ActivityAdd" />
-        <activity android:name=".ActivityWin" />
-        <activity android:name=".ActivityMinus" />
-        <activity android:name=".ActivityChose" />
+        <activity
+            android:name=".ActivityMultiple"
+            android:parentActivityName=".ActivityChose" />
+        <activity
+            android:name=".ActivityAdd"
+            android:parentActivityName=".ActivityChose" />
+        <activity
+            android:name=".ActivityWin"
+            android:parentActivityName=".ActivityChose" />
+        <activity
+            android:name=".ActivityMinus"
+            android:parentActivityName=".ActivityChose" />
+        <activity
+            android:name=".ActivityChose"
+            android:parentActivityName=".FirstScreenActivity" />
         <activity android:name=".SecondFragment" />
         <activity android:name=".FirstFragment" />
-        <activity android:name=".CalculatorActivity" />
-        <activity android:name=".FirstScreenActivity" />
+        <activity
+            android:name=".CalculatorActivity"
+            android:parentActivityName=".ActivityChose" />
+        <activity
+            android:name=".FirstScreenActivity"
+            android:parentActivityName=".AcitivityLogin" />
         <activity android:name=".AcitivityLogin">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,8 +69,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".QuizActivity" />
-        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".QuizActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:parentActivityName=".FirstScreenActivity" />
 
         <meta-data
             android:name="preloaded_fonts"

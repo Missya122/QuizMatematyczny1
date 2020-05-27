@@ -41,6 +41,14 @@ public class CalculatorActivity extends MenuForAllAcitivity implements View.OnCl
         toolbar = findViewById(R.id.myToolBar);
 
         setSupportActionBar(toolbar);
+        toolbar.setNavigationIcon(R.drawable.ic_chevron_left_black_24dp);
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
 
         button10 = (Button)findViewById(R.id.button10);

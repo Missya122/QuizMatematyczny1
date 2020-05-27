@@ -17,12 +17,14 @@ import android.widget.Toast;
 
 import java.util.Random;
 
-public class ActivityMinusK extends AppCompatActivity {
+public class ActivityMinusK extends MenuForAllAcitivity {
     public static final String EXTRA_COUNTER = "com.example.application.example.EXTRA_COUNTER";
     public static final String EXTRA_NUMBER = "com.example.application.example.EXTRA_NUMBER";
     private  int no;
     private  int range;
     private int counter;
+    private int goodAns;
+    private int wrongAns;
     private int gameCounter;
     private int flaga = 0;
     private boolean pom;
@@ -76,6 +78,15 @@ public class ActivityMinusK extends AppCompatActivity {
 
         setSupportActionBar(toolbar);
 
+        toolbar.setNavigationIcon(R.drawable.ic_chevron_left_black_24dp);
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
         textViewLicznik = (TextView)findViewById(R.id.textViewLicznik);
         editText1_2 = (EditText)findViewById(R.id.editText1_2);
         editText1_3 = (EditText)findViewById(R.id.editText1_3);
@@ -109,6 +120,8 @@ public class ActivityMinusK extends AppCompatActivity {
         buttonNext = (Button)findViewById(R.id.buttonNext);
 
         counter = 0;
+        goodAns = 0;
+        wrongAns = 0;
         gameCounter = 0;
         newGame();
 
@@ -468,6 +481,7 @@ public class ActivityMinusK extends AppCompatActivity {
                 buttonNext.setText("Sprawdź");
             }
             counter++;
+            goodAns++;
         } else if(flaga > 0){
             buttonNext.setBackgroundColor(Color.RED);
             if (gameCounter <= 10) {
@@ -475,6 +489,7 @@ public class ActivityMinusK extends AppCompatActivity {
             } else {
                 buttonNext.setText("Sprawdź");
             }
+            wrongAns++;
         }
     }
 
@@ -580,6 +595,8 @@ public class ActivityMinusK extends AppCompatActivity {
         Intent intent = new Intent(this, ActivityWin.class);
         intent.putExtra(EXTRA_NUMBER, no);
         intent.putExtra(EXTRA_COUNTER, counter);
+        intent.putExtra("wrongAns_MinusK", wrongAns);
+        intent.putExtra("goodAns_MinusK", goodAns);
         startActivity(intent);
     }
 }

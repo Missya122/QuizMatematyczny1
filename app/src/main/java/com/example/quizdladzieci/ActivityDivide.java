@@ -36,6 +36,8 @@ public class ActivityDivide extends MenuForAllAcitivity {
     private DivideQuestions currentQuestion;
 
     private int counter;
+    private int wrongAns;
+    private  int goodAns;
     private int gameCounter;
     private int no;
     private boolean answered;
@@ -61,6 +63,15 @@ public class ActivityDivide extends MenuForAllAcitivity {
 
         setSupportActionBar(toolbar);
 
+        toolbar.setNavigationIcon(R.drawable.ic_chevron_left_black_24dp);
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
 
 
 
@@ -71,6 +82,8 @@ public class ActivityDivide extends MenuForAllAcitivity {
         Collections.shuffle(divideQuestionsList);
 
         counter = 0;
+        wrongAns = 0;
+        goodAns = 0;
         gameCounter = 0;
         nrQuestion = myRandom.nextInt(questionCountTotal-11);
         newGame();
@@ -140,6 +153,7 @@ public class ActivityDivide extends MenuForAllAcitivity {
                 buttonNext.setText("Sprawdź");
             }
             counter++;
+            goodAns++;
         } else {
             editTextResult.setBackgroundColor(Color.RED);
             if (gameCounter <= 10) {
@@ -147,6 +161,7 @@ public class ActivityDivide extends MenuForAllAcitivity {
             } else {
                 buttonNext.setText("Sprawdź");
             }
+            wrongAns++;
         }
     }
 
@@ -158,6 +173,8 @@ public class ActivityDivide extends MenuForAllAcitivity {
         Intent intent = new Intent(this, ActivityWin.class);
         intent.putExtra(EXTRA_NUMBER, no);
         intent.putExtra(EXTRA_COUNTER, counter);
+        intent.putExtra("wrongAns_Divide", wrongAns);
+        intent.putExtra("goodAns_Divide", goodAns);
         startActivity(intent);
     }
 }

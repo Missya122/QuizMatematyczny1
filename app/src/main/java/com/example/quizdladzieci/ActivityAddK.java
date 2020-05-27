@@ -26,6 +26,8 @@ public class ActivityAddK extends AppCompatActivity {
     private  int no;
     private  int range;
     private int counter;
+    private  int wrongAns;
+    private int goodAns;
     private int gameCounter;
     private int flaga = 0;
     private boolean pom;
@@ -73,6 +75,14 @@ public class ActivityAddK extends AppCompatActivity {
         toolbar = findViewById(R.id.myToolBar);
 
         setSupportActionBar(toolbar);
+        toolbar.setNavigationIcon(R.drawable.ic_chevron_left_black_24dp);
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         textViewLicznik = (TextView)findViewById(R.id.textViewLicznik);
         textView1_1 = (TextView)findViewById(R.id.textView1_1);
@@ -102,6 +112,8 @@ public class ActivityAddK extends AppCompatActivity {
         buttonNext = (Button)findViewById(R.id.buttonNext);
 
         counter = 0;
+        goodAns = 0;
+        wrongAns = 0;
         gameCounter = 0;
         newGame();
 
@@ -464,13 +476,16 @@ public class ActivityAddK extends AppCompatActivity {
                 buttonNext.setText("Sprawdź");
             }
             counter++;
+            goodAns++;
         } else if(flaga > 0){
+            wrongAns++;
             buttonNext.setBackgroundColor(Color.RED);
             if (gameCounter <= 10) {
                 buttonNext.setText("Dalej!");
             } else {
                 buttonNext.setText("Sprawdź");
             }
+
         }
     }
 
@@ -538,6 +553,8 @@ public class ActivityAddK extends AppCompatActivity {
         Intent intent = new Intent(this, ActivityWin.class);
         intent.putExtra(EXTRA_NUMBER, no);
         intent.putExtra(EXTRA_COUNTER, counter);
+        intent.putExtra("goodAns_AddK", goodAns);
+        intent.putExtra("wrongAns_AddK",wrongAns);
         startActivity(intent);
     }
 }

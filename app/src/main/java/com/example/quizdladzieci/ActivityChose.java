@@ -38,6 +38,15 @@ public class ActivityChose extends MenuForAllAcitivity implements View.OnClickLi
 
         setSupportActionBar(toolbar);
 
+        toolbar.setNavigationIcon(R.drawable.ic_chevron_left_black_24dp);
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
 
         buttonAdd.setOnClickListener(this);
         buttonMinus.setOnClickListener(this);
