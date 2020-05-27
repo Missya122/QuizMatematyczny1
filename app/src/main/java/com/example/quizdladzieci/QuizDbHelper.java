@@ -297,6 +297,17 @@ public class QuizDbHelper extends SQLiteOpenHelper {
         addQuestion(q84);
         Question q85 = new Question(" 21 - 8 = ?  ", "12  ", "14 ", "13 ", 3, Question.DIFFICULTY_HARD, Sets.I, Category.ODEJMOWANIE);
         addQuestion(q85);
+        Question q86 = new Question(" 37 - 25 = ?  ", "10  ", "12 ", "16 ", 2, Question.DIFFICULTY_HARD, Sets.II, Category.ODEJMOWANIE);
+        addQuestion(q86);
+        Question q87 = new Question(" 44 - 25 = ?  ", "25  ", "29 ", "19 ", 3, Question.DIFFICULTY_HARD, Sets.III, Category.ODEJMOWANIE);
+        addQuestion(q87);
+        Question q88 = new Question(" 57 - 25 = ?  ", "20  ", "25 ", "27 ", 3, Question.DIFFICULTY_HARD, Sets.IV, Category.ODEJMOWANIE);
+        addQuestion(q88);
+        Question q89 = new Question(" 31 - 13 = ?  ", "18  ", "25 ", "13 ", 1, Question.DIFFICULTY_HARD, Sets.I, Category.ODEJMOWANIE);
+        addQuestion(q89);
+        Question q90 = new Question(" 51 - 18 = ?  ", "31  ", "33 ", "37 ", 2, Question.DIFFICULTY_HARD, Sets.II, Category.ODEJMOWANIE);
+        addQuestion(q90);
+
 
 
 
