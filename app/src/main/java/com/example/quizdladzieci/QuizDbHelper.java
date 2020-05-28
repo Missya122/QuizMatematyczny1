@@ -128,6 +128,7 @@ public class QuizDbHelper extends SQLiteOpenHelper {
 
     private void fillQuestionsTable() {
 
+
         //zapytania ręczne
         Question q1 = new Question(" 5 + 5 = ? ", "12 ", "8 ", "10 ", 3, Question.DIFFICULTY_EASY,Sets.I, Category.DODAWANIE);
         addQuestion(q1);
@@ -380,6 +381,26 @@ public class QuizDbHelper extends SQLiteOpenHelper {
         addQuestion(q20);
 
         //zestawI_dodawanie_hard q30
+        Question q21 = new Question(" 441 + 455 = ? ", "896 ", "912 ", "877 ", 1, Question.DIFFICULTY_HARD,Sets.I, Category.DODAWANIE);
+        addQuestion(q21);
+        Question q22 = new Question(" 394 + 330 = ? ", "746 ", "724 ", "700 ", 2, Question.DIFFICULTY_HARD,Sets.I, Category.DODAWANIE);
+        addQuestion(q22);
+        Question q23 = new Question(" 147 + 381 = ? ", "499 ", "544 ", "528 ", 3, Question.DIFFICULTY_HARD,Sets.I, Category.DODAWANIE);
+        addQuestion(q23);
+        Question q24 = new Question(" 134 + 149 = ? ", "283 ", "305 ", "263 ", 1, Question.DIFFICULTY_HARD,Sets.I, Category.DODAWANIE);
+        addQuestion(q24);
+        Question q25 = new Question(" 155 + 119 = ? ", "301 ", "274 ", "250 ", 2, Question.DIFFICULTY_HARD,Sets.I, Category.DODAWANIE);
+        addQuestion(q25);
+        Question q26 = new Question(" 418 + 217 = ? ", "620 ", "664 ", "635 ", 3, Question.DIFFICULTY_HARD,Sets.I, Category.DODAWANIE);
+        addQuestion(q26);
+        Question q27 = new Question(" 449 + 202 = ? ", "651 ", "677 ", "623 ", 1, Question.DIFFICULTY_HARD,Sets.I, Category.DODAWANIE);
+        addQuestion(q27);
+        Question q28 = new Question(" 238 + 423 = ? ", "683 ", "661 ", "637 ", 2, Question.DIFFICULTY_HARD,Sets.I, Category.DODAWANIE);
+        addQuestion(q28);
+        Question q29 = new Question(" 102 + 437 = ? ", "521 ", "565 ", "539 ", 3, Question.DIFFICULTY_HARD,Sets.I, Category.DODAWANIE);
+        addQuestion(q29);
+        Question q30 = new Question(" 190 + 403 = ? ", "593 ", "608 ", "573 ", 1, Question.DIFFICULTY_HARD,Sets.I, Category.DODAWANIE);
+        addQuestion(q30);
 
         //zestawII_dodawanie_easy q40
         Question q31 = new Question(" 10 + 4 = ? ", "14 ", "12 ", "12 ", 1, Question.DIFFICULTY_EASY,Sets.II, Category.DODAWANIE);
@@ -426,6 +447,26 @@ public class QuizDbHelper extends SQLiteOpenHelper {
         addQuestion(q50);
 
         //zestawII_dodawanie_hard q60
+        Question q51 = new Question(" 341 + 473 = ? ", "814 ", "843 ", "799 ", 1, Question.DIFFICULTY_HARD,Sets.II, Category.DODAWANIE);
+        addQuestion(q51);
+        Question q52 = new Question(" 115 + 228 = ? ", "358 ", "343 ", "323 ", 2, Question.DIFFICULTY_HARD,Sets.II, Category.DODAWANIE);
+        addQuestion(q52);
+        Question q53 = new Question(" 368 + 495 = ? ", "836 ", "887 ", "863 ", 3, Question.DIFFICULTY_HARD,Sets.II, Category.DODAWANIE);
+        addQuestion(q53);
+        Question q54 = new Question(" 211 + 220 = ? ", "431 ", "456 ", "402 ", 1, Question.DIFFICULTY_HARD,Sets.II, Category.DODAWANIE);
+        addQuestion(q54);
+        Question q55 = new Question(" 459 + 223 = ? ", "698 ", "682 ", "662 ", 2, Question.DIFFICULTY_HARD,Sets.II, Category.DODAWANIE);
+        addQuestion(q55);
+        Question q56 = new Question(" 360 + 318 = ? ", "653 ", "703 ", "678 ", 3, Question.DIFFICULTY_HARD,Sets.II, Category.DODAWANIE);
+        addQuestion(q56);
+        Question q57 = new Question(" 375 + 498 = ? ", "873 ", "893 ", "845 ", 1, Question.DIFFICULTY_HARD,Sets.II, Category.DODAWANIE);
+        addQuestion(q57);
+        Question q58 = new Question(" 359 + 320 = ? ", "704 ", "679 ", "655 ", 2, Question.DIFFICULTY_HARD,Sets.II, Category.DODAWANIE);
+        addQuestion(q58);
+        Question q59 = new Question(" 267 + 273 = ? ", "519 ", "565 ", "540 ", 3, Question.DIFFICULTY_HARD,Sets.II, Category.DODAWANIE);
+        addQuestion(q59);
+        Question q60 = new Question(" 266 + 362 = ? ", "628 ", "651 ", "612 ", 1, Question.DIFFICULTY_HARD,Sets.II, Category.DODAWANIE);
+        addQuestion(q60);
 
         //zestawIII_dodawanie_easy q70
         Question q61 = new Question(" 6 + 3 = ? ", "9 ", "13 ", "10 ", 1, Question.DIFFICULTY_EASY,Sets.III, Category.DODAWANIE);
@@ -450,8 +491,48 @@ public class QuizDbHelper extends SQLiteOpenHelper {
         addQuestion(q70);
 
         //zestawIII_dodawanie_medium q80
+        Question q71 = new Question(" 17 + 21 = ? ", "38 ", "49 ", "29 ", 1, Question.DIFFICULTY_MEDIUM,Sets.III, Category.DODAWANIE);
+        addQuestion(q71);
+        Question q72 = new Question(" 43 + 21 = ? ", "75 ", "64 ", "59 ", 2, Question.DIFFICULTY_MEDIUM,Sets.III, Category.DODAWANIE);
+        addQuestion(q72);
+        Question q73 = new Question(" 31 + 29 = ? ", "53 ", "64 ", "60 ", 3, Question.DIFFICULTY_MEDIUM,Sets.III, Category.DODAWANIE);
+        addQuestion(q73);
+        Question q74 = new Question(" 18 + 42 = ? ", "60 ", "70 ", "55 ", 1, Question.DIFFICULTY_MEDIUM,Sets.III, Category.DODAWANIE);
+        addQuestion(q74);
+        Question q75 = new Question(" 30 + 44 = ? ", "82 ", "74 ", "66 ", 2, Question.DIFFICULTY_MEDIUM,Sets.III, Category.DODAWANIE);
+        addQuestion(q75);
+        Question q76 = new Question(" 30 + 26 = ? ", "51 ", "63 ", "56 ", 3, Question.DIFFICULTY_MEDIUM,Sets.III, Category.DODAWANIE);
+        addQuestion(q76);
+        Question q77 = new Question(" 37 + 15 = ? ", "52 ", "63 ", "46 ", 1, Question.DIFFICULTY_MEDIUM,Sets.III, Category.DODAWANIE);
+        addQuestion(q77);
+        Question q78 = new Question(" 22 + 46 = ? ", "77 ", "68 ", "58 ", 2, Question.DIFFICULTY_MEDIUM,Sets.III, Category.DODAWANIE);
+        addQuestion(q78);
+        Question q79 = new Question(" 31 + 27 = ? ", "47 ", "64 ", "58 ", 3, Question.DIFFICULTY_MEDIUM,Sets.III, Category.DODAWANIE);
+        addQuestion(q79);
+        Question q80 = new Question(" 34 + 30 = ? ", "64 ", "74 ", "58 ", 1, Question.DIFFICULTY_MEDIUM,Sets.III, Category.DODAWANIE);
+        addQuestion(q80);
 
         //zestawIII_dodawanie_hard q90
+        Question q81 = new Question(" 381 + 493 = ? ", "874 ", "902 ", "855 ", 1, Question.DIFFICULTY_HARD,Sets.III, Category.DODAWANIE);
+        addQuestion(q81);
+        Question q82 = new Question(" 401 + 435 = ? ", "856 ", "836 ", "814 ", 2, Question.DIFFICULTY_HARD,Sets.III, Category.DODAWANIE);
+        addQuestion(q82);
+        Question q83 = new Question(" 407 + 132 = ? ", "518 ", "564 ", "539 ", 3, Question.DIFFICULTY_HARD,Sets.III, Category.DODAWANIE);
+        addQuestion(q83);
+        Question q84 = new Question(" 254 + 136 = ? ", "390 ", "405 ", "374 ", 1, Question.DIFFICULTY_HARD,Sets.III, Category.DODAWANIE);
+        addQuestion(q84);
+        Question q85 = new Question(" 368 + 468 = ? ", "863 ", "836 ", "809 ", 2, Question.DIFFICULTY_HARD,Sets.III, Category.DODAWANIE);
+        addQuestion(q85);
+        Question q86 = new Question(" 154 + 310 = ? ", "444 ", "483 ", "464 ", 3, Question.DIFFICULTY_HARD,Sets.III, Category.DODAWANIE);
+        addQuestion(q86);
+        Question q87 = new Question(" 484 + 141 = ? ", "625 ", "643 ", "604 ", 1, Question.DIFFICULTY_HARD,Sets.III, Category.DODAWANIE);
+        addQuestion(q87);
+        Question q88 = new Question(" 307 + 192 = ? ", "516 ", "499 ", "471 ", 2, Question.DIFFICULTY_HARD,Sets.III, Category.DODAWANIE);
+        addQuestion(q88);
+        Question q89 = new Question(" 349 + 147 = ? ", "470 ", "514 ", "496 ", 3, Question.DIFFICULTY_HARD,Sets.III, Category.DODAWANIE);
+        addQuestion(q89);
+        Question q90 = new Question(" 410 + 287 = ? ", "697 ", "727 ", "672 ", 1, Question.DIFFICULTY_HARD,Sets.III, Category.DODAWANIE);
+        addQuestion(q90);
 
         //zestawIV_dodawanie_easy q100
         Question q91 = new Question(" 10 + 3 = ? ", "13 ", "11 ", "12 ", 1, Question.DIFFICULTY_EASY,Sets.IV, Category.DODAWANIE);
@@ -476,35 +557,312 @@ public class QuizDbHelper extends SQLiteOpenHelper {
         addQuestion(q100);
 
         //zestawIV_dodawanie_medium q110
+        Question q101 = new Question(" 39 + 21 = ? ", "60 ", "65 ", "53 ", 1, Question.DIFFICULTY_MEDIUM,Sets.IV, Category.DODAWANIE);
+        addQuestion(q101);
+        Question q102 = new Question(" 43 + 16 = ? ", "68 ", "59 ", "50 ", 2, Question.DIFFICULTY_MEDIUM,Sets.IV, Category.DODAWANIE);
+        addQuestion(q102);
+        Question q103 = new Question(" 33 + 35 = ? ", "62 ", "78 ", "68 ", 3, Question.DIFFICULTY_MEDIUM,Sets.IV, Category.DODAWANIE);
+        addQuestion(q103);
+        Question q104 = new Question(" 15 + 47 = ? ", "62 ", "68 ", "53 ", 1, Question.DIFFICULTY_MEDIUM,Sets.IV, Category.DODAWANIE);
+        addQuestion(q104);
+        Question q105 = new Question(" 37 + 42 = ? ", "87 ", "79 ", "72 ", 2, Question.DIFFICULTY_MEDIUM,Sets.IV, Category.DODAWANIE);
+        addQuestion(q105);
+        Question q106 = new Question(" 39 + 32 = ? ", "60 ", "78 ", "71 ", 3, Question.DIFFICULTY_MEDIUM,Sets.IV, Category.DODAWANIE);
+        addQuestion(q106);
+        Question q107 = new Question(" 39 + 45 = ? ", "84 ", "93 ", "73 ", 1, Question.DIFFICULTY_MEDIUM,Sets.IV, Category.DODAWANIE);
+        addQuestion(q107);
+        Question q108 = new Question(" 45 + 45 = ? ", "98 ", "90 ", "79 ", 2, Question.DIFFICULTY_MEDIUM,Sets.IV, Category.DODAWANIE);
+        addQuestion(q108);
+        Question q109 = new Question(" 29 + 21 = ? ", "42 ", "61 ", "50 ", 3, Question.DIFFICULTY_MEDIUM,Sets.IV, Category.DODAWANIE);
+        addQuestion(q109);
+        Question q110 = new Question(" 41 + 45 = ? ", "86 ", "94 ", "78 ", 1, Question.DIFFICULTY_MEDIUM,Sets.IV, Category.DODAWANIE);
+        addQuestion(q110);
 
         //zestawIV_dodawanie_hard q120
-
-
+        Question q111 = new Question(" 447 + 226 = ? ", "673 ", "701 ", "656 ", 1, Question.DIFFICULTY_HARD,Sets.IV, Category.DODAWANIE);
+        addQuestion(q111);
+        Question q112 = new Question(" 424 + 490 = ? ", "943 ", "914 ", "885 ", 2, Question.DIFFICULTY_HARD,Sets.IV, Category.DODAWANIE);
+        addQuestion(q112);
+        Question q113 = new Question(" 263 + 481 = ? ", "728 ", "770 ", "744 ", 3, Question.DIFFICULTY_HARD,Sets.IV, Category.DODAWANIE);
+        addQuestion(q113);
+        Question q114 = new Question(" 450 + 261 = ? ", "711 ", "733 ", "692 ", 1, Question.DIFFICULTY_HARD,Sets.IV, Category.DODAWANIE);
+        addQuestion(q114);
+        Question q115 = new Question(" 282 + 201 = ? ", "511 ", "483 ", "460 ", 2, Question.DIFFICULTY_HARD,Sets.IV, Category.DODAWANIE);
+        addQuestion(q115);
+        Question q116 = new Question(" 186 + 182 = ? ", "349 ", "387 ", "368 ", 3, Question.DIFFICULTY_HARD,Sets.IV, Category.DODAWANIE);
+        addQuestion(q116);
+        Question q117 = new Question(" 379 + 262 = ? ", "641 ", "662 ", "613 ", 1, Question.DIFFICULTY_HARD,Sets.IV, Category.DODAWANIE);
+        addQuestion(q117);
+        Question q118 = new Question(" 341 + 108 = ? ", "465 ", "449 ", "426 ", 2, Question.DIFFICULTY_HARD,Sets.IV, Category.DODAWANIE);
+        addQuestion(q118);
+        Question q119 = new Question(" 456 + 343 = ? ", "772 ", "827 ", "799 ", 3, Question.DIFFICULTY_HARD,Sets.IV, Category.DODAWANIE);
+        addQuestion(q119);
+        Question q120 = new Question(" 272 + 244 = ? ", "516 ", "546 ", "489 ", 1, Question.DIFFICULTY_HARD,Sets.IV, Category.DODAWANIE);
+        addQuestion(q120);
 
         //zestawI_odejmowanie_easy q130
+        Question q121 = new Question(" 16 - 8 = ? ", "8 ", "11 ", "5 ", 1, Question.DIFFICULTY_EASY,Sets.I, Category.ODEJMOWANIE);
+        addQuestion(q121);
+        Question q122 = new Question(" 11 - 6 = ? ", "8 ", "5 ", "4 ", 2, Question.DIFFICULTY_EASY,Sets.I, Category.ODEJMOWANIE);
+        addQuestion(q122);
+        Question q123 = new Question(" 16 - 9 = ? ", "4 ", "9 ", "7 ", 3, Question.DIFFICULTY_EASY,Sets.I, Category.ODEJMOWANIE);
+        addQuestion(q123);
+        Question q124 = new Question(" 20 - 6 = ? ", "14 ", "15 ", "12 ", 1, Question.DIFFICULTY_EASY,Sets.I, Category.ODEJMOWANIE);
+        addQuestion(q124);
+        Question q125 = new Question(" 13 - 9 = ? ", "5 ", "4 ", "3 ", 2, Question.DIFFICULTY_EASY,Sets.I, Category.ODEJMOWANIE);
+        addQuestion(q125);
+        Question q126 = new Question(" 18 - 6 = ? ", "9 ", "13 ", "12 ", 3, Question.DIFFICULTY_EASY,Sets.I, Category.ODEJMOWANIE);
+        addQuestion(q126);
+        Question q127 = new Question(" 17 - 14 = ? ", "3 ", "2 ", "1 ", 1, Question.DIFFICULTY_EASY,Sets.I, Category.ODEJMOWANIE);
+        addQuestion(q127);
+        Question q128 = new Question(" 12 - 4 = ? ", "10 ", "8 ", "7 ", 2, Question.DIFFICULTY_EASY,Sets.I, Category.ODEJMOWANIE);
+        addQuestion(q128);
+        Question q129 = new Question(" 16 - 11 = ? ", "3 ", "7 ", "5 ", 3, Question.DIFFICULTY_EASY,Sets.I, Category.ODEJMOWANIE);
+        addQuestion(q129);
+        Question q130 = new Question(" 15 - 12 = ? ", "3 ", "2 ", "4 ", 1, Question.DIFFICULTY_EASY,Sets.I, Category.ODEJMOWANIE);
+        addQuestion(q130);
 
         //zestawI_odejmowanie_medium q140
+        Question q131 = new Question(" 36 - 23 = ? ", "13 ", "14 ", "16 ", 1, Question.DIFFICULTY_MEDIUM,Sets.I, Category.ODEJMOWANIE);
+        addQuestion(q131);
+        Question q132 = new Question(" 86 - 68 = ? ", "20 ", "18 ", "13 ", 2, Question.DIFFICULTY_MEDIUM,Sets.I, Category.ODEJMOWANIE);
+        addQuestion(q132);
+        Question q133 = new Question(" 98 - 52 = ? ", "37 ", "57 ", "46 ", 3, Question.DIFFICULTY_MEDIUM,Sets.I, Category.ODEJMOWANIE);
+        addQuestion(q133);
+        Question q134 = new Question(" 99 - 63 = ? ", "36 ", "46 ", "31 ", 1, Question.DIFFICULTY_MEDIUM,Sets.I, Category.ODEJMOWANIE);
+        addQuestion(q134);
+        Question q135 = new Question(" 96 - 61 = ? ", "41 ", "35 ", "25 ", 2, Question.DIFFICULTY_MEDIUM,Sets.I, Category.ODEJMOWANIE);
+        addQuestion(q135);
+        Question q136 = new Question(" 82 - 52 = ? ", "19 ", "34 ", "30 ", 3, Question.DIFFICULTY_MEDIUM,Sets.I, Category.ODEJMOWANIE);
+        addQuestion(q136);
+        Question q137 = new Question(" 79 - 54 = ? ", "25 ", "36 ", "15 ", 1, Question.DIFFICULTY_MEDIUM,Sets.I, Category.ODEJMOWANIE);
+        addQuestion(q137);
+        Question q138 = new Question(" 84 - 47 = ? ", "45 ", "37 ", "31 ", 2, Question.DIFFICULTY_MEDIUM,Sets.I, Category.ODEJMOWANIE);
+        addQuestion(q138);
+        Question q139 = new Question(" 71 - 48 = ? ", "13 ", "27 ", "23 ", 3, Question.DIFFICULTY_MEDIUM,Sets.I, Category.ODEJMOWANIE);
+        addQuestion(q139);
+        Question q140 = new Question(" 66 - 36 = ? ", "30 ", "41 ", "26 ", 1, Question.DIFFICULTY_MEDIUM,Sets.I, Category.ODEJMOWANIE);
+        addQuestion(q140);
 
         //zestawI_odejmowanie_hard q150
+        Question q141 = new Question(" 576 - 428 = ? ", "148 ", "169 ", "133 ", 1, Question.DIFFICULTY_HARD,Sets.I, Category.ODEJMOWANIE);
+        addQuestion(q141);
+        Question q142 = new Question(" 648 - 435 = ? ", "230 ", "213 ", "185 ", 2, Question.DIFFICULTY_HARD,Sets.I, Category.ODEJMOWANIE);
+        addQuestion(q142);
+        Question q143 = new Question(" 767 - 683 = ? ", "64 ", "103 ", "84 ", 3, Question.DIFFICULTY_HARD,Sets.I, Category.ODEJMOWANIE);
+        addQuestion(q143);
+        Question q144 = new Question(" 449 - 414 = ? ", "35 ", "37 ", "10 ", 1, Question.DIFFICULTY_HARD,Sets.I, Category.ODEJMOWANIE);
+        addQuestion(q144);
+        Question q145 = new Question(" 736 - 304 = ? ", "457 ", "432 ", "405 ", 2, Question.DIFFICULTY_HARD,Sets.I, Category.ODEJMOWANIE);
+        addQuestion(q145);
+        Question q146 = new Question(" 975 - 222 = ? ", "731 ", "771 ", "753 ", 3, Question.DIFFICULTY_HARD,Sets.I, Category.ODEJMOWANIE);
+        addQuestion(q146);
+        Question q147 = new Question(" 593 - 280 = ? ", "313 ", "336 ", "293 ", 1, Question.DIFFICULTY_HARD,Sets.I, Category.ODEJMOWANIE);
+        addQuestion(q147);
+        Question q148 = new Question(" 775 - 619 = ? ", "180 ", "156 ", "137 ", 2, Question.DIFFICULTY_HARD,Sets.I, Category.ODEJMOWANIE);
+        addQuestion(q148);
+        Question q149 = new Question(" 600 - 429 = ? ", "149 ", "190 ", "171 ", 3, Question.DIFFICULTY_HARD,Sets.I, Category.ODEJMOWANIE);
+        addQuestion(q149);
+        Question q150 = new Question(" 318 - 131 = ? ", "187 ", "210 ", "167 ", 1, Question.DIFFICULTY_HARD,Sets.I, Category.ODEJMOWANIE);
+        addQuestion(q150);
 
         //zestawII_odejmowanie_easy q160
+        Question q151 = new Question(" 13 - 4 = ? ", "9 ", "10 ", "6 ", 1, Question.DIFFICULTY_EASY,Sets.II, Category.ODEJMOWANIE);
+        addQuestion(q151);
+        Question q152 = new Question(" 6 - 4 = ? ", "3 ", "2 ", "1 ", 2, Question.DIFFICULTY_EASY,Sets.II, Category.ODEJMOWANIE);
+        addQuestion(q152);
+        Question q153 = new Question(" 18 - 11 = ? ", "6 ", "10 ", "7 ", 3, Question.DIFFICULTY_EASY,Sets.II, Category.ODEJMOWANIE);
+        addQuestion(q153);
+        Question q154 = new Question(" 20 - 14 = ? ", "6 ", "8 ", "5 ", 1, Question.DIFFICULTY_EASY,Sets.II, Category.ODEJMOWANIE);
+        addQuestion(q154);
+        Question q155 = new Question(" 14 - 10 = ? ", "7 ", "4 ", "3 ", 2, Question.DIFFICULTY_EASY,Sets.II, Category.ODEJMOWANIE);
+        addQuestion(q155);
+        Question q156 = new Question(" 16 - 9 = ? ", "5 ", "8 ", "7 ", 3, Question.DIFFICULTY_EASY,Sets.II, Category.ODEJMOWANIE);
+        addQuestion(q156);
+        Question q157 = new Question(" 16 - 5 = ? ", "11 ", "14 ", "10 ", 1, Question.DIFFICULTY_EASY,Sets.II, Category.ODEJMOWANIE);
+        addQuestion(q157);
+        Question q158 = new Question(" 15 - 6 = ? ", "10 ", "9 ", "6 ", 2, Question.DIFFICULTY_EASY,Sets.II, Category.ODEJMOWANIE);
+        addQuestion(q158);
+        Question q159 = new Question(" 12 - 9 = ? ", "2 ", "4 ", "3 ", 3, Question.DIFFICULTY_EASY,Sets.II, Category.ODEJMOWANIE);
+        addQuestion(q159);
+        Question q160 = new Question(" 12 - 10 = ? ", "2 ", "4 ", "3 ", 1, Question.DIFFICULTY_EASY,Sets.II, Category.ODEJMOWANIE);
+        addQuestion(q160);
 
         //zestawII_odejmowanie_medium q170
+        Question q161 = new Question(" 75 - 48 = ? ", "27 ", "34 ", "22 ", 1, Question.DIFFICULTY_MEDIUM,Sets.II, Category.ODEJMOWANIE);
+        addQuestion(q161);
+        Question q162 = new Question(" 92 - 51 = ? ", "48 ", "41 ", "32 ", 2, Question.DIFFICULTY_MEDIUM,Sets.II, Category.ODEJMOWANIE);
+        addQuestion(q162);
+        Question q163 = new Question(" 79 - 24 = ? ", "60 ", "55 ", "50 ", 3, Question.DIFFICULTY_MEDIUM,Sets.II, Category.ODEJMOWANIE);
+        addQuestion(q163);
+        Question q164 = new Question(" 84 - 36 = ? ", "48 ", "55 ", "37 ", 1, Question.DIFFICULTY_MEDIUM,Sets.II, Category.ODEJMOWANIE);
+        addQuestion(q164);
+        Question q165 = new Question(" 76 - 66 = ? ", "15 ", "10 ", "5 ", 2, Question.DIFFICULTY_MEDIUM,Sets.II, Category.ODEJMOWANIE);
+        addQuestion(q165);
+        Question q166 = new Question(" 54 - 41 = ? ", "18 ", "13 ", "10 ", 3, Question.DIFFICULTY_MEDIUM,Sets.II, Category.ODEJMOWANIE);
+        addQuestion(q166);
+        Question q167 = new Question(" 27 - 22 = ? ", "5 ", "4 ", "6 ", 1, Question.DIFFICULTY_MEDIUM,Sets.II, Category.ODEJMOWANIE);
+        addQuestion(q167);
+        Question q168 = new Question(" 62 - 27 = ? ", "44 ", "35 ", "30 ", 2, Question.DIFFICULTY_MEDIUM,Sets.II, Category.ODEJMOWANIE);
+        addQuestion(q168);
+        Question q169 = new Question(" 81 - 71 = ? ", "7 ", "13 ", "10 ", 3, Question.DIFFICULTY_MEDIUM,Sets.II, Category.ODEJMOWANIE);
+        addQuestion(q169);
+        Question q170 = new Question(" 74 - 51 = ? ", "23 ", "30 ", "17 ", 1, Question.DIFFICULTY_MEDIUM,Sets.II, Category.ODEJMOWANIE);
+        addQuestion(q170);
 
         //zestawII_odejmowanie_hard q180
+        Question q171 = new Question(" 734 - 507 = ? ", "227 ", "256 ", "199 ", 1, Question.DIFFICULTY_HARD,Sets.II, Category.ODEJMOWANIE);
+        addQuestion(q171);
+        Question q172 = new Question(" 968 - 128 = ? ", "861 ", "840 ", "822 ", 2, Question.DIFFICULTY_HARD,Sets.II, Category.ODEJMOWANIE);
+        addQuestion(q172);
+        Question q173 = new Question(" 951 - 136 = ? ", "799 ", "839 ", "815 ", 3, Question.DIFFICULTY_HARD,Sets.II, Category.ODEJMOWANIE);
+        addQuestion(q173);
+        Question q174 = new Question(" 289 - 197 = ? ", "92 ", "109 ", "75 ", 1, Question.DIFFICULTY_HARD,Sets.II, Category.ODEJMOWANIE);
+        addQuestion(q174);
+        Question q175 = new Question(" 332 - 257 = ? ", "97 ", "75 ", "58 ", 2, Question.DIFFICULTY_HARD,Sets.II, Category.ODEJMOWANIE);
+        addQuestion(q175);
+        Question q176 = new Question(" 706 - 218 = ? ", "461 ", "512 ", "488 ", 3, Question.DIFFICULTY_HARD,Sets.II, Category.ODEJMOWANIE);
+        addQuestion(q176);
+        Question q177 = new Question(" 404 - 370 = ? ", "34 ", "58 ", "17 ", 1, Question.DIFFICULTY_HARD,Sets.II, Category.ODEJMOWANIE);
+        addQuestion(q177);
+        Question q178 = new Question(" 300 - 167 = ? ", "153 ", "13 ", "104 ", 2, Question.DIFFICULTY_HARD,Sets.II, Category.ODEJMOWANIE);
+        addQuestion(q178);
+        Question q179 = new Question(" 468 - 352 = ? ", "97 ", "136 ", "116 ", 3, Question.DIFFICULTY_HARD,Sets.II, Category.ODEJMOWANIE);
+        addQuestion(q179);
+        Question q180 = new Question(" 615 - 111 = ? ", "504 ", "523 ", "480 ", 1, Question.DIFFICULTY_HARD,Sets.II, Category.ODEJMOWANIE);
+        addQuestion(q180);
 
         //zestawIII_odejmowanie_easy q190
+        Question q181 = new Question(" 14 - 8 = ? ", "6 ", "9 ", "3 ", 1, Question.DIFFICULTY_EASY,Sets.III, Category.ODEJMOWANIE);
+        addQuestion(q181);
+        Question q182 = new Question(" 20 - 5 = ? ", "17 ", "15 ", "13 ", 2, Question.DIFFICULTY_EASY,Sets.III, Category.ODEJMOWANIE);
+        addQuestion(q182);
+        Question q183 = new Question(" 16 - 9 = ? ", "6 ", "9 ", "7 ", 3, Question.DIFFICULTY_EASY,Sets.III, Category.ODEJMOWANIE);
+        addQuestion(q183);
+        Question q184 = new Question(" 12 - 6 = ? ", "6 ", "9 ", "5 ", 1, Question.DIFFICULTY_EASY,Sets.III, Category.ODEJMOWANIE);
+        addQuestion(q184);
+        Question q185 = new Question(" 13 - 6 = ? ", "11 ", "7 ", "6 ", 2, Question.DIFFICULTY_EASY,Sets.III, Category.ODEJMOWANIE);
+        addQuestion(q185);
+        Question q186 = new Question(" 7 - 5 = ? ", "1 ", "3 ", "2 ", 3, Question.DIFFICULTY_EASY,Sets.III, Category.ODEJMOWANIE);
+        addQuestion(q186);
+        Question q187 = new Question(" 20 - 10 = ? ", "10 ", "12 ", "7 ", 1, Question.DIFFICULTY_EASY,Sets.III, Category.ODEJMOWANIE);
+        addQuestion(q187);
+        Question q188 = new Question(" 17 - 4 = ? ", "14 ", "13 ", "10 ", 2, Question.DIFFICULTY_EASY,Sets.III, Category.ODEJMOWANIE);
+        addQuestion(q188);
+        Question q189 = new Question(" 16 - 13 = ? ", "4 ", "6 ", "3 ", 3, Question.DIFFICULTY_EASY,Sets.III, Category.ODEJMOWANIE);
+        addQuestion(q189);
+        Question q190 = new Question(" 17 - 10 = ? ", "7 ", "10 ", "4 ", 1, Question.DIFFICULTY_EASY,Sets.III, Category.ODEJMOWANIE);
+        addQuestion(q190);
 
         //zestawIII_odejmowanie_medium q200
+        Question q191 = new Question(" 61 - 42 = ? ", "19 ", "29 ", "11 ", 1, Question.DIFFICULTY_MEDIUM,Sets.III, Category.ODEJMOWANIE);
+        addQuestion(q191);
+        Question q192 = new Question(" 73 - 17 = ? ", "66 ", "56 ", "46 ", 2, Question.DIFFICULTY_MEDIUM,Sets.III, Category.ODEJMOWANIE);
+        addQuestion(q192);
+        Question q193 = new Question(" 81 - 24 = ? ", "47 ", "64 ", "57 ", 3, Question.DIFFICULTY_MEDIUM,Sets.III, Category.ODEJMOWANIE);
+        addQuestion(q193);
+        Question q194 = new Question(" 62 - 40 = ? ", "22 ", "32 ", "17 ", 1, Question.DIFFICULTY_MEDIUM,Sets.III, Category.ODEJMOWANIE);
+        addQuestion(q194);
+        Question q195 = new Question(" 34 - 23 = ? ", "12 ", "11 ", "9 ", 2, Question.DIFFICULTY_MEDIUM,Sets.III, Category.ODEJMOWANIE);
+        addQuestion(q195);
+        Question q196 = new Question(" 90 - 40 = ? ", "40 ", "58 ", "50 ", 3, Question.DIFFICULTY_MEDIUM,Sets.III, Category.ODEJMOWANIE);
+        addQuestion(q196);
+        Question q197 = new Question(" 80 - 19 = ? ", "61 ", "66 ", "50 ", 1, Question.DIFFICULTY_MEDIUM,Sets.III, Category.ODEJMOWANIE);
+        addQuestion(q197);
+        Question q198 = new Question(" 97 - 28 = ? ", "74 ", "69 ", "59 ", 2, Question.DIFFICULTY_MEDIUM,Sets.III, Category.ODEJMOWANIE);
+        addQuestion(q198);
+        Question q199 = new Question(" 88 - 32 = ? ", "48 ", "67 ", "56 ", 3, Question.DIFFICULTY_MEDIUM,Sets.III, Category.ODEJMOWANIE);
+        addQuestion(q199);
+        Question q200 = new Question(" 91 - 42 = ? ", "49 ", "60 ", "39 ", 1, Question.DIFFICULTY_MEDIUM,Sets.III, Category.ODEJMOWANIE);
+        addQuestion(q200);
 
         //zestawIII_odejmowanie_hard q210
+        Question q201 = new Question(" 662 - 472 = ? ", "190 ", "207 ", "161 ", 1, Question.DIFFICULTY_HARD,Sets.III, Category.ODEJMOWANIE);
+        addQuestion(q201);
+        Question q202 = new Question(" 709 - 181 = ? ", "547 ", "528 ", "503 ", 2, Question.DIFFICULTY_HARD,Sets.III, Category.ODEJMOWANIE);
+        addQuestion(q202);
+        Question q203 = new Question(" 729 - 121 = ? ", "583 ", "636 ", "608 ", 3, Question.DIFFICULTY_HARD,Sets.III, Category.ODEJMOWANIE);
+        addQuestion(q203);
+        Question q204 = new Question(" 669 - 137 = ? ", "532 ", "548 ", "513 ", 1, Question.DIFFICULTY_HARD,Sets.III, Category.ODEJMOWANIE);
+        addQuestion(q204);
+        Question q205 = new Question(" 734 - 171 = ? ", "581 ", "563 ", "539 ", 2, Question.DIFFICULTY_HARD,Sets.III, Category.ODEJMOWANIE);
+        addQuestion(q205);
+        Question q206 = new Question(" 887 - 392 = ? ", "478 ", "512 ", "495 ", 3, Question.DIFFICULTY_HARD,Sets.III, Category.ODEJMOWANIE);
+        addQuestion(q206);
+        Question q207 = new Question(" 966 - 454 = ? ", "512 ", "539 ", "484 ", 1, Question.DIFFICULTY_HARD,Sets.III, Category.ODEJMOWANIE);
+        addQuestion(q207);
+        Question q208 = new Question(" 508 - 298 = ? ", "234 ", "210 ", "189 ", 2, Question.DIFFICULTY_HARD,Sets.III, Category.ODEJMOWANIE);
+        addQuestion(q208);
+        Question q209 = new Question(" 514 - 231 = ? ", "260 ", "310 ", "283 ", 3, Question.DIFFICULTY_HARD,Sets.III, Category.ODEJMOWANIE);
+        addQuestion(q209);
+        Question q210 = new Question(" 702 - 194 = ? ", "508 ", "528 ", "481 ", 1, Question.DIFFICULTY_HARD,Sets.III, Category.ODEJMOWANIE);
+        addQuestion(q210);
 
         //zestawIV_odejmowanie_easy q220
+        Question q211 = new Question(" 16 - 10 = ? ", "6 ", "10 ", "3 ", 1, Question.DIFFICULTY_EASY,Sets.IV, Category.ODEJMOWANIE);
+        addQuestion(q211);
+        Question q212 = new Question(" 11 - 9 = ? ", "1 ", "2 ", "3 ", 2, Question.DIFFICULTY_EASY,Sets.IV, Category.ODEJMOWANIE);
+        addQuestion(q212);
+        Question q213 = new Question(" 17 - 8 = ? ", "7 ", "8 ", "9 ", 3, Question.DIFFICULTY_EASY,Sets.IV, Category.ODEJMOWANIE);
+        addQuestion(q213);
+        Question q214 = new Question(" 9 - 7 = ? ", "2 ", "5 ", "3 ", 1, Question.DIFFICULTY_EASY,Sets.IV, Category.ODEJMOWANIE);
+        addQuestion(q214);
+        Question q215 = new Question(" 12 - 6 = ? ", "4 ", "6 ", "5 ", 2, Question.DIFFICULTY_EASY,Sets.IV, Category.ODEJMOWANIE);
+        addQuestion(q215);
+        Question q216 = new Question(" 16 - 9 = ? ", "5 ", "9 ", "7 ", 3, Question.DIFFICULTY_EASY,Sets.IV, Category.ODEJMOWANIE);
+        addQuestion(q216);
+        Question q217 = new Question(" 14 - 10 = ? ", "4 ", "8 ", "1 ", 1, Question.DIFFICULTY_EASY,Sets.IV, Category.ODEJMOWANIE);
+        addQuestion(q217);
+        Question q218 = new Question(" 10 - 7 = ? ", "1 ", "3 ", "2 ", 2, Question.DIFFICULTY_EASY,Sets.IV, Category.ODEJMOWANIE);
+        addQuestion(q218);
+        Question q219 = new Question(" 13 - 5 = ? ", "5 ", "11 ", "8 ", 3, Question.DIFFICULTY_EASY,Sets.IV, Category.ODEJMOWANIE);
+        addQuestion(q219);
+        Question q220 = new Question(" 20 - 17 = ? ", "3 ", "7 ", "1 ", 1, Question.DIFFICULTY_EASY,Sets.IV, Category.ODEJMOWANIE);
+        addQuestion(q220);
 
         //zestawIV_odejmowanie_medium q230
+        Question q221 = new Question(" 83 - 40 = ? ", "43 ", "50 ", "39 ", 1, Question.DIFFICULTY_MEDIUM,Sets.IV, Category.ODEJMOWANIE);
+        addQuestion(q221);
+        Question q222 = new Question(" 97 - 72 = ? ", "34 ", "25 ", "14 ", 2, Question.DIFFICULTY_MEDIUM,Sets.IV, Category.ODEJMOWANIE);
+        addQuestion(q222);
+        Question q223 = new Question(" 75 - 60 = ? ", "11 ", "22 ", "15 ", 3, Question.DIFFICULTY_MEDIUM,Sets.IV, Category.ODEJMOWANIE);
+        addQuestion(q223);
+        Question q224 = new Question(" 56 - 41 = ? ", "15 ", "11 ", "13 ", 1, Question.DIFFICULTY_MEDIUM,Sets.IV, Category.ODEJMOWANIE);
+        addQuestion(q224);
+        Question q225 = new Question(" 93 - 27 = ? ", "71 ", "66 ", "56 ", 2, Question.DIFFICULTY_MEDIUM,Sets.IV, Category.ODEJMOWANIE);
+        addQuestion(q225);
+        Question q226 = new Question(" 63 - 27 = ? ", "27 ", "47 ", "36 ", 3, Question.DIFFICULTY_MEDIUM,Sets.IV, Category.ODEJMOWANIE);
+        addQuestion(q226);
+        Question q227 = new Question(" 80 - 53 = ? ", "27 ", "34 ", "20 ", 1, Question.DIFFICULTY_MEDIUM,Sets.IV, Category.ODEJMOWANIE);
+        addQuestion(q227);
+        Question q228 = new Question(" 98 - 23 = ? ", "79 ", "75 ", "69 ", 2, Question.DIFFICULTY_MEDIUM,Sets.IV, Category.ODEJMOWANIE);
+        addQuestion(q228);
+        Question q229 = new Question(" 73 - 52 = ? ", "14 ", "31 ", "21 ", 3, Question.DIFFICULTY_MEDIUM,Sets.IV, Category.ODEJMOWANIE);
+        addQuestion(q229);
+        Question q230 = new Question(" 95 - 49 = ? ", "46 ", "55 ", "40 ", 1, Question.DIFFICULTY_MEDIUM,Sets.IV, Category.ODEJMOWANIE);
+        addQuestion(q230);
 
         //zestawIV_odejmowanie_hard q240
-
+        Question q231 = new Question(" 634 - 530 = ? ", "104 ", "123 ", "77 ", 1, Question.DIFFICULTY_HARD,Sets.IV, Category.ODEJMOWANIE);
+        addQuestion(q231);
+        Question q232 = new Question(" 805 - 640 = ? ", "193 ", "165 ", "148 ", 2, Question.DIFFICULTY_HARD,Sets.IV, Category.ODEJMOWANIE);
+        addQuestion(q232);
+        Question q233 = new Question(" 816 - 595 = ? ", "206 ", "245 ", "221 ", 3, Question.DIFFICULTY_HARD,Sets.IV, Category.ODEJMOWANIE);
+        addQuestion(q233);
+        Question q234 = new Question(" 952 - 202 = ? ", "750 ", "772 ", "731 ", 1, Question.DIFFICULTY_HARD,Sets.IV, Category.ODEJMOWANIE);
+        addQuestion(q234);
+        Question q235 = new Question(" 937 - 605 = ? ", "355 ", "332 ", "304 ", 2, Question.DIFFICULTY_HARD,Sets.IV, Category.ODEJMOWANIE);
+        addQuestion(q235);
+        Question q236 = new Question(" 946 - 854 = ? ", "63 ", "117 ", "92 ", 3, Question.DIFFICULTY_HARD,Sets.IV, Category.ODEJMOWANIE);
+        addQuestion(q236);
+        Question q237 = new Question(" 678 - 214 = ? ", "464 ", "490 ", "447 ", 1, Question.DIFFICULTY_HARD,Sets.IV, Category.ODEJMOWANIE);
+        addQuestion(q237);
+        Question q238 = new Question(" 679 - 431 = ? ", "266 ", "248 ", "225 ", 2, Question.DIFFICULTY_HARD,Sets.IV, Category.ODEJMOWANIE);
+        addQuestion(q238);
+        Question q239 = new Question(" 797 - 539 = ? ", "235 ", "280 ", "258 ", 3, Question.DIFFICULTY_HARD,Sets.IV, Category.ODEJMOWANIE);
+        addQuestion(q239);
+        Question q240 = new Question(" 581 - 499 = ? ", "82 ", "108 ", "62 ", 1, Question.DIFFICULTY_HARD,Sets.IV, Category.ODEJMOWANIE);
+        addQuestion(q240);
 
 
         //zestawI_mnozenie_easy q250
