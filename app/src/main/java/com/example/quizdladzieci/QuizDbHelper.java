@@ -332,10 +332,8 @@ public class QuizDbHelper extends SQLiteOpenHelper {
         addQuestion(q100);
 
 
-
         /*
         //zapytania losowe
-
         //zestawI_dodawanie_easy q10
         Question q1 = new Question(" 2 + 8 = ? ", "10 ", "8 ", "7 ", 1, Question.DIFFICULTY_EASY,Sets.I, Category.DODAWANIE);
         addQuestion(q1);
@@ -866,29 +864,268 @@ public class QuizDbHelper extends SQLiteOpenHelper {
 
 
         //zestawI_mnozenie_easy q250
+        Question q241 = new Question(" 2 * 3 = ? ", "6 ", "5 ", "4 ", 1, Question.DIFFICULTY_EASY,Sets.I, Category.MNOŻENIE);
+        addQuestion(q241);
+        Question q242 = new Question(" 3 * 3 = ? ", "7 ", "9 ", "8 ", 2, Question.DIFFICULTY_EASY,Sets.I, Category.MNOŻENIE);
+        addQuestion(q242);
+        Question q243 = new Question(" 3 * 4 = ? ", "13 ", "14 ", "12 ", 3, Question.DIFFICULTY_EASY,Sets.I, Category.MNOŻENIE);
+        addQuestion(q243);
+        Question q244 = new Question(" 5 * 3 = ? ", "15 ", "12 ", "13 ", 1, Question.DIFFICULTY_EASY,Sets.I, Category.MNOŻENIE);
+        addQuestion(q244);
+        Question q245 = new Question(" 6 * 2 = ? ", "15 ", "12 ", "13 ", 2, Question.DIFFICULTY_EASY,Sets.I, Category.MNOŻENIE);
+        addQuestion(q245);
+        Question q246 = new Question(" 5 * 4 = ? ", "18 ", "15 ", "20 ", 3, Question.DIFFICULTY_EASY,Sets.I, Category.MNOŻENIE);
+        addQuestion(q246);
+        Question q247 = new Question(" 4 * 2 = ? ", "8 ", "9 ", "5 ", 1, Question.DIFFICULTY_EASY,Sets.I, Category.MNOŻENIE);
+        addQuestion(q247);
+        Question q248 = new Question(" 2 * 2 = ? ", "3 ", "4 ", "6 ", 2, Question.DIFFICULTY_EASY,Sets.I, Category.MNOŻENIE);
+        addQuestion(q248);
+        Question q249 = new Question(" 6 * 3 = ? ", "12 ", "14 ", "18 ", 3, Question.DIFFICULTY_EASY,Sets.I, Category.MNOŻENIE);
+        addQuestion(q249);
+        Question q250 = new Question(" 4 * 4 = ? ", "16 ", "20 ", "12 ", 1, Question.DIFFICULTY_EASY,Sets.I, Category.MNOŻENIE);
+        addQuestion(q250);
 
         //zestawI_mnozenie_medium q260
+        Question q251 = new Question(" 9 * 8 = ? ", "72 ", "85 ", "74 ", 1, Question.DIFFICULTY_MEDIUM,Sets.I, Category.MNOŻENIE);
+        addQuestion(q251);
+        Question q252 = new Question(" 5 * 9 = ? ", "47 ", "45 ", "50 ", 2, Question.DIFFICULTY_MEDIUM,Sets.I, Category.MNOŻENIE);
+        addQuestion(q252);
+        Question q253 = new Question(" 10 * 5 = ? ", "43 ", "56 ", "50 ", 3, Question.DIFFICULTY_MEDIUM,Sets.I, Category.MNOŻENIE);
+        addQuestion(q253);
+        Question q254 = new Question(" 7 * 6 = ? ", "42 ", "47 ", "34 ", 1, Question.DIFFICULTY_MEDIUM,Sets.I, Category.MNOŻENIE);
+        addQuestion(q254);
+        Question q255 = new Question(" 7 * 4 = ? ", "14 ", "28 ", "21 ", 2, Question.DIFFICULTY_MEDIUM,Sets.I, Category.MNOŻENIE);
+        addQuestion(q255);
+        Question q256 = new Question(" 7 * 5 = ? ", "32 ", "41 ", "35 ", 3, Question.DIFFICULTY_MEDIUM,Sets.I, Category.MNOŻENIE);
+        addQuestion(q256);
+        Question q257 = new Question(" 10 * 7 = ? ", "70 ", "78 ", "59 ", 1, Question.DIFFICULTY_MEDIUM,Sets.I, Category.MNOŻENIE);
+        addQuestion(q257);
+        Question q258 = new Question(" 7 * 6 = ? ", "50 ", "42 ", "33 ", 2, Question.DIFFICULTY_MEDIUM,Sets.I, Category.MNOŻENIE);
+        addQuestion(q258);
+        Question q259 = new Question(" 6 * 3 = ? ", "27 ", "23 ", "18 ", 3, Question.DIFFICULTY_MEDIUM,Sets.I, Category.MNOŻENIE);
+        addQuestion(q259);
+        Question q260 = new Question(" 7 * 7 = ? ", "49 ", "55 ", "41 ", 1, Question.DIFFICULTY_MEDIUM,Sets.I, Category.MNOŻENIE);
+        addQuestion(q260);
 
         //zestawI_mnozenie_hard q270
+        Question q261 = new Question(" 13 * 12 = ? ", "156 ", "184 ", "139 ", 1, Question.DIFFICULTY_HARD,Sets.I, Category.MNOŻENIE);
+        addQuestion(q261);
+        Question q262 = new Question(" 17 * 13 = ? ", "242 ", "221 ", "194 ", 2, Question.DIFFICULTY_HARD,Sets.I, Category.MNOŻENIE);
+        addQuestion(q262);
+        Question q263 = new Question(" 15 * 14 = ? ", "192 ", "237 ", "210 ", 3, Question.DIFFICULTY_HARD,Sets.I, Category.MNOŻENIE);
+        addQuestion(q263);
+        Question q264 = new Question(" 19 * 15 = ? ", "285 ", "314 ", "267 ", 1, Question.DIFFICULTY_HARD,Sets.I, Category.MNOŻENIE);
+        addQuestion(q264);
+        Question q265 = new Question(" 20 * 18 = ? ", "380 ", "360 ", "350 ", 2, Question.DIFFICULTY_HARD,Sets.I, Category.MNOŻENIE);
+        addQuestion(q265);
+        Question q266 = new Question(" 18 * 14 = ? ", "225 ", "278 ", "252 ", 3, Question.DIFFICULTY_HARD,Sets.I, Category.MNOŻENIE);
+        addQuestion(q266);
+        Question q267 = new Question(" 17 * 13 = ? ", "221 ", "251 ", "198 ", 1, Question.DIFFICULTY_HARD,Sets.I, Category.MNOŻENIE);
+        addQuestion(q267);
+        Question q268 = new Question(" 19 * 13 = ? ", "274 ", "247 ", "224 ", 2, Question.DIFFICULTY_HARD,Sets.I, Category.MNOŻENIE);
+        addQuestion(q268);
+        Question q269 = new Question(" 15 * 11 = ? ", "145 ", "185 ", "165 ", 3, Question.DIFFICULTY_HARD,Sets.I, Category.MNOŻENIE);
+        addQuestion(q269);
+        Question q270 = new Question(" 19 * 12 = ? ", "228 ", "246 ", "204 ", 1, Question.DIFFICULTY_HARD,Sets.I, Category.MNOŻENIE);
+        addQuestion(q270);
 
         //zestawII_mnozenie_easy q280
+        Question q271 = new Question(" 4 * 3 = ? ", "12 ", "14 ", "10 ", 1, Question.DIFFICULTY_EASY,Sets.II, Category.MNOŻENIE);
+        addQuestion(q271);
+        Question q272 = new Question(" 4 * 2 = ? ", "6 ", "8 ", "5 ", 2, Question.DIFFICULTY_EASY,Sets.II, Category.MNOŻENIE);
+        addQuestion(q272);
+        Question q273 = new Question(" 3 * 6 = ? ", "16 ", "20 ", "18 ", 3, Question.DIFFICULTY_EASY,Sets.II, Category.MNOŻENIE);
+        addQuestion(q273);
+        Question q274 = new Question(" 3 * 2 = ? ", "6 ", "9 ", "4 ", 1, Question.DIFFICULTY_EASY,Sets.II, Category.MNOŻENIE);
+        addQuestion(q274);
+        Question q275 = new Question(" 6 * 2 = ? ", "13 ", "12 ", "11 ", 2, Question.DIFFICULTY_EASY,Sets.II, Category.MNOŻENIE);
+        addQuestion(q275);
+        Question q276 = new Question(" 5 * 2 = ? ", "8 ", "11 ", "10 ", 3, Question.DIFFICULTY_EASY,Sets.II, Category.MNOŻENIE);
+        addQuestion(q276);
+        Question q277 = new Question(" 3 * 5 = ? ", "15 ", "13 ", "17 ", 1, Question.DIFFICULTY_EASY,Sets.II, Category.MNOŻENIE);
+        addQuestion(q277);
+        Question q278 = new Question(" 2 * 9 = ? ", "16 ", "18 ", "20 ", 2, Question.DIFFICULTY_EASY,Sets.II, Category.MNOŻENIE);
+        addQuestion(q278);
+        Question q279 = new Question(" 7 * 2 = ? ", "18 ", "16 ", "14 ", 3, Question.DIFFICULTY_EASY,Sets.II, Category.MNOŻENIE);
+        addQuestion(q279);
+        Question q280 = new Question(" 5 * 2 = ? ", "10 ", "12 ", "8 ", 1, Question.DIFFICULTY_EASY,Sets.II, Category.MNOŻENIE);
+        addQuestion(q280);
 
         //zestawII_mnozenie_medium q290
+        Question q281 = new Question(" 8 * 7 = ? ", "56 ", "65 ", "51 ", 1, Question.DIFFICULTY_MEDIUM,Sets.II, Category.MNOŻENIE);
+        addQuestion(q281);
+        Question q282 = new Question(" 9 * 8 = ? ", "82 ", "72 ", "66 ", 2, Question.DIFFICULTY_MEDIUM,Sets.II, Category.MNOŻENIE);
+        addQuestion(q282);
+        Question q283 = new Question(" 9 * 4 = ? ", "45 ", "40 ", "36 ", 3, Question.DIFFICULTY_MEDIUM,Sets.II, Category.MNOŻENIE);
+        addQuestion(q283);
+        Question q284 = new Question(" 8 * 5 = ? ", "40 ", "49 ", "32 ", 1, Question.DIFFICULTY_MEDIUM,Sets.II, Category.MNOŻENIE);
+        addQuestion(q284);
+        Question q285 = new Question(" 5 * 4 = ? ", "25 ", "20 ", "15 ", 2, Question.DIFFICULTY_MEDIUM,Sets.II, Category.MNOŻENIE);
+        addQuestion(q285);
+        Question q286 = new Question(" 9 * 5 = ? ", "35 ", "55 ", "45 ", 3, Question.DIFFICULTY_MEDIUM,Sets.II, Category.MNOŻENIE);
+        addQuestion(q286);
+        Question q287 = new Question(" 7 * 5 = ? ", "35 ", "39 ", "30 ", 1, Question.DIFFICULTY_MEDIUM,Sets.II, Category.MNOŻENIE);
+        addQuestion(q287);
+        Question q288 = new Question(" 9 * 7 = ? ", "67 ", "63 ", "55 ", 2, Question.DIFFICULTY_MEDIUM,Sets.II, Category.MNOŻENIE);
+        addQuestion(q288);
+        Question q289 = new Question(" 6 * 5 = ? ", "36 ", "34 ", "30 ", 3, Question.DIFFICULTY_MEDIUM,Sets.II, Category.MNOŻENIE);
+        addQuestion(q289);
+        Question q290 = new Question(" 9 * 9 = ? ", "81 ", "71 ", "91 ", 1, Question.DIFFICULTY_MEDIUM,Sets.II, Category.MNOŻENIE);
+        addQuestion(q290);
 
         //zestawII_mnozenie_hard q300
+        Question q291 = new Question(" 17 * 15 = ? ", "255 ", "279 ", "232 ", 1, Question.DIFFICULTY_HARD,Sets.II, Category.MNOŻENIE);
+        addQuestion(q291);
+        Question q292 = new Question(" 17 * 12 = ? ", "228 ", "204 ", "178 ", 2, Question.DIFFICULTY_HARD,Sets.II, Category.MNOŻENIE);
+        addQuestion(q292);
+        Question q293 = new Question(" 15 * 11 = ? ", "139 ", "192 ", "165 ", 3, Question.DIFFICULTY_HARD,Sets.II, Category.MNOŻENIE);
+        addQuestion(q293);
+        Question q294 = new Question(" 18 * 12 = ? ", "216 ", "241 ", "199 ", 1, Question.DIFFICULTY_HARD,Sets.II, Category.MNOŻENIE);
+        addQuestion(q294);
+        Question q295 = new Question(" 20 * 14 = ? ", "320 ", "280 ", "261 ", 2, Question.DIFFICULTY_HARD,Sets.II, Category.MNOŻENIE);
+        addQuestion(q295);
+        Question q296 = new Question(" 16 * 15 = ? ", "214 ", "262 ", "240 ", 3, Question.DIFFICULTY_HARD,Sets.II, Category.MNOŻENIE);
+        addQuestion(q296);
+        Question q297 = new Question(" 19 * 12 = ? ", "228 ", "258 ", "211 ", 1, Question.DIFFICULTY_HARD,Sets.II, Category.MNOŻENIE);
+        addQuestion(q297);
+        Question q298 = new Question(" 18 * 13 = ? ", "257 ", "234 ", "205 ", 2, Question.DIFFICULTY_HARD,Sets.II, Category.MNOŻENIE);
+        addQuestion(q298);
+        Question q299 = new Question(" 17 * 16 = ? ", "260 ", "289 ", "272 ", 3, Question.DIFFICULTY_HARD,Sets.II, Category.MNOŻENIE);
+        addQuestion(q299);
+        Question q300 = new Question(" 19 * 14 = ? ", "266 ", "294 ", "241 ", 1, Question.DIFFICULTY_HARD,Sets.II, Category.MNOŻENIE);
+        addQuestion(q300);
 
         //zestawIII_mnozenie_easy q310
+        Question q301 = new Question(" 2 * 8 = ? ", "16 ", "14 ", "12 ", 1, Question.DIFFICULTY_EASY,Sets.III, Category.MNOŻENIE);
+        addQuestion(q301);
+        Question q302 = new Question(" 9 * 2 = ? ", "16 ", "14 ", "18 ", 2, Question.DIFFICULTY_EASY,Sets.III, Category.MNOŻENIE);
+        addQuestion(q302);
+        Question q303 = new Question(" 2 * 2 = ? ", "6 ", "5 ", "4 ", 3, Question.DIFFICULTY_EASY,Sets.III, Category.MNOŻENIE);
+        addQuestion(q303);
+        Question q304 = new Question(" 4 * 3 = ? ", "12 ", "13 ", "10 ", 1, Question.DIFFICULTY_EASY,Sets.III, Category.MNOŻENIE);
+        addQuestion(q304);
+        Question q305 = new Question(" 3 * 2 = ? ", "5 ", "6 ", "4 ", 2, Question.DIFFICULTY_EASY,Sets.III, Category.MNOŻENIE);
+        addQuestion(q305);
+        Question q306 = new Question(" 3 * 3 = ? ", "6 ", "7 ", "9 ", 3, Question.DIFFICULTY_EASY,Sets.III, Category.MNOŻENIE);
+        addQuestion(q306);
+        Question q307 = new Question(" 5 * 2 = ? ", "10 ", "12 ", "8 ", 1, Question.DIFFICULTY_EASY,Sets.III, Category.MNOŻENIE);
+        addQuestion(q307);
+        Question q308 = new Question(" 7 * 1 = ? ", "9 ", "7 ", "14 ", 2, Question.DIFFICULTY_EASY,Sets.III, Category.MNOŻENIE);
+        addQuestion(q308);
+        Question q309 = new Question(" 7 * 2 = ? ", "12 ", "18 ", "14 ", 3, Question.DIFFICULTY_EASY,Sets.III, Category.MNOŻENIE);
+        addQuestion(q309);
+        Question q310 = new Question(" 3 * 4 = ? ", "12 ", "14 ", "10 ", 1, Question.DIFFICULTY_EASY,Sets.III, Category.MNOŻENIE);
+        addQuestion(q310);
 
         //zestawIII_mnozenie_medium q320
+        Question q311 = new Question(" 5 * 4 = ? ", "20 ", "24 ", "26 ", 1, Question.DIFFICULTY_MEDIUM,Sets.III, Category.MNOŻENIE);
+        addQuestion(q311);
+        Question q312 = new Question(" 9 * 7 = ? ", "70 ", "63 ", "57 ", 2, Question.DIFFICULTY_MEDIUM,Sets.III, Category.MNOŻENIE);
+        addQuestion(q312);
+        Question q313 = new Question(" 9 * 5 = ? ", "55 ", "51 ", "45 ", 3, Question.DIFFICULTY_MEDIUM,Sets.III, Category.MNOŻENIE);
+        addQuestion(q313);
+        Question q314 = new Question(" 8 * 4 = ? ", "32 ", "43 ", "24 ", 1, Question.DIFFICULTY_MEDIUM,Sets.III, Category.MNOŻENIE);
+        addQuestion(q314);
+        Question q315 = new Question(" 6 * 4 = ? ", "28 ", "24 ", "16 ", 2, Question.DIFFICULTY_MEDIUM,Sets.III, Category.MNOŻENIE);
+        addQuestion(q315);
+        Question q316 = new Question(" 7 * 5 = ? ", "25 ", "44 ", "35 ", 3, Question.DIFFICULTY_MEDIUM,Sets.III, Category.MNOŻENIE);
+        addQuestion(q316);
+        Question q317 = new Question(" 9 * 4 = ? ", "36 ", "40 ", "44 ", 1, Question.DIFFICULTY_MEDIUM,Sets.III, Category.MNOŻENIE);
+        addQuestion(q317);
+        Question q318 = new Question(" 8 * 7 = ? ", "60 ", "56 ", "48 ", 2, Question.DIFFICULTY_MEDIUM,Sets.III, Category.MNOŻENIE);
+        addQuestion(q318);
+        Question q319 = new Question(" 7 * 4 = ? ", "18 ", "38 ", "28 ", 3, Question.DIFFICULTY_MEDIUM,Sets.III, Category.MNOŻENIE);
+        addQuestion(q319);
+        Question q320 = new Question(" 11 * 5 = ? ", "55 ", "44 ", "66 ", 1, Question.DIFFICULTY_MEDIUM,Sets.III, Category.MNOŻENIE);
+        addQuestion(q320);
 
         //zestawIII_mnozenie_hard q330
+        Question q321 = new Question(" 19 * 15 = ? ", "285 ", "309 ", "259 ", 1, Question.DIFFICULTY_HARD,Sets.III, Category.MNOŻENIE);
+        addQuestion(q321);
+        Question q322 = new Question(" 17 * 15 = ? ", "275 ", "255 ", "234 ", 2, Question.DIFFICULTY_HARD,Sets.III, Category.MNOŻENIE);
+        addQuestion(q322);
+        Question q323 = new Question(" 18 * 16 = ? ", "273 ", "303 ", "288 ", 3, Question.DIFFICULTY_HARD,Sets.III, Category.MNOŻENIE);
+        addQuestion(q323);
+        Question q324 = new Question(" 19 * 18 = ? ", "342 ", "361 ", "326 ", 1, Question.DIFFICULTY_HARD,Sets.III, Category.MNOŻENIE);
+        addQuestion(q324);
+        Question q325 = new Question(" 18 * 13 = ? ", "225 ", "234 ", "213 ", 2, Question.DIFFICULTY_HARD,Sets.III, Category.MNOŻENIE);
+        addQuestion(q325);
+        Question q326 = new Question(" 12 * 16 = ? ", "192 ", "224 ", "240 ", 3, Question.DIFFICULTY_HARD,Sets.III, Category.MNOŻENIE);
+        addQuestion(q326);
+        Question q327 = new Question(" 15 * 11 = ? ", "165 ", "189 ", "142 ", 1, Question.DIFFICULTY_HARD,Sets.III, Category.MNOŻENIE);
+        addQuestion(q327);
+        Question q328 = new Question(" 15 * 13 = ? ", "212 ", "195 ", "178 ", 2, Question.DIFFICULTY_HARD,Sets.III, Category.MNOŻENIE);
+        addQuestion(q328);
+        Question q329 = new Question(" 20 * 15 = ? ", "280 ", "315 ", "300 ", 3, Question.DIFFICULTY_HARD,Sets.III, Category.MNOŻENIE);
+        addQuestion(q329);
+        Question q330 = new Question(" 16 * 15 = ? ", "240 ", "269 ", "213 ", 1, Question.DIFFICULTY_HARD,Sets.III, Category.MNOŻENIE);
+        addQuestion(q330);
 
         //zestawIV_mnozenie_easy q340
+        Question q331 = new Question(" 3 * 4 = ? ", "12 ", "16 ", "14 ", 1, Question.DIFFICULTY_EASY,Sets.IV, Category.MNOŻENIE);
+        addQuestion(q331);
+        Question q332 = new Question(" 9 * 2 = ? ", "20 ", "18 ", "19 ", 2, Question.DIFFICULTY_EASY,Sets.IV, Category.MNOŻENIE);
+        addQuestion(q332);
+        Question q333 = new Question(" 8 * 2 = ? ", "14 ", "20 ", "16 ", 3, Question.DIFFICULTY_EASY,Sets.IV, Category.MNOŻENIE);
+        addQuestion(q333);
+        Question q334 = new Question(" 5 * 3 = ? ", "15 ", "12 ", "16 ", 1, Question.DIFFICULTY_EASY,Sets.IV, Category.MNOŻENIE);
+        addQuestion(q334);
+        Question q335 = new Question(" 10 * 2 = ? ", "10 ", "20 ", "15 ", 2, Question.DIFFICULTY_EASY,Sets.IV, Category.MNOŻENIE);
+        addQuestion(q335);
+        Question q336 = new Question(" 4 * 2 = ? ", "6 ", "10 ", "8 ", 3, Question.DIFFICULTY_EASY,Sets.IV, Category.MNOŻENIE);
+        addQuestion(q336);
+        Question q337 = new Question(" 7 * 2 = ? ", "14 ", "16 ", "13 ", 1, Question.DIFFICULTY_EASY,Sets.IV, Category.MNOŻENIE);
+        addQuestion(q337);
+        Question q338 = new Question(" 5 * 2 = ? ", "14 ", "10 ", "9 ", 2, Question.DIFFICULTY_EASY,Sets.IV, Category.MNOŻENIE);
+        addQuestion(q338);
+        Question q339 = new Question(" 2 * 3 = ? ", "5 ", "7 ", "6 ", 3, Question.DIFFICULTY_EASY,Sets.IV, Category.MNOŻENIE);
+        addQuestion(q339);
+        Question q340 = new Question(" 5 * 4 = ? ", "20 ", "15 ", "10 ", 1, Question.DIFFICULTY_EASY,Sets.IV, Category.MNOŻENIE);
+        addQuestion(q340);
 
         //zestawIV_mnozenie_medium q350
+        Question q341 = new Question(" 15 * 6 = ? ", "90 ", "100 ", "80 ", 1, Question.DIFFICULTY_MEDIUM,Sets.IV, Category.MNOŻENIE);
+        addQuestion(q341);
+        Question q342 = new Question(" 11 * 7 = ? ", "70 ", "77 ", "64 ", 2, Question.DIFFICULTY_MEDIUM,Sets.IV, Category.MNOŻENIE);
+        addQuestion(q342);
+        Question q343 = new Question(" 12 * 4 = ? ", "40 ", "60 ", "48 ", 3, Question.DIFFICULTY_MEDIUM,Sets.IV, Category.MNOŻENIE);
+        addQuestion(q343);
+        Question q344 = new Question(" 9 * 5 = ? ", "45 ", "51 ", "40 ", 1, Question.DIFFICULTY_MEDIUM,Sets.IV, Category.MNOŻENIE);
+        addQuestion(q344);
+        Question q345 = new Question(" 12 * 5 = ? ", "68 ", "60 ", "54 ", 2, Question.DIFFICULTY_MEDIUM,Sets.IV, Category.MNOŻENIE);
+        addQuestion(q345);
+        Question q346 = new Question(" 11 * 6 = ? ", "56 ", "73 ", "66 ", 3, Question.DIFFICULTY_MEDIUM,Sets.IV, Category.MNOŻENIE);
+        addQuestion(q346);
+        Question q347 = new Question(" 8 * 7 = ? ", "56 ", "65 ", "52 ", 1, Question.DIFFICULTY_MEDIUM,Sets.IV, Category.MNOŻENIE);
+        addQuestion(q347);
+        Question q348 = new Question(" 12 * 6 = ? ", "82 ", "72 ", "62 ", 2, Question.DIFFICULTY_MEDIUM,Sets.IV, Category.MNOŻENIE);
+        addQuestion(q348);
+        Question q349 = new Question(" 14 * 7 = ? ", "91 ", "95 ", "98 ", 3, Question.DIFFICULTY_MEDIUM,Sets.IV, Category.MNOŻENIE);
+        addQuestion(q349);
+        Question q350 = new Question(" 7 * 13 = ? ", "91 ", "99 ", "95 ", 1, Question.DIFFICULTY_MEDIUM,Sets.IV, Category.MNOŻENIE);
+        addQuestion(q350);
 
         //zestawIV_mnozenie_hard q360
-
+        Question q351 = new Question(" 15 * 13 = ? ", "195 ", "220 ", "173 ", 1, Question.DIFFICULTY_HARD,Sets.IV, Category.MNOŻENIE);
+        addQuestion(q351);
+        Question q352 = new Question(" 13 * 11 = ? ", "165 ", "143 ", "121 ", 2, Question.DIFFICULTY_HARD,Sets.IV, Category.MNOŻENIE);
+        addQuestion(q352);
+        Question q353 = new Question(" 18 * 15 = ? ", "242 ", "290 ", "270 ", 3, Question.DIFFICULTY_HARD,Sets.IV, Category.MNOŻENIE);
+        addQuestion(q353);
+        Question q354 = new Question(" 20 * 12 = ? ", "240 ", "268 ", "210 ", 1, Question.DIFFICULTY_HARD,Sets.IV, Category.MNOŻENIE);
+        addQuestion(q354);
+        Question q355 = new Question(" 18 * 15 = ? ", "291 ", "270 ", "240 ", 2, Question.DIFFICULTY_HARD,Sets.IV, Category.MNOŻENIE);
+        addQuestion(q355);
+        Question q356 = new Question(" 20 * 19 = ? ", "357 ", "399 ", "380 ", 3, Question.DIFFICULTY_HARD,Sets.IV, Category.MNOŻENIE);
+        addQuestion(q356);
+        Question q357 = new Question(" 20 * 16 = ? ", "320 ", "347 ", "291 ", 1, Question.DIFFICULTY_HARD,Sets.IV, Category.MNOŻENIE);
+        addQuestion(q357);
+        Question q358 = new Question(" 19 * 18 = ? ", "359 ", "342 ", "327 ", 2, Question.DIFFICULTY_HARD,Sets.IV, Category.MNOŻENIE);
+        addQuestion(q358);
+        Question q359 = new Question(" 20 * 19 = ? ", "365 ", "409 ", "380 ", 3, Question.DIFFICULTY_HARD,Sets.IV, Category.MNOŻENIE);
+        addQuestion(q359);
+        Question q360 = new Question(" 19 * 17 = ? ", "323 ", "339 ", "300 ", 1, Question.DIFFICULTY_HARD,Sets.IV, Category.MNOŻENIE);
+        addQuestion(q360);
 
 
         //zestawI_dzielenie_easy q370
