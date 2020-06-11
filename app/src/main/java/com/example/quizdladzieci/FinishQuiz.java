@@ -48,11 +48,11 @@ public class FinishQuiz extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-        final int score = intent.getIntExtra("score", -1);
+        final int score = intent.getIntExtra("score", 0);
 
-        final int wrongAns = intent.getIntExtra("wrongAns",-2);
+        final int wrongAns = intent.getIntExtra("wrongAns",0);
 
-        final int question_count = intent.getIntExtra("question_count", -3);
+        final int question_count = intent.getIntExtra("question_count", 0);
 
         score_view = findViewById(R.id.tvScore);
 
