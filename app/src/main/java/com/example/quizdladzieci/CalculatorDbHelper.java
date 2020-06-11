@@ -230,6 +230,23 @@ public class CalculatorDbHelper extends SQLiteOpenHelper {
         addQuestion(q91);
         DivideQuestions q92 = new DivideQuestions("50 : 5 = ", 10);
         addQuestion(q92);
+        DivideQuestions q93 = new DivideQuestions("48 : 6 = ", 8);
+        addQuestion(q93);
+        DivideQuestions q94 = new DivideQuestions("32 : 4 = ", 8);
+        addQuestion(q94);
+        DivideQuestions q95 = new DivideQuestions("14 : 7 = ", 2);
+        addQuestion(q95);
+        DivideQuestions q96 = new DivideQuestions("100 : 10 = ", 10);
+        addQuestion(q96);
+        DivideQuestions q97 = new DivideQuestions("12 : 4 = ", 3);
+        addQuestion(q97);
+        DivideQuestions q98 = new DivideQuestions("15 : 5 = ", 3);
+        addQuestion(q98);
+        DivideQuestions q99 = new DivideQuestions("72 : 8 = ", 8);
+        addQuestion(q99);
+        DivideQuestions q100 = new DivideQuestions("14 : 2 = ", 7);
+        addQuestion(q100);
+
     }
 
     private void addQuestion(DivideQuestions questions){
