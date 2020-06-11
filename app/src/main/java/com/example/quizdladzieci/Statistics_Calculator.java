@@ -72,12 +72,12 @@ public class Statistics_Calculator extends MenuForAllAcitivity {
 
                 UserProfile userProfile = dataSnapshot.getValue(UserProfile.class);
 
-                tvCalcGoodCount.setText("Liczba wszystkich poprawnych odpowiedzi to: " + userProfile.getUserGoodAnswersQuiz());
-                tvCalcMaxYour.setText("Twój najlepszy wynik: " + userProfile.getUserBestScoreQuiz());
-                tvCalcBadCount.setText("Liczba wszystkich błędnych odpowiedzi to: " + userProfile.getUserBadAnswersQuiz());
-                float all_question = (float) (userProfile.getUserBadAnswersQuiz() + userProfile.getUserGoodAnswersQuiz());
+                tvCalcGoodCount.setText("Liczba wszystkich poprawnych odpowiedzi to: " + userProfile.getUserGoodAnswersCalc());
+                tvCalcMaxYour.setText("Twój najlepszy wynik: " + userProfile.getUserBestScoreCalc());
+                tvCalcBadCount.setText("Liczba wszystkich błędnych odpowiedzi to: " + userProfile.getUserBadAnswersCalc());
+                float all_question = (float) (userProfile.getUserBadAnswersCalc() + userProfile.getUserGoodAnswersCalc());
 
-                float result = (float) (userProfile.getUserGoodAnswersQuiz())/all_question;
+                float result = (float) (userProfile.getUserGoodAnswersCalc())/all_question;
                 int mark = 0;
 
                 if( result >= 0 && result < 0.3 )
